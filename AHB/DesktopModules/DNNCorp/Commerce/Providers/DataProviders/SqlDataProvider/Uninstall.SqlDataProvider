@@ -1,0 +1,990 @@
+﻿IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Templates_ModuleId]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Templates] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Templates_ModuleId]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Templates_TemplateType]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Templates] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Templates_TemplateType]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Templates_IsSystem]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Templates] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Templates_IsSystem]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Templates_DateCreated]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Templates] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Templates_DateCreated]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_TaxRates_TaxIdentifier]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_TaxRates] DROP CONSTRAINT [DF_{objectQualifier}Commerce_TaxRates_TaxIdentifier]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_TaxRates_TaxRate]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_TaxRates] DROP CONSTRAINT [DF_{objectQualifier}Commerce_TaxRates_TaxRate]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Table_1_Required]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Properties] DROP CONSTRAINT [DF_Table_1_Required]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Properties_DateCreated]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Properties] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Properties_DateCreated]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Properties_DateUpdated]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Properties] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Properties_DateUpdated]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Properties_IsDeleted]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Properties] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Properties_IsDeleted]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Properties_SortPriority]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Properties] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Properties_SortPriority]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Properties_ObjectType]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Properties] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Properties_ObjectType]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Products_ProductId]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Products] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Products_ProductId]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Products_ProductGroupId]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Products] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Products_ProductGroupId]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Products_SortOrder]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Products] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Products_SortOrder]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Products_Active]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Products] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Products_Active]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Products_Deleted]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Products] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Products_Deleted]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Products_DateAdded]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Products] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Products_DateAdded]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Products_DateUpdated]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Products] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Products_DateUpdated]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Products_EmailTemplate]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Products] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Products_EmailTemplate]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Products_Taxable]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Products] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Products_Taxable]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Products_ShipFee]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Products] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Products_ShipFee]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Products_ShipWeight]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Products] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Products_ShipWeight]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Products_ProductType]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Products] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Products_ProductType]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Products_RequireShipAddress]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Products] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Products_RequireShipAddress]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Products_Visible]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Products] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Products_Visible]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Products_AllowedRolesGracePeriod]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Products] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Products_AllowedRolesGracePeriod]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Products_InstructionsEnabled]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Products] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Products_InstructionsEnabled]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_ProductGroups_SortOrder]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_ProductGroups] DROP CONSTRAINT [DF_{objectQualifier}Commerce_ProductGroups_SortOrder]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Product_Properties_SortPriority]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Product_Properties] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Product_Properties_SortPriority]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Product_Properties_IsDeleted]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Product_Properties] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Product_Properties_IsDeleted]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_OrderTemp_CartId]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_OrderTemp] DROP CONSTRAINT [DF_{objectQualifier}Commerce_OrderTemp_CartId]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_OrderTemp_Price]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_OrderTemp] DROP CONSTRAINT [DF_{objectQualifier}Commerce_OrderTemp_Price]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_OrderTemp_DateAdded]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_OrderTemp] DROP CONSTRAINT [DF_{objectQualifier}Commerce_OrderTemp_DateAdded]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_OrderTemp_Discount]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_OrderTemp] DROP CONSTRAINT [DF_{objectQualifier}Commerce_OrderTemp_Discount]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_OrderTemp_DiscountId]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_OrderTemp] DROP CONSTRAINT [DF_{objectQualifier}Commerce_OrderTemp_DiscountId]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_OrderStatus_PortalId]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_OrderStatus] DROP CONSTRAINT [DF_{objectQualifier}Commerce_OrderStatus_PortalId]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_OrderStatus_SortOrder]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_OrderStatus] DROP CONSTRAINT [DF_{objectQualifier}Commerce_OrderStatus_SortOrder]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Orders_PostLog_Status]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Orders_PostLog] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Orders_PostLog_Status]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Orders_PostLog_DateCreated]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Orders_PostLog] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Orders_PostLog_DateCreated]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Orders_OrderId]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Orders] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Orders_OrderId]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Orders_BillToAddressId]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Orders] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Orders_BillToAddressId]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Orders_ShipToAddressId]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Orders] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Orders_ShipToAddressId]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Orders_DateUpdated]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Orders] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Orders_DateUpdated]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Orders_OrderStatus]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Orders] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Orders_OrderStatus]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Orders_SalesRepId]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Orders] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Orders_SalesRepId]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Orders_IsPaid]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Orders] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Orders_IsPaid]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Orders_CustomerId]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Orders] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Orders_CustomerId]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Orders_DiscountId]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Orders] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Orders_DiscountId]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Commerce_OrderDetails_Commerce_Orders]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_OrderDetails]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_OrderDetails] DROP CONSTRAINT [FK_Commerce_OrderDetails_Commerce_Orders]
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_OrderDetails_OrderDetailsId]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_OrderDetails] DROP CONSTRAINT [DF_{objectQualifier}Commerce_OrderDetails_OrderDetailsId]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_OrderDetails_Disc]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_OrderDetails] DROP CONSTRAINT [DF_{objectQualifier}Commerce_OrderDetails_Disc]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_OrderDetails_Misc]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_OrderDetails] DROP CONSTRAINT [DF_{objectQualifier}Commerce_OrderDetails_Misc]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_OrderDetails_Deleted]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_OrderDetails] DROP CONSTRAINT [DF_{objectQualifier}Commerce_OrderDetails_Deleted]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_OrderDetails_DiscountId]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_OrderDetails] DROP CONSTRAINT [DF_{objectQualifier}Commerce_OrderDetails_DiscountId]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_OrderDetails_SubTotal]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_OrderDetails] DROP CONSTRAINT [DF_{objectQualifier}Commerce_OrderDetails_SubTotal]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_OrderDetails_AgreementIds]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_OrderDetails] DROP CONSTRAINT [DF_{objectQualifier}Commerce_OrderDetails_AgreementIds]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Files_RequiresAgreement]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Files] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Files_RequiresAgreement]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Files_IsDeleted]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Files] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Files_IsDeleted]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Files_DateCreated]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Files] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Files_DateCreated]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Files_DateUpdated]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Files] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Files_DateUpdated]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Files_Archived]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Files] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Files_Archived]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_File_Log_DateCreated]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_File_Log] DROP CONSTRAINT [DF_{objectQualifier}Commerce_File_Log_DateCreated]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Commerce_DiscountsToProducts_Commerce_Discounts]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_DiscountsToProducts]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_DiscountsToProducts] DROP CONSTRAINT [FK_Commerce_DiscountsToProducts_Commerce_Discounts]
+GO
+
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Commerce_DiscountsToProducts_Commerce_Products]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_DiscountsToProducts]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_DiscountsToProducts] DROP CONSTRAINT [FK_Commerce_DiscountsToProducts_Commerce_Products]
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_DiscountsToCustomers_Count]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_DiscountsToCustomers] DROP CONSTRAINT [DF_{objectQualifier}Commerce_DiscountsToCustomers_Count]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Discounts_DiscountCodeRequired]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Discounts] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Discounts_DiscountCodeRequired]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Discounts_UserMaxUsage]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Discounts] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Discounts_UserMaxUsage]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Discounts_TotalMaxUsage]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Discounts] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Discounts_TotalMaxUsage]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Discounts_TotalUsageCount]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Discounts] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Discounts_TotalUsageCount]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Disable]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Discounts] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Disable]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_RestrictionType]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Discounts] DROP CONSTRAINT [DF_{objectQualifier}Commerce_RestrictionType]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}Commerce_Cart_Discount]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}Commerce_Cart] DROP CONSTRAINT [DF_{objectQualifier}Commerce_Cart_Discount]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Templates]') AND type in (N'U'))
+DROP TABLE {databaseOwner}[{objectQualifier}Commerce_Templates]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_TaxRates]') AND type in (N'U'))
+DROP TABLE {databaseOwner}[{objectQualifier}Commerce_TaxRates]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Properties]') AND type in (N'U'))
+DROP TABLE {databaseOwner}[{objectQualifier}Commerce_Properties]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Products]') AND type in (N'U'))
+DROP TABLE {databaseOwner}[{objectQualifier}Commerce_Products]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_ProductGroups]') AND type in (N'U'))
+DROP TABLE {databaseOwner}[{objectQualifier}Commerce_ProductGroups]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Product_Properties]') AND type in (N'U'))
+DROP TABLE {databaseOwner}[{objectQualifier}Commerce_Product_Properties]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Product_Files]') AND type in (N'U'))
+DROP TABLE {databaseOwner}[{objectQualifier}Commerce_Product_Files]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_OrderTemp]') AND type in (N'U'))
+DROP TABLE {databaseOwner}[{objectQualifier}Commerce_OrderTemp]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_OrderStatus]') AND type in (N'U'))
+DROP TABLE {databaseOwner}[{objectQualifier}Commerce_OrderStatus]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Orders_PostLog]') AND type in (N'U'))
+DROP TABLE {databaseOwner}[{objectQualifier}Commerce_Orders_PostLog]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Orders]') AND type in (N'U'))
+DROP TABLE {databaseOwner}[{objectQualifier}Commerce_Orders]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_OrderDetails]') AND type in (N'U'))
+DROP TABLE {databaseOwner}[{objectQualifier}Commerce_OrderDetails]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Files]') AND type in (N'U'))
+DROP TABLE {databaseOwner}[{objectQualifier}Commerce_Files]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_File_Log]') AND type in (N'U'))
+DROP TABLE {databaseOwner}[{objectQualifier}Commerce_File_Log]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_DiscountsToRoles]') AND type in (N'U'))
+DROP TABLE {databaseOwner}[{objectQualifier}Commerce_DiscountsToRoles]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_DiscountsToProducts]') AND type in (N'U'))
+DROP TABLE {databaseOwner}[{objectQualifier}Commerce_DiscountsToProducts]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_DiscountsToCustomers]') AND type in (N'U'))
+DROP TABLE {databaseOwner}[{objectQualifier}Commerce_DiscountsToCustomers]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Discounts_ReqProducts]') AND type in (N'U'))
+DROP TABLE {databaseOwner}[{objectQualifier}Commerce_Discounts_ReqProducts]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Discounts]') AND type in (N'U'))
+DROP TABLE {databaseOwner}[{objectQualifier}Commerce_Discounts]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Cart]') AND type in (N'U'))
+DROP TABLE {databaseOwner}[{objectQualifier}Commerce_Cart]
+GO
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Settings]') AND type in (N'U'))
+DROP TABLE {databaseOwner}[{objectQualifier}Commerce_Settings]
+GO
+
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Settings_Save]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Settings_Save]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Settings_List]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Settings_List]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Settings_Get]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Settings_Get]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Settings_Delete]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Settings_Delete]
+GO
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_OrderDetails_Save]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_OrderDetails_Save]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Product_Save]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Product_Save]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Dashboard_RecentCustomers]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Dashboard_RecentCustomers]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Dashboard_PendingOrders]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Dashboard_PendingOrders]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Users_Search]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Users_Search]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Templates_Save]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Templates_Save]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Templates_List]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Templates_List]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Templates_Delete]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Templates_Delete]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Templates_Get]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Templates_Get]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_TaxRates_List]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_TaxRates_List]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_TaxRates_Save]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_TaxRates_Save]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_TaxRates_Get]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_TaxRates_Get]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_TaxRates_GetRate]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_TaxRates_GetRate]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_TaxRates_Delete]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_TaxRates_Delete]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_RepairProductSort]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_RepairProductSort]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Properties_Save]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Properties_Save]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Properties_RebuildSort]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Properties_RebuildSort]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Properties_List]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Properties_List]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Properties_Get]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Properties_Get]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_ProductGroup_Save]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_ProductGroup_Save]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_ProductGroup_Get]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_ProductGroup_Get]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_ProductGroup_FullList]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_ProductGroup_FullList]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_ProductGroup_List]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_ProductGroup_List]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_ProductGroup_ChangeSort]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_ProductGroup_ChangeSort]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_ProductGroup_Delete]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_ProductGroup_Delete]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Product_List]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Product_List]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Product_ChangeSort]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Product_ChangeSort]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Product_Get]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Product_Get]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Product_Delete]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Product_Delete]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_OrderTemp_QtyUpdate]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_OrderTemp_QtyUpdate]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_OrderTemp_List]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_OrderTemp_List]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_OrderTemp_Delete]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_OrderTemp_Delete]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_OrderTemp_Add]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_OrderTemp_Add]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_OrderTemp_DeleteItem]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_OrderTemp_DeleteItem]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_OrderStatus_Save]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_OrderStatus_Save]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_OrderStatus_Get]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_OrderStatus_Get]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_OrderStatus_List]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_OrderStatus_List]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_OrdersDetails_From_Temp]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_OrdersDetails_From_Temp]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_OrderStatus_Delete]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_OrderStatus_Delete]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Orders_SearchHistory]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Orders_SearchHistory]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Orders_Search]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Orders_Search]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Orders_PostLog_Save]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Orders_PostLog_Save]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Orders_PostLog_List]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Orders_PostLog_List]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Orders_ListByCustomer]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Orders_ListByCustomer]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Orders_List]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Orders_List]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Orders_GetLast]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Orders_GetLast]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Orders_GetByOrderNumber]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Orders_GetByOrderNumber]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Orders_Get]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Orders_Get]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Orders_Delete]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Orders_Delete]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_OrderDetails_List]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_OrderDetails_List]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_OrderDetails_Get]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_OrderDetails_Get]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_OrderDetails_Delete]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_OrderDetails_Delete]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Order_Save]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Order_Save]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_GetUsers]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_GetUsers]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Files_Save]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Files_Save]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Files_UserFiles]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Files_UserFiles]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Files_OrderItem]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Files_OrderItem]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Files_GetProduct]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Files_GetProduct]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Files_ListByProduct]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Files_ListByProduct]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Files_Get]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Files_Get]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Files_Download]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Files_Download]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Files_Delete]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Files_Delete]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Files_AddToProduct]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Files_AddToProduct]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_File_LogSave]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_File_LogSave]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Discounts_Search]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Discounts_Search]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Discounts_GetUserUsageCount]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Discounts_GetUserUsageCount]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Discount_UpdateUsage]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Discount_UpdateUsage]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Discount_Save]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Discount_Save]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Discount_ListReqRoles]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Discount_ListReqRoles]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Discount_ListReqProducts]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Discount_ListReqProducts]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Discount_ListProducts]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Discount_ListProducts]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Discount_List]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Discount_List]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Discount_GetByCode]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Discount_GetByCode]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Discount_Get]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Discount_Get]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Discount_FindDiscount]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Discount_FindDiscount]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Discount_DelReqRole]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Discount_DelReqRole]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Discount_DelReqProduct]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Discount_DelReqProduct]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Discount_DeleteProduct]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Discount_DeleteProduct]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Discount_AddReqProduct]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Discount_AddReqProduct]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Discount_AddReqRole]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Discount_AddReqRole]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Discount_Delete]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Discount_Delete]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_DashBoard_SalesByMonth]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_DashBoard_SalesByMonth]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Discount_AddProduct]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Discount_AddProduct]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Dashboard_RecentPurchases]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Dashboard_RecentPurchases]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Dashboard_QuickSummary]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Dashboard_QuickSummary]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_DashBoard_MonthBestProducts]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_DashBoard_MonthBestProducts]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Customers_List]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Customers_List]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Customers_GetAddresses]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Customers_GetAddresses]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Cart_UpdateOrderData]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Cart_UpdateOrderData]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Customers_FindByEmail]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Customers_FindByEmail]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Cart_UpdateDiscount]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Cart_UpdateDiscount]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Cart_UpdateDate]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Cart_UpdateDate]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Cart_Save]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Cart_Save]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Cart_Get]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Cart_Get]
+GO
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Discount_ForProduct]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Discount_ForProduct]
+GO
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_OrderDetails_ListByProductIdForUser]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_OrderDetails_ListByProductIdForUser]
+GO
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}Commerce_Cart_UpdateCartItemDiscount]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Commerce_Cart_UpdateCartItemDiscount]
+GO
+IF  EXISTS (SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}vw_Commerce_OrdersList]'))
+DROP VIEW {databaseOwner}[{objectQualifier}vw_Commerce_OrdersList]
+GO
+
+

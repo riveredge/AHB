@@ -1,0 +1,201 @@
+<dotnetnuke type="Package" version="5.0">
+	<packages>
+		<package name="DotNetNuke.Recipe.Skin" type="Skin" version="1.0.0">
+			<friendlyName>Recipe</friendlyName>
+			<description>A DotNetNuke Design Challenge container package submitted to the "Standards" category by dnnprofis.at.   For mobile devices the skin changes to a mobile format.  It demonstrates the capabilities of building versatile web sites. Utilizes the Core Navigation Provider.</description>
+			<owner>
+				<name>DotNetNuke</name>
+				<organization>DotNetNuke Corporation</organization>
+				<url>www.dotnetnuke.com</url>
+				<email>support@dotnetnuke.com</email>
+			</owner>
+			<license src="skinlicense.txt"></license>
+			<releaseNotes src="skinreleasenotes.txt"></releaseNotes>
+			<dependencies>
+				<dependency type="CoreVersion">05.02.00</dependency>
+			</dependencies>
+			<components>
+				<component type="File">
+					<files>
+						<file>
+							<name>skinlicense.txt</name>
+						</file>
+						<file>
+							<name>skinreleasenotes.txt</name>
+						</file>
+					</files>
+				</component>
+				<component type="Skin">
+					<skinFiles>
+						<skinName>Recipe</skinName>
+						<basePath />
+						<skinFile>
+						  <path>css</path>
+						  <name>antiscreen.css</name>
+						</skinFile>
+						<skinFile>
+						  <path>css</path>
+						  <name>handheld.css</name>
+						</skinFile>
+						<skinFile>
+						  <path>css</path>
+						  <name>ie6screen.css</name>
+						</skinFile>
+						<skinFile>
+						  <path>css</path>
+						  <name>ie7screen.css</name>
+						</skinFile>
+						<skinFile>
+						  <path>css</path>
+						  <name>menu.css</name>
+						</skinFile>
+						<skinFile>
+						  <path>css</path>
+						  <name>screen.css</name>
+						</skinFile>
+						<skinFile>
+						  <path>images</path>
+						  <name>botl.png</name>
+						</skinFile>
+						<skinFile>
+						  <path>images</path>
+						  <name>botr.png</name>
+						</skinFile>
+						<skinFile>
+						  <path>images</path>
+						  <name>header-handheld.jpg</name>
+						</skinFile>
+						<skinFile>
+						  <path>images</path>
+						  <name>header.jpg</name>
+						</skinFile>
+						<skinFile>
+						  <path>images</path>
+						  <name>menucorner.png</name>
+						</skinFile>
+						<skinFile>
+						  <name>Home.doctype.xml</name>
+						</skinFile>
+						<skinFile>
+						  <name>Home.htm</name>
+						</skinFile>
+						<skinFile>
+						  <name>Home.jpg</name>
+						</skinFile>
+						<skinFile>
+						  <name>Portal.doctype.xml</name>
+						</skinFile>
+						<skinFile>
+						  <name>Portal.htm</name>
+						</skinFile>
+						<skinFile>
+						  <name>Portal.jpg</name>
+						</skinFile>
+						<skinFile>
+						  <name>Skin.css</name>
+						</skinFile>
+						<skinFile>
+						  <name>Skin.xml</name>
+						</skinFile>
+					</skinFiles>
+				</component>
+			</components>
+		</package>
+		<package name="DotNetNuke.Recipe.Container" type="Container" version="1.0.0">
+			<friendlyName>Recipe</friendlyName>
+			<description>A DotNetNuke Design Challenge container package submitted to the "Standards" category by dnnprofis.at.   For mobile devices the skin changes to a mobile format.  It demonstrates the capabilities of building versatile web sites. Utilizes the Core Navigation Provider.</description>
+			<owner>
+				<name>DotNetNuke</name>
+				<organization>DotNetNuke Corporation</organization>
+				<url>www.dotnetnuke.com</url>
+				<email>support@dotnetnuke.com</email>
+			</owner>
+			<license src="containerlicense.txt"></license>
+			<releaseNotes src="containerreleasenotes.txt"></releaseNotes>
+			<dependencies>
+				<dependency type="CoreVersion">05.02.00</dependency>
+			</dependencies>
+			<components>
+				<component type="File">
+					<files>
+						<file>
+							<name>containerlicense.txt</name>
+						</file>
+						<file>
+							<name>containerreleasenotes.txt</name>
+						</file>
+					</files>
+				</component>
+				<component type="Container">
+					<containerFiles>
+						<containerName>Recipe</containerName>
+						<basePath />
+						<containerFile>
+						  <path>images</path>
+						  <name>bluecorner.png</name>
+						</containerFile>
+						<containerFile>
+						  <path>images</path>
+						  <name>greencorner.png</name>
+						</containerFile>
+						<containerFile>
+						  <path>images</path>
+						  <name>redcorner.png</name>
+						</containerFile>
+						<containerFile>
+						  <path>images</path>
+						  <name>whitebluecorner.png</name>
+						</containerFile>
+						<containerFile>
+						  <path>images</path>
+						  <name>whitegreencorner.png</name>
+						</containerFile>
+						<containerFile>
+						  <path>images</path>
+						  <name>whiteredcorner.png</name>
+						</containerFile>
+						<containerFile>
+						  <name>Blue Title Bar, Border.css</name>
+						</containerFile>
+						<containerFile>
+						  <name>Blue Title Bar, Border.htm</name>
+						</containerFile>
+						<containerFile>
+						  <name>Blue Title Bar, Border.jpg</name>
+						</containerFile>
+						<containerFile>
+						  <name>Container.css</name>
+						</containerFile>
+						<containerFile>
+						  <name>Container.xml</name>
+						</containerFile>
+						<containerFile>
+						  <name>Green Title Bar, Border.css</name>
+						</containerFile>
+						<containerFile>
+						  <name>Green Title Bar, Border.htm</name>
+						</containerFile>
+						<containerFile>
+						  <name>Green Title Bar, Border.jpg</name>
+						</containerFile>
+						<containerFile>
+						  <name>Red Title Bar, Border.css</name>
+						</containerFile>
+						<containerFile>
+						  <name>Red Title Bar, Border.htm</name>
+						</containerFile>
+						<containerFile>
+						  <name>Red Title Bar, Border.jpg</name>
+						</containerFile>
+						<containerFile>
+						  <name>Standard.htm</name>
+						</containerFile>
+						<containerFile>
+						  <name>Standard.jpg</name>
+						</containerFile>
+					</containerFiles>
+				</component>
+			</components>
+		</package>
+	</packages>
+</dotnetnuke>

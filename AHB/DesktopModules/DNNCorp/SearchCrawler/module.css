@@ -1,0 +1,5 @@
+#dnnSearchSpiderSettings .dnnFormItem input, #dnnSearchSpiderSettings .dnnFormItem textarea, #dnnSearchSpiderSettings .dnnFormItem select {width:50%;}
+#dnnSearchSpiderSettings.dnnForm input[type="checkbox"], #dnnSearchSpiderSettings.dnnFormItem input[type="radio"] {width:auto;}
+#dnnSearchSpiderSettings .dnnFormItem .sssInputList {display:block; width:65%; overflow:hidden;}
+    #dnnSearchSpiderSettings .dnnFormItem .sssInputList input {width:auto;float:none;padding:0;text-align:left;clear:left;}
+    #dnnSearchSpiderSettings .dnnFormItem .sssInputList label {width:auto;padding:0 5px 0 0;margin-left:3px;text-align:left;font-weight:normal;margin-top:0;float: none;display: inline;}

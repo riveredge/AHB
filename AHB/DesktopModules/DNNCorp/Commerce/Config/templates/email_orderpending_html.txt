@@ -1,0 +1,15 @@
+<style type="text/css">
+
+.apnormal{font-family:Tahoma;font-size:11px;}
+.apbold{font-family:Tahoma;font-size:11px; font-weight:bold;}
+.amheader{font-family:Tahoma;font-size:12px;font-weight:bold;}
+.amcptblhdr{font-family:Tahoma;font-size:11px; font-weight:bold;background-color:#666666;color:#fff;}
+</style>
+<div style="font-family:Tahoma;font-size:11px;">
+Dear [CONTACT:FIRSTNAME], <br />
+Your order has been received, but not processed.  We are still waiting for your payment.  Please send payment so that we may process your order promptly. <br />
+ <br />
+Thank you, <br />
+[PORTAL:PORTALNAME] <br />
+[PORTAL:URL] <br />
+</div>

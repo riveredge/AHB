@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="plRestrictFolder.Text" xml:space="preserve">
+    <value>Restrict Tree to 1 Folder:</value>
+  </data>
+  <data name="plRestrictFolder.Help" xml:space="preserve">
+    <value>Select one folder if you want to restrict what users can see to one of the folders in the list. Through the tree, you will also be able to navigate to subfolders and documents belonging to the selected folder.</value>
+  </data>
+  <data name="plRestrictCategory.Text" xml:space="preserve">
+    <value>Restrict Tree to 1 Category:</value>
+  </data>
+  <data name="plRestrictCategory.Help" xml:space="preserve">
+    <value>Select one category if you want to restrict what users can see to one of the categories in the list. Through the tree, you will also be able to navigate to subcategories and documents belonging to the selected category.</value>
+  </data>
+  <data name="cboRestrictFolderAll.Text" xml:space="preserve">
+    <value>- No Restrictions -</value>
+  </data>
+  <data name="plMode.Text" xml:space="preserve">
+    <value>Default Tree Mode:</value>
+  </data>
+  <data name="plMode.Help" xml:space="preserve">
+    <value>Select the default navigation tree mode you prefer. The tree can be shown as organized by folders, or by categories.</value>
+  </data>
+  <data name="plModeToggle.Text" xml:space="preserve">
+    <value>Allow Tree Mode Toggle:</value>
+  </data>
+  <data name="plModeToggle.Help" xml:space="preserve">
+    <value>Check this option if you want to allow users to change the navigation tree mode. If you choose not to allow toggling, then users will only see the tree organized by either folder or category, withouth the possibility to switch between the two views. [Administrators will continue to see the toggle options for administartive purposes]</value>
+  </data>
+  <data name="cboModeFolder.Text" xml:space="preserve">
+    <value>folder [default]</value>
+  </data>
+  <data name="cboModeCategory.Text" xml:space="preserve">
+    <value>category</value>
+  </data>
+  <data name="plRootFolder.Text" xml:space="preserve">
+    <value>Root Folder:</value>
+  </data>
+  <data name="plRootFolder.Help" xml:space="preserve">
+    <value>Select a root folder, to store the folders and documents, in the physical drive. When a folder is selected from the list, the Database and the File System are automatically synchronized.</value>
+  </data>
+  <data name="cboRootFolderUnspecified.Text" xml:space="preserve">
+    <value>- Unspecified -</value>
+  </data>
+  <data name="plAllowedExtensionsAdd.Help" xml:space="preserve">
+    <value>This setting allows you to enable the file extensions that are allowed in the document library. Available extensions are configured by the host server.</value>
+  </data>
+  <data name="plAllowedExtensionsAdd.Text" xml:space="preserve">
+    <value>Enabled Extensions:</value>
+  </data>
+  <data name="plSecureFiles.Help" xml:space="preserve">
+    <value>
+		If checked, this option will protect your documents from direct download by renaming them to a type of extension that is not directly served by a Web Server [.resx]. As a result, the only possible way to access the document will be through the document library interface.
+		&lt;br&gt;&lt;br&gt;
+		When unchecked, this option will allow documents to be downloaded directly from a web browser or to be referenced by links.
+		</value>
+  </data>
+  <data name="plSecureFiles.Text" xml:space="preserve">
+    <value>Secure Files:</value>
+  </data>
+  <data name="plConfirmDownload.Help" xml:space="preserve">
+    <value>When checked, this option will show a pop-up window with additional information, before a download is started.&lt;br&gt;&lt;br&gt;If unchecked, the download will start directly.</value>
+  </data>
+  <data name="plConfirmDownload.Text" xml:space="preserve">
+    <value>Confirm Download [pop-up]:</value>
+  </data>
+  <data name="cmdRootFolderEnable.Text" xml:space="preserve">
+    <value>Enable/Disable Selection of a new Root Folder</value>
+  </data>
+  <data name="cmdRootFolderEnable.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/Enable.png</value>
+  </data>
+  <data name="cmdRootFolderSync.Text" xml:space="preserve">
+    <value>Synchronize the Database and the File System</value>
+  </data>
+  <data name="cmdRootFolderSyncOff.Text" xml:space="preserve">
+    <value>To Synchronize the Database and the File System you need to disable the selection of a root folder</value>
+  </data>
+  <data name="cmdRootFolderSyncAlert.Text" xml:space="preserve">
+    <value>You are about to Synchronize the Database and the File System.\n\nOnce completed, you will be able to review the results in the Synchronization Log.</value>
+  </data>
+  <data name="cmdRootFolderSync.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/Sync.png</value>
+  </data>
+  <data name="cmdRootFolderSyncOff.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/SyncOff.png</value>
+  </data>
+  <data name="plHideTree.Text" xml:space="preserve">
+    <value>Hide Tree [Flat View]:</value>
+  </data>
+  <data name="plHideTree.Help" xml:space="preserve">
+    <value>Select this option to hide the navigation tree. Choosing this option will automatically display all the documents under the folder/category, including all the documents in subfolders/subcategories. It is necessary to specify a folder/category when this option is selected.  This can be done by either selecting a folder/category from one of the restriction lists, or by passing the ID of the folder/category in the URL. [Administrators will continue to see the navigation tree for administartive purposes]</value>
+  </data>
+  <data name="plHorizontalScroll.Text" xml:space="preserve">
+    <value>Allow Tree Horizontal Scroll:</value>
+  </data>
+  <data name="plHorizontalScroll.Help" xml:space="preserve">
+    <value>By Default, the navigation tree grows in size (horizontally and vertically) according to the number of folders that are open at any one time.  Allowing Horizontal Scrolling will prevent the tree from growing in width, and present the user with the possibility to scroll to the right or left, in order to see the folders.</value>
+  </data>
+  <data name="plDisplayDocumentDescription.Text" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="plDisplayDocumentDescription.Help" xml:space="preserve">
+    <value>Select this option to view the description field of the document in the Document grid.</value>
+  </data>
+  <data name="plDisplayDocumentSize.Text" xml:space="preserve">
+    <value>Size:</value>
+  </data>
+  <data name="plDisplayDocumentSize.Help" xml:space="preserve">
+    <value>Select this option to view the size field of the document in the Document grid.</value>
+  </data>
+  <data name="ControlTitle_settings.Text" xml:space="preserve">
+    <value>DocumentLibrary Settings</value>
+  </data>
+  <data name="lblFieldsetTree.Text" xml:space="preserve">
+    <value>Navigation Tree Options</value>
+  </data>
+  <data name="lblFieldsetGrid.Text" xml:space="preserve">
+    <value>Document Grid Options</value>
+  </data>
+  <data name="lblFieldsetFolder.Text" xml:space="preserve">
+    <value>File System Options</value>
+  </data>
+  <data name="lblFieldsetDocument.Text" xml:space="preserve">
+    <value>Document Options</value>
+  </data>
+  <data name="lblFieldsetModule.Text" xml:space="preserve">
+    <value>Module Options</value>
+  </data>
+  <data name="lnkRootFolderSyncLog.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/SyncLog.png</value>
+  </data>
+  <data name="lnkRootFolderSyncLog.Text" xml:space="preserve">
+    <value>Display the last Synchronization Log</value>
+  </data>
+  <data name="lnkRootFolderSyncLogAlert.Text" xml:space="preserve">
+    <value>There is no Synchronization Log to display</value>
+  </data>
+  <data name="plRootFolderSync.Text" xml:space="preserve">
+    <value>Synchronize:</value>
+  </data>
+  <data name="plRootFolderSync.Help" xml:space="preserve">
+    <value>Synchronize the Database and the File System.\n\nOnce completed, you will be able to review the results in the Synchronization Log.</value>
+  </data>
+  <data name="lblFieldsetStats.Text" xml:space="preserve">
+    <value>Statistics Options</value>
+  </data>
+  <data name="plStatsLogDays.Text" xml:space="preserve">
+    <value>Stats Log History [Days]:</value>
+  </data>
+  <data name="plStatsLogDays.Help" xml:space="preserve">
+    <value>Enter the number of days that you want to retain folder, category and document statistics information.</value>
+  </data>
+  <data name="ddlModuleStyleDefault.Text" xml:space="preserve">
+    <value>- Default -</value>
+  </data>
+  <data name="plModuleStyle.Text" xml:space="preserve">
+    <value>Style:</value>
+  </data>
+  <data name="plModuleStyle.Help" xml:space="preserve">
+    <value>Select the module style from the list of available styles</value>
+  </data>
+  <data name="plVersioning.Text" xml:space="preserve">
+    <value>Versioning:</value>
+  </data>
+  <data name="plVersioning.Help" xml:space="preserve">
+    <value>Versioning will allow you to save a specified number of copies of the documents you upload. Every time you re-upload a new version of the same document, the previous version is saved and can be restored on demand.</value>
+  </data>
+  <data name="plVersioningEnabled.Text" xml:space="preserve">
+    <value>Versioning Enabled:</value>
+  </data>
+  <data name="plVersioningEnabled.Help" xml:space="preserve">
+    <value>Enable or disable versioning</value>
+  </data>
+  <data name="plVersioningMaxNumber.Text" xml:space="preserve">
+    <value>Versioning Max Number:</value>
+  </data>
+  <data name="plVersioningMaxNumber.Help" xml:space="preserve">
+    <value>Maximum number of versions to be saved for each document.</value>
+  </data>
+  <data name="plDisplayDocumentName.Help" xml:space="preserve">
+    <value>This option cannot be selected. The name field of the document in the Document grid is required.</value>
+  </data>
+  <data name="plDisplayDocumentName.Text" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="plDisplayDocumentUploaded.Text" xml:space="preserve">
+    <value>Uploaded:</value>
+  </data>
+  <data name="plDisplayDocumentUploaded.Help" xml:space="preserve">
+    <value>Select this option to view the name of the person that uploaded as well as the date of the document in the Document grid.</value>
+  </data>
+  <data name="plDisplayDocumentModified.Text" xml:space="preserve">
+    <value>Modified:</value>
+  </data>
+  <data name="lblDisplay.Text" xml:space="preserve">
+    <value>Display</value>
+  </data>
+  <data name="lblSortBy.Text" xml:space="preserve">
+    <value>Default Sort</value>
+  </data>
+  <data name="lblSortByAsc.Text" xml:space="preserve">
+    <value>Ascending</value>
+  </data>
+  <data name="lblSortByDesc.Text" xml:space="preserve">
+    <value>Descending</value>
+  </data>
+  <data name="cmdRootFolderEnableAlert.Text" xml:space="preserve">
+    <value>Clicking this option will allow you to change the Root Folder.\n\nOnce you update your changes, the Database and the File System will be automatically synchronized.</value>
+  </data>
+  <data name="chxSecureFilesAlert.Text" xml:space="preserve">
+    <value>Changing this option will allow you to protect or unprotect your files from direct download.\n\nOnce you update your changes, the Database and the File System will be automatically synchronized.</value>
+  </data>
+  <data name="cmdRootFolderEnable2.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/Enable2.png</value>
+  </data>
+  <data name="plSearch.Help" xml:space="preserve">
+    <value>The Search section will allow you to set search options for the documents.</value>
+  </data>
+  <data name="plSearch.Text" xml:space="preserve">
+    <value>Search:</value>
+  </data>
+  <data name="plDNNSearchEnabled.Help" xml:space="preserve">
+    <value>Selecting this option, allows the documents to participate in the default DNN Search. The searchable fields will include the Name and the Description of the document. Please Note: the default DNN Search does not index document content. Also, it does not implement any kind of security.  Therefore, unauthorized users may see descriptions for documents they may not have access to.  Such documents will still be download protected.</value>
+  </data>
+  <data name="plDNNSearchEnabled.Text" xml:space="preserve">
+    <value>DNN Search Enabled:</value>
+  </data>
+  <data name="plDisplayNavigation.Text" xml:space="preserve">
+    <value>Display Navigation:</value>
+  </data>
+  <data name="plDisplayNavigation.Help" xml:space="preserve">
+    <value>By deselecting this option, you will be removing the navigation (paging) and info mechanisms at the top and bottom of the grid.  As a result, all items in the list will be displayed at once.</value>
+  </data>
+  <data name="lblDisplayLength.Text" xml:space="preserve">
+    <value>Display Length</value>
+  </data>
+  <data name="plItemsPerPage.Text" xml:space="preserve">
+    <value>Items Per Page:</value>
+  </data>
+  <data name="plItemsPerPage.Help" xml:space="preserve">
+    <value>The number of items that will bee displayed in the grid.</value>
+  </data>
+  <data name="ddlGridLayoutDefault.Text" xml:space="preserve">
+    <value>[default]</value>
+  </data>
+  <data name="plGridLayout.Text" xml:space="preserve">
+    <value>Layout:</value>
+  </data>
+  <data name="plGridLayout.Help" xml:space="preserve">
+    <value>Select the layout to be applied to the document grid, from the list of available layouts</value>
+  </data>
+  <data name="plDisplayDocumentIcon.Text" xml:space="preserve">
+    <value>Icon:</value>
+  </data>
+  <data name="plDisplayDocumentIcon.Help" xml:space="preserve">
+    <value>Select this option to view the icon that correspondes to the document type.</value>
+  </data>
+  <data name="plTreeStyle.Text" xml:space="preserve">
+    <value>Tree Style:</value>
+  </data>
+  <data name="plTreeStyle.Help" xml:space="preserve">
+    <value>Select a tree style. Tree styles differ in the iconsets used and the consequent look and feel of the tree structure.</value>
+  </data>
+  <data name="cboTreeStylePM.Text" xml:space="preserve">
+    <value>plus-minus signs [default]</value>
+  </data>
+  <data name="cboTreeStyleUD.Text" xml:space="preserve">
+    <value>up-down arrows</value>
+  </data>
+  <data name="plEnableWebDav_lnk.Help" xml:space="preserve">
+    <value>
+		This option will display an alternative 'open on server' button in the documents grid, next to the 'download\' button. Clicking on the 'open on server' button will present a pop-up with the following options:
+		&lt;ul&gt;
+		&lt;li&gt;
+		Open Option: Selecting the Open option, will open the application in its corresponding application. The [save] and [save as] options will save any changes directly on the server.
+		&lt;/li&gt;
+		&lt;li&gt;
+		Save Option: not applicable, do not use [use the download button instead].
+		&lt;/li&gt;
+		&lt;li&gt;
+		Cancel Option: cancels the operation.
+		&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;br&gt;&lt;br&gt;
+		&lt;b&gt;Note 1:&lt;/b&gt; The folder must be a WebDav folder [you will need to configure the server]. You can check if the current root folder is correctly setup as a WebDav folder, by clicking on the icon next to the 'Enable WebDav' checkbox.
+		&lt;br&gt;&lt;br&gt;
+		&lt;b&gt;Note 2:&lt;/b&gt; In case that WebDav is not correctly setup on the server, and this option is selected, the document will still open in its corresponding application, but the [save] and [save as] options will only save the document in a local [to your PC] folder.
+		&lt;br&gt;&lt;br&gt;
+		&lt;b&gt;Note 3:&lt;/b&gt; There is no need for any client browser configuration.
+		</value>
+  </data>
+  <data name="plEnableWebDav.Text" xml:space="preserve">
+    <value>Enable WebDav:</value>
+  </data>
+  <data name="chxEnableWebDavAlertYes_lnk.Text" xml:space="preserve">
+    <value>This option will display an alternative \'open on server\' button in the documents grid, next to the \'download\' button.\n\nClicking on the \'open on server\' button will present a pop-up with the following options:\n\nOpen Option: Selecting the Open option, will open the application in its corresponding application. The [save] and [save as] options will save any changes directly on the server.\n\nSave Option: not applicable, do not use [use the download button instead].\n\nCancel Option: cancels the operation.\n\n\n\nNote 1: The folder must be a WebDav folder [you will need to configure the server]. You can check if the current root folder is correctly setup as a WebDav folder, by clicking on the icon next to the \'Enable WebDav\' checkbox.\n\nNote 2: In case that WebDav is not correctly setup on the server, and this option is selected, the document will still open in its corresponding application, but the [save] and [save as] options will only save the document in a local [to your PC] folder.\n\nNote 3: There is no need for any client browser configuration.</value>
+  </data>
+  <data name="chxEnableWebDavAlertNo.Text" xml:space="preserve">
+    <value>This option is Not Available when the Secure Files option is checked.</value>
+  </data>
+  <data name="cmdEnableWebDavCheck.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/tDocumentWebDav.png</value>
+  </data>
+  <data name="cmdEnableWebDavCheck.Text" xml:space="preserve">
+    <value>check if WebDav is enabled on the server</value>
+  </data>
+  <data name="cmdEnableWebDavCheckOK.Text" xml:space="preserve">
+    <value>webdav is enabled on the server</value>
+  </data>
+  <data name="cmdEnableWebDavCheckKO.Text" xml:space="preserve">
+    <value>webdav [or some of its options] does not seem to be enabled on the server or, the server response is not a valid webdav response</value>
+  </data>
+  <data name="cmdEnableWebDavCheckKOUNCShare.Text" xml:space="preserve">
+    <value>webdav cannot be enabled for UNC Shares</value>
+  </data>
+  <data name="plDisplayMedia.Help" xml:space="preserve">
+    <value>When checked, this option will display a PLAY button for media files (audio, images and video).</value>
+  </data>
+  <data name="plDisplayMedia.Text" xml:space="preserve">
+    <value>Display Media:</value>
+  </data>
+  <data name="plBoxSize.Help" xml:space="preserve">
+    <value>Select the size of the box that displays the media content of the documents.</value>
+  </data>
+  <data name="plBoxSize.Text" xml:space="preserve">
+    <value>Box Size:</value>
+  </data>
+  <data name="plMedia.Help" xml:space="preserve">
+    <value>The Media Content section will allow you to set media content options for the documents.</value>
+  </data>
+  <data name="plMedia.Text" xml:space="preserve">
+    <value>Media Content:</value>
+  </data>
+  <data name="ddlBoxSizeDefault.Text" xml:space="preserve">
+    <value>- Default -</value>
+  </data>
+  <data name="chxBigUploadsAlert.Text" xml:space="preserve">
+    <value>IMPORTANT: Full trust is required to allow huge uploads. You need to ensure that your web hosting permits you to set Full trust in the web.config. If not, please do not check this option. To set full trust in the web.config, you have to add the following line in system.web section:\n\n&lt;trust level="Full" /&gt;\n\nIf checked, this option will allow huge uploads (up to 2 GB). Notice that the web.config will be automatically modified (a backup of the actual configuration file will be created on the same folder). And also, a folder will be created in the root folder of the application.\n\nBy unchecking it, the changes done to the web.config and the folder in the root folder will be eliminated.\n\nNOTE ON UNINSTALL: Prior to uninstall the module, please uncheck this option, otherwise you will need to manually remove some entries on web.config file and remove the folder that is created on the root folder of the application.</value>
+  </data>
+  <data name="plBigUploads.Help" xml:space="preserve">
+    <value>If checked, this option will allow huge uploads (up to 2 GB). Notice that the web.config will be automatically modified (a backup of the actual configuration file will be created on the same folder). And also, a folder will be created in the root folder of the application.&lt;br /&gt;&lt;br /&gt;By unchecking it, the changes done to the web.config and the folder in the root folder will be eliminated.</value>
+  </data>
+  <data name="plBigUploads.Text" xml:space="preserve">
+    <value>Huge Uploads</value>
+  </data>
+  <data name="plEnableWebDav.Help" xml:space="preserve">
+    <value>
+      This option will display an alternative 'open on server' button in the documents grid, next to the 'download\' button. Clicking on the 'open on server' button will open the document in its client environment (MS Word or MS Excel):
+      &lt;br&gt;&lt;br&gt;
+      &lt;b&gt;Note 1:&lt;/b&gt; The folder must be a WebDav folder [you will need to configure the server]. You can check if the current root folder is correctly setup as a WebDav folder, by clicking on the icon next to the 'Enable WebDav' checkbox.
+      &lt;br&gt;&lt;br&gt;
+      &lt;b&gt;Note 2:&lt;/b&gt; In case that WebDav is not correctly setup on the server, and this option is selected, the document will still open in its corresponding application, but the [save] and [save as] options will only save the document in a local [to your PC] folder.
+      &lt;br&gt;&lt;br&gt;
+      &lt;b&gt;Note 3:&lt;/b&gt; You must enable ActiveX controls to run on you client PC, by changing the corresponding Zone Security Options.
+    </value>
+  </data>
+  <data name="chxEnableWebDavAlertYes.Text" xml:space="preserve">
+    <value>This option will display an alternative \'open on server\' button in the documents grid, next to the \'download\' button.\n\nClicking on the \'open on server\' button will open the document in its client environment (MS Word or MS Excel):\n\n\n\nNote 1: The folder must be a WebDav folder [you will need to configure the server]. You can check if the current root folder is correctly setup as a WebDav folder, by clicking on the icon next to the \'Enable WebDav\' checkbox.\n\nNote 2: In case that WebDav is not correctly setup on the server, and this option is selected, the document will still open in its corresponding application, but the [save] and [save as] options will only save the document in a local [to your PC] folder.\n\nNote 3: You must enable ActiveX controls to run on you client PC, by changing the corresponding Zone Security Options.</value>
+  </data>
+  <data name="plThumbnailBackColor.Help" xml:space="preserve">
+    <value>The thumbnails of images with transparent background need a color to replace transparent pixels with. You can enter here the color to replace with (in hexadecimal format). This setting is optional and will only be valid when layout is set to "thumbnails". If you don't set a value and the layout is set to "thumbnails", transparent pixels will be replaced with white pixels. Examples: #FF0000, #12A2C3.</value>
+  </data>
+  <data name="plThumbnailBackColor.Text" xml:space="preserve">
+    <value>Thumbnail Background Color:</value>
+  </data>
+  <data name="GlobalDocument.Text" xml:space="preserve">
+    <value>Global Settings &gt; Document Options</value>
+  </data>
+  <data name="GlobalFileSystem.Text" xml:space="preserve">
+    <value>Global Settings &gt; File System Options</value>
+  </data>
+  <data name="GlobalModule.Text" xml:space="preserve">
+    <value>Global Settings &gt; Module Options</value>
+  </data>
+  <data name="GlobalStatistics.Text" xml:space="preserve">
+    <value>Global Settings &gt; Statistics Options</value>
+  </data>
+  <data name="LocalDocumentGrid.Text" xml:space="preserve">
+    <value>Local Settings &gt; Document Grid Options</value>
+  </data>
+  <data name="LocalNavigationTree.Text" xml:space="preserve">
+    <value>Local Settings &gt; Navigation Tree Options</value>
+  </data>
+  <data name="plDisplayDocumentModified.Help" xml:space="preserve">
+    <value>Select this option to view the name of the person that last modified as well as the date of the document in the Document grid.</value>
+  </data>
+  <data name="btnExtensionsAllowAll.Tooltip" xml:space="preserve">
+    <value>Allow All</value>
+  </data>
+  <data name="btnExtensionsAllowSelected.Tooltip" xml:space="preserve">
+    <value>Allow Selected</value>
+  </data>
+  <data name="btnExtensionsBlockAll.Tooltip" xml:space="preserve">
+    <value>Block All</value>
+  </data>
+  <data name="btnExtensionsBlockSelected.Tooltip" xml:space="preserve">
+    <value>Block Selected</value>
+  </data>
+  <data name="ExtensionsDisabled.Text" xml:space="preserve">
+    <value>Extension(s) moved to disabled list.</value>
+  </data>
+  <data name="ExtensionsEnabled.Text" xml:space="preserve">
+    <value>Extension(s) moved to enabled list.</value>
+  </data>
+  <data name="ExtensionsNoHostExtensions.Text" xml:space="preserve">
+    <value>There are no allowable file extensions defined at Host level.</value>
+  </data>
+  <data name="ExtensionsSelectAllowedExtension.Text" xml:space="preserve">
+    <value>Please, select some enabled extensions.</value>
+  </data>
+  <data name="ExtensionsSelectDisabledExtension.Text" xml:space="preserve">
+    <value>Please, select some disabled extensions.</value>
+  </data>
+  <data name="lbExtensionsDisabled.Text" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="lbExtensionsEnabled.Text" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="rblExtensionsAll.Text" xml:space="preserve">
+    <value>Enable all available extensions</value>
+  </data>
+  <data name="rblExtensionsSelected.Text" xml:space="preserve">
+    <value>Select extensions to enable</value>
+  </data>
+</root>

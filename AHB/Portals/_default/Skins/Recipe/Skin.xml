@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Object>
+    <Token>[MENU]</Token>
+    <Settings>
+      <Setting>
+        <Name>seperatecss</Name>
+        <Value>True</Value>
+      </Setting>
+      <Setting>
+        <Name>rootmenuitemcssclass</Name>
+        <Value>MainMenu_RootMenuItem</Value>
+      </Setting>
+      <Setting>
+        <Name>rootmenuitemactivecssclass</Name>
+        <Value>MainMenu_RootMenuItemActive</Value>
+      </Setting>
+      <Setting>
+        <Name>rootmenuitemselectedcssclass</Name>
+        <Value>MainMenu_RootMenuItemSelected</Value>
+      </Setting>
+    </Settings>
+  </Object>
+</Objects>

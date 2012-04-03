@@ -1,0 +1,21 @@
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}sc_GetSearchResultsModules') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}sc_GetSearchResultsModules
+GO
+
+CREATE procedure {databaseOwner}{objectQualifier}sc_GetSearchResultsModules
+	@PortalID int
+AS
+BEGIN
+	SELECT
+			TM.TabID,
+			T.TabName  AS SearchTabName
+	FROM	{databaseOwner}{objectQualifier}Modules M
+			INNER JOIN	{databaseOwner}{objectQualifier}ModuleDefinitions MD ON MD.ModuleDefID = M.ModuleDefID
+			INNER JOIN	{databaseOwner}{objectQualifier}TabModules TM ON TM.ModuleID = M.ModuleID
+			INNER JOIN	{databaseOwner}{objectQualifier}Tabs T ON T.TabID = TM.TabID
+	WHERE	MD.FriendlyName = N'SearchCrawlerResults'
+			AND T.PortalID = @PortalID
+			AND T.IsDeleted = 0
+END
+GO
+

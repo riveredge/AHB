@@ -1,0 +1,51 @@
+<meta name="viewport" content="width=320" />
+
+<div class="controlpanel" id="ControlPanel" runat="server" />
+
+<div class="pagemaster">
+    <div class="header">
+        <div class="headerMenu"><img src="images/menucorner.png" class="menucorner" style="display:none" alt="menucorner" /><object id="dnnNAV" codetype="dotnetnuke/server" codebase="NAV">
+	                                <param name="ProviderName" value="DNNMenuNavigationProvider" />
+	                                <param name="IndicateChildren" value="false" />
+	                                <param name="ControlOrientation" value="Horizontal" />
+									<param name="CSSControl" value="mainMenu" />
+	                            </object></div>
+        [LOGO]
+    </div>
+   
+    <div class="box">
+    <div class="userbar">[USER] [LOGIN]</div>
+        <div class="content">
+           
+            <div id="TopPane" runat="server" class="toppane"></div>
+                
+                <div id="ContentPane" runat="server" class="contentpane" />
+                <div id="RightPane" runat="server" class="rightpane"></div>
+                <div id="RightPane2" runat="server" class="rightpane2"></div>
+           
+            <div id="BottomPane" runat="server" class="bottompane"></div>
+        </div>
+         <img src="images/botl.png" alt="corner" class="cornerleft" style="display:none" />
+         <div class="whitebottom" style="display:none">&nbsp;</div>
+    </div>
+    
+    
+    <div class="bottom">
+    <div class="searchbar">[SEARCH]</div>
+  
+    </div>
+</div>
+
+<object id="StylesIE6" codetype="dotnetnuke/server" codebase="STYLES">
+        <param name="Name" value="IE6Minus" />
+        <param name="StyleSheet" value="css/ie6screen.css" />
+        <param name="Condition" value="IE 6" />
+        <param name="UseSkinPath" value="true" />
+    </object>
+    
+<object id="StylesIE7" codetype="dotnetnuke/server" codebase="STYLES">
+    <param name="Name" value="IE7Minus" />
+    <param name="StyleSheet" value="css/ie7screen.css" />
+    <param name="Condition" value="gte IE 7" />
+    <param name="UseSkinPath" value="true" />
+</object>

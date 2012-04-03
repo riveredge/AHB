@@ -1,0 +1,8 @@
+﻿.dnnEditServers{width:100%;margin:1em auto}
+#dnnEditServers li {list-style-type:none;}
+#dnnEditServers .dnnFormItem select {width:50%;}
+#dnnEditServers #editServersList ul.dnnActions {border-top: none; border-bottom: medium double #ccc; padding: 0 0 1em;}
+	.mwsEditServers .dnnLeft{width:24%;}
+		.mwsEditServers .dnnLeft .dnnServerImage{width:120px;}	
+	.mwsEditServers .dnnRight{width:74%;}
+		.mwsEditServers .dnnRight .dnnFormItem label{margin-top:0;}

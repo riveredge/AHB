@@ -1,0 +1,20 @@
+﻿<dotnetnuke type="ResourceFile" version="5.0">
+  <files>
+    <file>
+      <path>App_LocalResources/</path>
+      <name>EditServers.ascx.resx</name>
+    </file>
+    <file>
+      <path />
+      <name>EditServers.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>module.css</name>
+    </file>
+    <file>
+      <path>Images/</path>
+      <name>webServerManager.gif</name>
+    </file>
+  </files>
+</dotnetnuke>

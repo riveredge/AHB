@@ -1,0 +1,13 @@
+Dear [USER:DISPLAYNAME],
+
+We are pleased to advise that you have been added as a Registered User to [PORTAL:PORTALNAME]. Please read the following information carefully and be sure to save this message in a safe location for future reference.
+
+Portal Website Address: [PORTAL:URL]
+Username: [MEMBERSHIP:USERNAME]
+Password: [MEMBERSHIP:PASSWORD]
+
+Please take the opportunity to visit the website to review its content and take advantage of its many features.
+
+Thank you, we appreciate your support...
+
+[PORTAL:PORTALNAME]

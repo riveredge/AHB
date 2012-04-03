@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<boxSizes>
+  <boxSize name="Small" value="320x240"></boxSize>
+  <boxSize name="Medium" value="640x480"></boxSize>
+  <boxSize name="Large" value="800x600"></boxSize>
+</boxSizes>

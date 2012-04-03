@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ModuleHelp.Text" xml:space="preserve">
+    <value>&lt;h1&gt;About DocumentLibrary Module&lt;/h1&gt;&lt;p&gt;DocumentLibrary allows users to manage and share documents in a flexible, intelligent way, offering granular control over Folder and Document access.&lt;/p&gt;</value>
+  </data>
+  <data name="imgFirst.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/dgArrowLL.png</value>
+  </data>
+  <data name="imgFirst.ImageUrlOff" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/dgArrowLLOff.png</value>
+  </data>
+  <data name="imgFirst.Text" xml:space="preserve">
+    <value>first page</value>
+  </data>
+  <data name="imgPrevious.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/dgArrowL.png</value>
+  </data>
+  <data name="imgPrevious.ImageUrlOff" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/dgArrowLOff.png</value>
+  </data>
+  <data name="imgPrevious.Text" xml:space="preserve">
+    <value>previous page</value>
+  </data>
+  <data name="imgNext.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/dgArrowR.png</value>
+  </data>
+  <data name="imgNext.ImageUrlOff" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/dgArrowROff.png</value>
+  </data>
+  <data name="imgNext.Text" xml:space="preserve">
+    <value>next page</value>
+  </data>
+  <data name="imgLast.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/dgArrowRR.png</value>
+  </data>
+  <data name="imgLast.ImageUrlOff" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/dgArrowRROff.png</value>
+  </data>
+  <data name="imgLast.Text" xml:space="preserve">
+    <value>last page</value>
+  </data>
+  <data name="lblPageCount.Text" xml:space="preserve">
+    <value>page {0} of {1}</value>
+  </data>
+  <data name="DocumentName.Header" xml:space="preserve">
+    <value>Document</value>
+  </data>
+  <data name="DocumentDescription.Header" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="DocumentSize.Header" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="lblTotalRecords.Text" xml:space="preserve">
+    <value>total items </value>
+  </data>
+  <data name="lblPageSize.Text" xml:space="preserve">
+    <value>items x page </value>
+  </data>
+  <data name="lblProcessRequest.Text" xml:space="preserve">
+    <value>processing request...</value>
+  </data>
+  <data name="CategoryParent.Text" xml:space="preserve">
+    <value>Parent Category</value>
+  </data>
+  <data name="CategoryDirectUrl.Text" xml:space="preserve">
+    <value>Category Direct URL</value>
+  </data>
+  <data name="ctxAddCategory.Text" xml:space="preserve">
+    <value>add sub-category</value>
+  </data>
+  <data name="CategoryName.Text" xml:space="preserve">
+    <value>Category Name</value>
+  </data>
+  <data name="CategoryParentHelp.Text" xml:space="preserve">
+    <value>Select the parent category for the current category</value>
+  </data>
+  <data name="CategoryDirectUrlHelp.Text" xml:space="preserve">
+    <value>If linking to this page through an external link, and you only want to show the contents of this specific category (and all of its sub-categories), use the following URL.&lt;br&gt;&lt;br&gt;This URL will achieve the same results as setting the value of 'Restrict List to 1 Category' in the module settings.</value>
+  </data>
+  <data name="CategoryNameHelp.Text" xml:space="preserve">
+    <value>Enter a name for the category</value>
+  </data>
+  <data name="ctxEditCategory.Text" xml:space="preserve">
+    <value>edit category settings</value>
+  </data>
+  <data name="ctxDeleteCategory.Text" xml:space="preserve">
+    <value>delete category</value>
+  </data>
+  <data name="ctxEditCategoryRoot.Text" xml:space="preserve">
+    <value>root category settings</value>
+  </data>
+  <data name="lblDocumentGrid.Text" xml:space="preserve">
+    <value>no items found</value>
+  </data>
+  <data name="lnkByCategory.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/mCategory.png</value>
+  </data>
+  <data name="lnkByFolder.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/mFolder.png</value>
+  </data>
+  <data name="lnkByCategory.Text" xml:space="preserve">
+    <value>Show Documents organized by Category</value>
+  </data>
+  <data name="lnkByFolder.Text" xml:space="preserve">
+    <value>Show Documents organized by Folder</value>
+  </data>
+  <data name="ctxAddRoot.Text" xml:space="preserve">
+    <value>add root-folder</value>
+  </data>
+  <data name="ctxAddFolder.Text" xml:space="preserve">
+    <value>add sub-folder</value>
+  </data>
+  <data name="ctxEditFolder.Text" xml:space="preserve">
+    <value>edit folder settings</value>
+  </data>
+  <data name="ctxDeleteFolder.Text" xml:space="preserve">
+    <value>delete folder</value>
+  </data>
+  <data name="ctxEditFolderRoot.Text" xml:space="preserve">
+    <value>root folder settings</value>
+  </data>
+  <data name="FolderName.Text" xml:space="preserve">
+    <value>Folder Name</value>
+  </data>
+  <data name="FolderParent.Text" xml:space="preserve">
+    <value>Parent Folder</value>
+  </data>
+  <data name="FolderDirectUrl.Text" xml:space="preserve">
+    <value>Direct URL</value>
+  </data>
+  <data name="FolderNameHelp.Text" xml:space="preserve">
+    <value>Enter a name for the Folder</value>
+  </data>
+  <data name="FolderParentHelp.Text" xml:space="preserve">
+    <value>Select the parent folder for the current folder.</value>
+  </data>
+  <data name="FolderDirectUrlHelp.Text" xml:space="preserve">
+    <value>If linking to this page through an external link, and you only want to show the contents of this specific folder (and all of its sub-folders), use the following URL.&lt;br&gt;&lt;br&gt;This URL will achieve the same results as setting the value of 'Restrict List to 1 Folder' in the module settings.</value>
+  </data>
+  <data name="DocumentCategories.Text" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="DocumentCategoriesHelp.Text" xml:space="preserve">
+    <value>Select the categories you want to associate with the document</value>
+  </data>
+  <data name="imgAddDocument.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/tDocumentAdd.png</value>
+  </data>
+  <data name="imgAddDocument.Text" xml:space="preserve">
+    <value>add document(s)</value>
+  </data>
+  <data name="DocumentEdit.Header" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="imgEditDocument.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/tDocumentEdit.png</value>
+  </data>
+  <data name="imgEditDocument.Text" xml:space="preserve">
+    <value>edit</value>
+  </data>
+  <data name="DocumentName.Text" xml:space="preserve">
+    <value>Document Name</value>
+  </data>
+  <data name="DocumentDescription.Text" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="DocumentFolder.Text" xml:space="preserve">
+    <value>Folder</value>
+  </data>
+  <data name="DocumentNameHelp.Text" xml:space="preserve">
+    <value>Enter a name for the document</value>
+  </data>
+  <data name="DocumentDescriptionHelp.Text" xml:space="preserve">
+    <value>Enter a description for the document</value>
+  </data>
+  <data name="DocumentFolderHelp.Text" xml:space="preserve">
+    <value>Select a folder to store the document</value>
+  </data>
+  <data name="ctxAddDocument.Text" xml:space="preserve">
+    <value>add document(s)</value>
+  </data>
+  <data name="cmdUpdate.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="cmdNext.Text" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="cmdFinish.Text" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="DocumentFile.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="DocumentFileHelp.Text" xml:space="preserve">
+    <value>Select a file from your file system</value>
+  </data>
+  <data name="DocumentUnzipHelp.Text" xml:space="preserve">
+    <value>Select this option to unzip the uploaded file and create the corresponding folder structure. After unzipping the uploaded zip file, it will be removed.</value>
+  </data>
+  <data name="DocumentUnzip.Text" xml:space="preserve">
+    <value>Unzip File</value>
+  </data>
+  <data name="DocumentOverwriteHelp.Text" xml:space="preserve">
+    <value>Select this option to ovewrite existing files</value>
+  </data>
+  <data name="DocumentOverwrite.Text" xml:space="preserve">
+    <value>Overwrite File(s)</value>
+  </data>
+  <data name="hlpSecurity.Help" xml:space="preserve">
+    <value>Set security rights on folders and/or documents for every role.</value>
+  </data>
+  <data name="lblSecurity.Text" xml:space="preserve">
+    <value>Role Security</value>
+  </data>
+  <data name="lblView.Text" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="lblEdit.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="lblDelete.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="lblChangeSecurity.Text" xml:space="preserve">
+    <value>Edit &lt;br/&gt; Security</value>
+  </data>
+  <data name="SecurityInheritHelp.Text" xml:space="preserve">
+    <value>Select this option if you want this folder to inherit security permission from parent folder</value>
+  </data>
+  <data name="SecurityInherit.Text" xml:space="preserve">
+    <value>Inherit Security</value>
+  </data>
+  <data name="FolderDirectViewHelp.Text" xml:space="preserve">
+    <value>Select this option if you want this folder to be hidden from general view, unless accessed directly through the 'Direct URL' parameter provided above or through settings the value of 'Restrict List to 1 Folder' in the module settings.&lt;/br&gt;&lt;/br&gt;If the folder marked for direct view contains children, all children will also be visible, unless those children have also been marked for direct view.&lt;br&gt;&lt;br&gt;[parameter name and value: fid=nn]</value>
+  </data>
+  <data name="FolderDirectView.Text" xml:space="preserve">
+    <value>Direct Access Only</value>
+  </data>
+  <data name="CategoryDirectViewHelp.Text" xml:space="preserve">
+    <value>Select this option if you want this category to be hidden from general view, unless accessed directly through the 'Category Direct URL' parameter provided above or through settings the value of 'Restrict List to 1 Category' in the module settings.&lt;br&gt;&lt;br&gt;[parameter name and value: cid=nn]</value>
+  </data>
+  <data name="CategoryDirectView.Text" xml:space="preserve">
+    <value>Direct Access Only</value>
+  </data>
+  <data name="treeNoRootFolder.Text" xml:space="preserve">
+    <value>click to add root folder</value>
+  </data>
+  <data name="treeNoRootFolderInfo.Text" xml:space="preserve">
+    <value>There is no root folder defined. 
+			   &lt;br/&gt;The following options are availabe in order to create one:  
+			   &lt;ul&gt;&lt;li&gt;you can create a new folder by clicking on the [click to add root folder] link in the navigation tree&lt;/li&gt;
+			   &lt;li&gt;you can select a pre-existing folder by navigating to the settings of this module and in the global tab, selecting the Portal option and then a [Root Folder] from the list, or selecting the UNC Share option, and then typing the path of the folder.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Note: &lt;/b&gt;either selection will will automatically synchronize the database with the folder. All documents and child-folders in the new root folder will be included in the library.&lt;/li&gt;&lt;/ul&gt;
+		</value>
+  </data>
+  <data name="treeNoRootCategory.Text" xml:space="preserve">
+    <value>click to add root category</value>
+  </data>
+  <data name="treeNoFolders.Text" xml:space="preserve">
+    <value>Empty</value>
+  </data>
+  <data name="treeNoCategories.Text" xml:space="preserve">
+    <value>Empty</value>
+  </data>
+  <data name="lblAdd.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="lblAddDoc.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="lblEditDoc.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="lblTrackDoc.Text" xml:space="preserve">
+    <value>Enable Track</value>
+  </data>
+  <data name="treeNoFolderParent.Text" xml:space="preserve">
+    <value>Document Library</value>
+  </data>
+  <data name="treeNoCategoryParent.Text" xml:space="preserve">
+    <value>Document Library</value>
+  </data>
+  <data name="imgDownloadDocument.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/tDocumentDownload.png</value>
+  </data>
+  <data name="imgViewDocument.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/tDocumentView.png</value>
+  </data>
+  <data name="fileExists.Text" xml:space="preserve">
+    <value>File already exists. To override check 'Overwrite Existing File(s)' box.</value>
+  </data>
+  <data name="deleteDocConfirm.Text" xml:space="preserve">
+    <value>Are you sure you want to delete this Document?</value>
+  </data>
+  <data name="deleteFolderConfirm.Text" xml:space="preserve">
+    <value>Are you sure you want to delete this Folder and all of its Documents and SubFolders?</value>
+  </data>
+  <data name="lblTitleFileEdition.Text" xml:space="preserve">
+    <value>Edit Document</value>
+  </data>
+  <data name="lblTitleFileUpload.Text" xml:space="preserve">
+    <value>Upload Document</value>
+  </data>
+  <data name="deleteFolder.Text" xml:space="preserve">
+    <value>Delete Folder</value>
+  </data>
+  <data name="updateFolder.Text" xml:space="preserve">
+    <value>Edit Folder</value>
+  </data>
+  <data name="addFolder.Text" xml:space="preserve">
+    <value>Add Folder</value>
+  </data>
+  <data name="securityFolder.Text" xml:space="preserve">
+    <value>Edit Security</value>
+  </data>
+  <data name="lblDownload.Text" xml:space="preserve">
+    <value>&lt;p&gt;You are about to download a file from this site.&lt;/p&gt;
+			   &lt;p&gt;Click on the download button to start downloading.&lt;/p&gt;
+		</value>
+  </data>
+  <data name="lnkClose.Text" xml:space="preserve">
+    <value>close window</value>
+  </data>
+  <data name="errorDelete.Text" xml:space="preserve">
+    <value>Error deleting the document. Cause: </value>
+  </data>
+  <data name="errorUpdate.Text" xml:space="preserve">
+    <value>Error updating the document. Cause: </value>
+  </data>
+  <data name="errorAdd.Text" xml:space="preserve">
+    <value>Error adding the document. Cause: </value>
+  </data>
+  <data name="errorSelfPointingChild.Text" xml:space="preserve">
+    <value>Error updating the folder. Cause: the parent folder selected is the current folder
+		</value>
+  </data>
+  <data name="errorUnauthorizedParentFolder.Text" xml:space="preserve">
+    <value>Error updating the folder. Cause: you do not have enough permissions to move this folder under the selected parent folder
+		</value>
+  </data>
+  <data name="errorUnauthorizedParentCategory.Text" xml:space="preserve">
+    <value>Error updating the category. Cause: you do not have enough permissions to move this category under the selected parent category
+		</value>
+  </data>
+  <data name="errorExistingFolder.Text" xml:space="preserve">
+    <value>Error updating the folder. Cause: this folder name already exists</value>
+  </data>
+  <data name="errorExistingFolderDirectKey.Text" xml:space="preserve">
+    <value>Error updating the folder. Cause: this folder's direct key already exists, and it must be unique.</value>
+  </data>
+  <data name="errorExistingCategoryDirectKey.Text" xml:space="preserve">
+    <value>Error updating the category. Cause: this category's direct key already exists, and it must be unique.</value>
+  </data>
+  <data name="errorParentAlreadyChild.Text" xml:space="preserve">
+    <value>Error updating the folder. Cause: the parent folder selected is a child folder</value>
+  </data>
+  <data name="errorRequiredFolder.Text" xml:space="preserve">
+    <value>Error creating the folder. Cause: a folder name is required.</value>
+  </data>
+  <data name="errorUpdateFolder.Text" xml:space="preserve">
+    <value>Error updating the folder. Cause: </value>
+  </data>
+  <data name="errorSecurityFolder.Text" xml:space="preserve">
+    <value>Error updating folder security. Cause: </value>
+  </data>
+  <data name="errorDeleteFolder.Text" xml:space="preserve">
+    <value>Error deleting the folder. Cause: </value>
+  </data>
+  <data name="errorAddFolder.Text" xml:space="preserve">
+    <value>Error adding the folder. Cause: </value>
+  </data>
+  <data name="treeFolderDirectView.Text" xml:space="preserve">
+    <value>direct access only</value>
+  </data>
+  <data name="treeFolderDirectView.Help" xml:space="preserve">
+    <value>The navigation tree contains folders that have been configured to be hidden from non administrator view, unless accessed directly through the 'Direct URL' parameter in the edit folder section or through settings the value of 'Restrict List to 1 Folder' in the module settings</value>
+  </data>
+  <data name="treeCategoryDirectView.Text" xml:space="preserve">
+    <value>direct access only</value>
+  </data>
+  <data name="treeCategoryDirectView.Help" xml:space="preserve">
+    <value>The navigation tree contains categories that have been configured to be hidden from non administrator view, unless accessed directly through the 'Category Direct URL' parameter in the edit category section or through settings the value of 'Restrict List to 1 Folder' in the module settings</value>
+  </data>
+  <data name="treeFolderRestricted.Text" xml:space="preserve">
+    <value>restricted</value>
+  </data>
+  <data name="treeFolderRestricted.Help" xml:space="preserve">
+    <value>The module has been configured to show only subfolders and documents from one folder.</value>
+  </data>
+  <data name="treeCategoryRestricted.Text" xml:space="preserve">
+    <value>restricted</value>
+  </data>
+  <data name="treeCategoryRestricted.Help" xml:space="preserve">
+    <value>The module has been configured to show only subcategories and documents from one category.</value>
+  </data>
+  <data name="treeHidden.Text" xml:space="preserve">
+    <value>hidden [flat view]</value>
+  </data>
+  <data name="treeHidden.Help" xml:space="preserve">
+    <value>The module has been configured to hide the list tree to non administrator users.</value>
+  </data>
+  <data name="treeToggle.Text" xml:space="preserve">
+    <value>no toggle</value>
+  </data>
+  <data name="treeToggle.Help" xml:space="preserve">
+    <value>The module has been configured not to allow toggling between folder and category mode to non administrator users.</value>
+  </data>
+  <data name="treeFolderRequiredAdmin.Text" xml:space="preserve">
+    <value>the current settings require a folder to be specified either through settings or through url parameters</value>
+  </data>
+  <data name="treeFolderRequiredUser.Text" xml:space="preserve">
+    <value>the current settings do not allow direct access to this document library</value>
+  </data>
+  <data name="treeCategoryRequiredAdmin.Text" xml:space="preserve">
+    <value>the current settings require a category to be specified either through settings or through url parameters</value>
+  </data>
+  <data name="treeCategoryRequiredUser.Text" xml:space="preserve">
+    <value>the current settings do not allow direct access to this document library</value>
+  </data>
+  <data name="treeFolderRequiredValid.Text" xml:space="preserve">
+    <value>the specified folder does not exist</value>
+  </data>
+  <data name="treeCategoryRequiredValid.Text" xml:space="preserve">
+    <value>the specified category does not exist</value>
+  </data>
+  <data name="Help.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/Help.png</value>
+  </data>
+  <data name="Info.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/Info.png</value>
+  </data>
+  <data name="FolderOff.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/tFolderLock.png</value>
+  </data>
+  <data name="CategoryOff.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/tCategoryLock.png</value>
+  </data>
+  <data name="imgDownloadDocument.Text" xml:space="preserve">
+    <value>download</value>
+  </data>
+  <data name="deleteCategory.Text" xml:space="preserve">
+    <value>Delete Category</value>
+  </data>
+  <data name="updateCategory.Text" xml:space="preserve">
+    <value>Edit Category</value>
+  </data>
+  <data name="addCategory.Text" xml:space="preserve">
+    <value>Add Category</value>
+  </data>
+  <data name="securityCategory.Text" xml:space="preserve">
+    <value>Edit Security</value>
+  </data>
+  <data name="errorCategorySelfPointingChild.Text" xml:space="preserve">
+    <value>Error updating the category. Cause:  The parent category selected is the current category</value>
+  </data>
+  <data name="errorExistingCategory.Text" xml:space="preserve">
+    <value>Error updating the category. Cause:  This category name already exists</value>
+  </data>
+  <data name="errorCategoryParentAlreadyChild.Text" xml:space="preserve">
+    <value>Error updating the category. Cause:  The parent category selected is a child category</value>
+  </data>
+  <data name="errorUpdateCategory.Text" xml:space="preserve">
+    <value>Error updating the category. Cause: </value>
+  </data>
+  <data name="errorSecurityCategory.Text" xml:space="preserve">
+    <value>Error updating category security. Cause: </value>
+  </data>
+  <data name="errorDeleteCategory.Text" xml:space="preserve">
+    <value>Error deleting the category. Cause: </value>
+  </data>
+  <data name="errorAddCategory.Text" xml:space="preserve">
+    <value>Error adding the category. Cause: </value>
+  </data>
+  <data name="deleteCategoryConfirm.Text" xml:space="preserve">
+    <value>Are you sure you want to delete this Category and all of its SubCategories?</value>
+  </data>
+  <data name="lnkGeneral.Text" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="lnkSecurity.Text" xml:space="preserve">
+    <value>Security</value>
+  </data>
+  <data name="lblDownloadTitle.Text" xml:space="preserve">
+    <value>File Download</value>
+  </data>
+  <data name="lblDownloadButton.Text" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="plModuleStyle.Text" xml:space="preserve">
+    <value>Style</value>
+  </data>
+  <data name="plModuleStyle.Help" xml:space="preserve">
+    <value>Select the Style of the module</value>
+  </data>
+  <data name="actionStats.Text" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="actionStatsDoc.Text" xml:space="preserve">
+    <value>by Document</value>
+  </data>
+  <data name="actionStatsFol.Text" xml:space="preserve">
+    <value>by Folder</value>
+  </data>
+  <data name="actionStatsCat.Text" xml:space="preserve">
+    <value>by Category</value>
+  </data>
+  <data name="actionStatsDoc2.Text" xml:space="preserve">
+    <value>Stats by Document</value>
+  </data>
+  <data name="actionStatsFol2.Text" xml:space="preserve">
+    <value>Stats by Folder</value>
+  </data>
+  <data name="actionStatsCat2.Text" xml:space="preserve">
+    <value>Stats by Category</value>
+  </data>
+  <data name="lblFolderDirectAccess.Text" xml:space="preserve">
+    <value>URL Access</value>
+  </data>
+  <data name="hlpFolderDirectAccess.Help" xml:space="preserve">
+    <value>This group of attributes determines if and how a folder can be accessed directly through a URL</value>
+  </data>
+  <data name="FolderDirectKey.Text" xml:space="preserve">
+    <value>Direct Access Key</value>
+  </data>
+  <data name="FolderDirectKeyHelp.Text" xml:space="preserve">
+    <value>If you want to key protect this folder, enter a unique key. In order to access the folder, the key will be a required parameter in the URL.&lt;br&gt;&lt;br&gt;[parameter name and value: fk=nn]</value>
+  </data>
+  <data name="lblCategoryDirectAccess.Text" xml:space="preserve">
+    <value>Category Access</value>
+  </data>
+  <data name="hlpCategoryDirectAccess.Help" xml:space="preserve">
+    <value>This group of attributes determines if and how a folder can be accessed directly through a url</value>
+  </data>
+  <data name="CategoryDirectKey.Text" xml:space="preserve">
+    <value>Direct Access Key</value>
+  </data>
+  <data name="CategoryDirectKeyHelp.Text" xml:space="preserve">
+    <value>If you want to key protect this category, enter a unique key. In order to access the folder, the key will be a required parameter in the URL.&lt;br&gt;&lt;br&gt;[parameter name and value: ck=nn]</value>
+  </data>
+  <data name="lblFolder.Text" xml:space="preserve">
+    <value>Folder</value>
+  </data>
+  <data name="lblDocument.Text" xml:space="preserve">
+    <value>Document</value>
+  </data>
+  <data name="lblRole.Text" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="SecurityUserHelp.Text" xml:space="preserve">
+    <value>Set security rights on folders and/or documents for every user.</value>
+  </data>
+  <data name="SecurityUser.Text" xml:space="preserve">
+    <value>User Security</value>
+  </data>
+  <data name="lblSecurityUserEdit.Text" xml:space="preserve">
+    <value>[to add user security, add the folder first]</value>
+  </data>
+  <data name="lblFolderU.Text" xml:space="preserve">
+    <value>Folder</value>
+  </data>
+  <data name="lblDocumentU.Text" xml:space="preserve">
+    <value>Document</value>
+  </data>
+  <data name="lblUser.Text" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="UserName.Header" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="FirstName.Header" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="LastName.Header" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="cmdSelect.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/Details.png</value>
+  </data>
+  <data name="cmdSelect.AlternateText" xml:space="preserve">
+    <value>select user</value>
+  </data>
+  <data name="UserLetterFilter.Text" xml:space="preserve">
+    <value>A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z</value>
+  </data>
+  <data name="imgSecurityUser.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/User.png</value>
+  </data>
+  <data name="imgSecurityUser.AlternateText" xml:space="preserve">
+    <value>select a user</value>
+  </data>
+  <data name="valSecurityUserUser.ErrorMessage" xml:space="preserve">
+    <value>user not found</value>
+  </data>
+  <data name="cmdAddUser.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/Add.png</value>
+  </data>
+  <data name="cmdAddUser.Text" xml:space="preserve">
+    <value>add user</value>
+  </data>
+  <data name="cmdDeleteUser.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/Delete.png</value>
+  </data>
+  <data name="cmdDeleteUser.Text" xml:space="preserve">
+    <value>delete user</value>
+  </data>
+  <data name="DocumentVersionsHelp.Text" xml:space="preserve">
+    <value>View version information for this document.</value>
+  </data>
+  <data name="DocumentVersions.Text" xml:space="preserve">
+    <value>Document Versioning</value>
+  </data>
+  <data name="cmdDocVerView.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/Disks.png</value>
+  </data>
+  <data name="cmdDocVerView.AlternateText" xml:space="preserve">
+    <value>version info</value>
+  </data>
+  <data name="cmdDocVerAdd.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/DisksAdd.png</value>
+  </data>
+  <data name="cmdDocVerAdd.AlternateText" xml:space="preserve">
+    <value>save this document as a new version</value>
+  </data>
+  <data name="cmdRestore.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/DiskRestore.png</value>
+  </data>
+  <data name="cmdRestore.AlternateText" xml:space="preserve">
+    <value>restore</value>
+  </data>
+  <data name="cmdDestroy.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/Delete2.png</value>
+  </data>
+  <data name="cmdDestroy.AlternateText" xml:space="preserve">
+    <value>delete permanently</value>
+  </data>
+  <data name="cmdRestore.Text" xml:space="preserve">
+    <value>Are you sure you want to restore this item?</value>
+  </data>
+  <data name="cmdDestroy.Text" xml:space="preserve">
+    <value>Are you sure you want to delete this item permanently?</value>
+  </data>
+  <data name="errorRestoreNoVersionDoc.Text" xml:space="preserve">
+    <value>Error restoring the item. Cause: no version to restore</value>
+  </data>
+  <data name="errorRestoreNoActiveDoc.Text" xml:space="preserve">
+    <value>Error restoring the item. Cause: no active document exists for this document version.</value>
+  </data>
+  <data name="alertRestoreSuccess.Text" xml:space="preserve">
+    <value>Success. This item has been restored succesfully.</value>
+  </data>
+  <data name="alertRestoreFailure.Text" xml:space="preserve">
+    <value>Error restoring the item. Cause:</value>
+  </data>
+  <data name="errorDestroyNoVersionDoc.Text" xml:space="preserve">
+    <value>Error deleting the item. Cause: no version to delete</value>
+  </data>
+  <data name="errorDestroyFailure.Text" xml:space="preserve">
+    <value>Error deleting the item. Cause: </value>
+  </data>
+  <data name="alertDestroySuccess.Text" xml:space="preserve">
+    <value>Success. This item has been deleted succesfully.</value>
+  </data>
+  <data name="warningAsyncSyncAdmin.Text" xml:space="preserve">
+    <value>&lt;strong&gt;A file synchronization process is still running.&lt;/strong&gt;&lt;br&gt;&lt;br&gt;As a consequence, you may not be seeing the most up to date information until the process has completed.&lt;br&gt;&lt;br&gt;To see the status of the synchronization process, please go to the module settings and under the globals tab, click on the Synchronization Log icon.</value>
+  </data>
+  <data name="warningAsyncSync.Text" xml:space="preserve">
+    <value>a file synchronization process is running. Not all data may be up to date.</value>
+  </data>
+  <data name="errorRootFolderAdmin.Text" xml:space="preserve">
+    <value>&lt;strong&gt;Error while updating the Root Folder.&lt;br&gt;No changes were made.&lt;/strong&gt;&lt;br&gt;&lt;br&gt;Possible Causes:&lt;ul&gt;&lt;li&gt;The ASP.NET/Network Services user, does not have appropriate permissions on the directory you are trying to seet as the Root Folder&lt;/li&gt;&lt;li&gt;The Directory Path is incorrect&lt;/li&gt;&lt;/ul&gt;</value>
+  </data>
+  <data name="errorRootFolder.Text" xml:space="preserve">
+    <value>error while updating the Root Folder. No changes were made.</value>
+  </data>
+  <data name="Uploaded.Header" xml:space="preserve">
+    <value>Uploaded</value>
+  </data>
+  <data name="Modified.Header" xml:space="preserve">
+    <value>Modified</value>
+  </data>
+  <data name="DocumentUploadedHelp.Text" xml:space="preserve">
+    <value>Upload Information includes: Upload Date, User Login Name, User Full Name</value>
+  </data>
+  <data name="DocumentUploaded.Text" xml:space="preserve">
+    <value>Upload Info</value>
+  </data>
+  <data name="DocumentModifiedHelp.Text" xml:space="preserve">
+    <value>Modified Information includes: Modified Date, User Login Name, User Full Name</value>
+  </data>
+  <data name="DocumentModified.Text" xml:space="preserve">
+    <value>Modified Info</value>
+  </data>
+  <data name="errorAddExtension.Text" xml:space="preserve">
+    <value>current settings (module or host) do not allow this file extension</value>
+  </data>
+  <data name="errorDownloadFileDoc.Text" xml:space="preserve">
+    <value>Error while downloading this file. Cause: The file with id:{0} does not exist in the database.</value>
+  </data>
+  <data name="errorDownloadFileSec.Text" xml:space="preserve">
+    <value>Error while downloading this file. Cause: Appropriate security credentials missing.</value>
+  </data>
+  <data name="cmdTrack.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/Mail.png</value>
+  </data>
+  <data name="cmdTrack.Text" xml:space="preserve">
+    <value>currently tracking. click to turn off [at folder level]</value>
+  </data>
+  <data name="cmdTrackNo.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/MailOff.png</value>
+  </data>
+  <data name="cmdTrackNo.Text" xml:space="preserve">
+    <value>not tracking. click to turn on [at folder level]</value>
+  </data>
+  <data name="cmdTrackNoLogin.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/MailOffLock.png</value>
+  </data>
+  <data name="cmdTrackNoLogin.Text" xml:space="preserve">
+    <value>tracking [for the whole folder] enabled for logged in users</value>
+  </data>
+  <data name="trackSubject.Text" xml:space="preserve">
+    <value>DocumentLibrary: Document(s) Change Alert</value>
+  </data>
+  <data name="trackBody.Text" xml:space="preserve">
+    <value>The following document(s) have changed on site {0}: {1}</value>
+  </data>
+  <data name="lblModerate.Text" xml:space="preserve">
+    <value>Enable Moderate</value>
+  </data>
+  <data name="folderModerateNoUnzip.Text" xml:space="preserve">
+    <value>Cannot unzip a file in a moderated folder. If needed, please upload files in the .zip package individually.</value>
+  </data>
+  <data name="uploadModerateFolConfirm.Text" xml:space="preserve">
+    <value>Moderated folder upload. All uploaded documents will be reviewed before being published.</value>
+  </data>
+  <data name="lblTitleModerate.Text" xml:space="preserve">
+    <value>&amp;nbsp;-&amp;nbsp;Moderated </value>
+  </data>
+  <data name="updateDocConfirm.Text" xml:space="preserve">
+    <value>Moderated folder edit. All edits will be reviewed before being published.</value>
+  </data>
+  <data name="moderateSubject.Text" xml:space="preserve">
+    <value>DocumentLibrary: Document(s) Moderate Alert</value>
+  </data>
+  <data name="moderateBody.Text" xml:space="preserve">
+    <value>The following document(s) need moderation on site {0}: {1}</value>
+  </data>
+  <data name="actionTools.Text" xml:space="preserve">
+    <value>tools</value>
+  </data>
+  <data name="actionModerate.Text" xml:space="preserve">
+    <value>Moderate</value>
+  </data>
+  <data name="actionModerateAll.Text" xml:space="preserve">
+    <value>all Items</value>
+  </data>
+  <data name="actionModerateMine.Text" xml:space="preserve">
+    <value>my Items</value>
+  </data>
+  <data name="actionTrack.Text" xml:space="preserve">
+    <value>Tracked Items</value>
+  </data>
+  <data name="lblTrack.Text" xml:space="preserve">
+    <value>Enable Track</value>
+  </data>
+  <data name="lblDocumentImage.Text" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="hlpDocumentImage.Help" xml:space="preserve">
+    <value>Enter the URL of the image associated with the document</value>
+  </data>
+  <data name="trackFolderOnConfirm.Text" xml:space="preserve">
+    <value>You are about to enable document tracking on the entire folder.\nYou will be notified of changes to all existing items, as well as new item uploads.</value>
+  </data>
+  <data name="trackFolderOffConfirm.Text" xml:space="preserve">
+    <value>You are about to disable document tracking on the entire folder.\nYou will be no longer receive notification on any item changes or uploads.</value>
+  </data>
+  <data name="cmdTrackDoc.Text" xml:space="preserve">
+    <value>currently tracking. click to turn off</value>
+  </data>
+  <data name="cmdTrackDocNo.Text" xml:space="preserve">
+    <value>not tracking. click to turn on</value>
+  </data>
+  <data name="cmdTrackDocNoLogin.Text" xml:space="preserve">
+    <value>tracking enabled for logged in users</value>
+  </data>
+  <data name="imgWebDavDocument.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/tDocumentWebDav.png</value>
+  </data>
+  <data name="imgWebDavDocument.Text" xml:space="preserve">
+    <value>open on server</value>
+  </data>
+  <data name="imgPlay.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/tDocumentView.png</value>
+  </data>
+  <data name="imgPlay.Text" xml:space="preserve">
+    <value>display media</value>
+  </data>
+  <data name="UploadProgressHelp.Text" xml:space="preserve">
+    <value>Huge files could take a long time to upload so please be patient.</value>
+  </data>
+  <data name="UploadProgress.Text" xml:space="preserve">
+    <value>Upload Progress</value>
+  </data>
+  <data name="fileBeingModerated.Text" xml:space="preserve">
+    <value>File being moderated. While a document is being reviewed, it cannot be overwritten.</value>
+  </data>
+  <data name="errorActiveXGeneral.Text" xml:space="preserve">
+    <value>The following error has occurred:</value>
+  </data>
+  <data name="errorActiveXSettings.Text" xml:space="preserve">
+    <value>error: ActiveX settings do not seem to be properly enabled.</value>
+  </data>
+  <data name="imgPlayOff.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/DocumentLibrary/images/tDocumentViewOff.png</value>
+  </data>
+  <data name="DocumentDateExpirationHelp.Text" xml:space="preserve">
+    <value>Enter a expiration date for the document</value>
+  </data>
+  <data name="DocumentDateExpiration.Text" xml:space="preserve">
+    <value>Expiration Date</value>
+  </data>
+  <data name="cmdClearExpirationDate.Text" xml:space="preserve">
+    <value>Clear Expiration Date</value>
+  </data>
+  <data name="lblExpirationDateCleared.Text" xml:space="preserve">
+    <value>The expiration date has been cleared</value>
+  </data>
+  <data name="CategoryDirectViewSettings.Text" xml:space="preserve">
+    <value>Direct View Settings</value>
+  </data>
+  <data name="CategoryGeneralSettings.Text" xml:space="preserve">
+    <value>General Settings</value>
+  </data>
+  <data name="CategorySecuritySettings.Text" xml:space="preserve">
+    <value>Security Settings</value>
+  </data>
+  <data name="CategorySettings.Text" xml:space="preserve">
+    <value>Category Settings</value>
+  </data>
+  <data name="FolderDirectViewSettings.Text" xml:space="preserve">
+    <value>Direct View Settings</value>
+  </data>
+  <data name="FolderGeneralSettings.Text" xml:space="preserve">
+    <value>General Settings</value>
+  </data>
+  <data name="FolderSecuritySettings.Text" xml:space="preserve">
+    <value>Security Settings</value>
+  </data>
+  <data name="FolderSettings.Text" xml:space="preserve">
+    <value>Folder Settings</value>
+  </data>
+  <data name="RoleSecurity.Text" xml:space="preserve">
+    <value>Role Security</value>
+  </data>
+  <data name="RoleSecurityHelp.Text" xml:space="preserve">
+    <value>Set security rights on folders and/or documents for every role.</value>
+  </data>
+</root>

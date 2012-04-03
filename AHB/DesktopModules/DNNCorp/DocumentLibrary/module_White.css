@@ -1,0 +1,162 @@
+/* ================================
+CSS STYLES FOR help
+================================ */
+.help{background-color: #ffffcc;border-right: 1px solid;border-top: 1px solid;border-left: 1px solid;border-bottom: 1px solid;padding-bottom: 5px;padding-top: 5px;padding-right: 5px;padding-left: 5px;}
+/* ================================
+CSS STYLES FOR tabs
+================================ */
+#divTabStripsStyle{width: 100%;}
+#divTabStripsStyle div{width: 86px;height: 22px;float: left;margin-right: 4px;}
+#divTabStripsStyle div a{display: inline;text-align: center;text-decoration: none;font: bold 10px Arial; /*tab font */color: black; /*font color */width: 86px; /*width of tab image */height: 22px; /*height of tab image */float: left;padding-top: 4px; /*vertical offset of tab text from top of tab*/background-image: url(images/Tab.png); /*URL to tab image */background-repeat: no-repeat;}
+#divTabStripsStyle a:hover, #divTabStripsStyle a.current{background-image: url(images/TabOn.png); /*URL to tab image onmouseover */color: black;}
+#divTabContentStyle{display: block;margin-top: 0px;clear: left;border: solid 1px #cccccc; /*width: 84%; /*width of 2nd level content*/width: 100%;padding: 5px; /*background-color: #9EBEF5;*/}
+.tabcontent{display: none;}
+/* ================================
+CSS STYLES FOR module layout
+================================ */
+.OT{}
+.OTTR1{display: none;}
+.OTTD1_1{}
+.OTTD1_2{}
+.OTTD1_3{}
+.OTTR2{}
+.OTTD2_1{display: none;}
+.OTTD2_2{}
+.OTTD2_3{display: none;}
+.OTTR3{display: none;}
+.OTTD3_1{}
+.OTTD3_2{}
+.OTTD3_3{}
+.Box100{font-family: Tahoma, Arial, Helvetica;font-size: 12px;font-weight: normal;width: 100%;min-width: 100px;}
+.Box95{font-family: Tahoma, Arial, Helvetica;font-size: 12px;font-weight: normal;width: 95%;min-width: 100px;}
+.Tree{border-right: solid 1px #c6c6c6;}
+.OuterTable{padding: 0 0 0 1;background-color: White;}
+.OuterTableTree{border: solid 1px #cccccc;height: 100%;padding-right: 5px;}
+.Details{width: 100%;}
+/* ================================
+CSS STYLES FOR white toolbar
+================================ */
+.StatusBar{border-top: #cccccc 1px solid;margin-top: 2px;height: 25px;}
+.ToolbarBackgroundTop{border: #808080 1px solid;width: 100%;height: 25px;padding-bottom: 0px;margin-bottom: 1px;font-family: Tahoma;font-size: 11px;font-weight: bold;color: gray;}
+.ToolbarBackgroundBottom{border: #808080 1px solid;width: 100%;height: 25px;padding-top: 0px;margin-top: 1px;font-family: Tahoma;font-size: 11px;font-weight: bold;color: gray;}
+.ToolbarLeft{padding-right: 5px;}
+.ToolbarRight{padding-left: 5px;}
+/* ================================
+CSS STYLES FOR text
+================================ */
+.dgTxt{font-size: 11px;color: #000000;font-family: Arial, Verdana, Sans-Serif;vertical-align: top;}
+.dgTxt a:hover{text-decoration: none;color: #66a4e5;}
+.dgTxtGrey{font-size: 11px;color: #c0c0c0;font-family: Arial, Verdana, Sans-Serif;}
+.dgTxtS{font-size: 9px;color: #000000;font-family: Arial, Verdana, Sans-Serif;}
+.dgTxtS a:hover{text-decoration: none;color: #66a4e5;}
+.dgTxtB{font-weight: bold;font-size: 11px;color: #000000;font-family: Arial, Verdana, Sans-Serif;}
+.dgTxtB a:hover{text-decoration: none;color: #3c9dfd;}
+.dgTxtB a:link{text-decoration: none;color: #333333;}
+.dgTxtBm{font-weight: bold;font-size: 13px;color: #000000;font-family: Arial, Verdana, Sans-Serif;}
+.dgTxtBm a:hover{text-decoration: none;color: #66a4e5;}
+.dgTxtR{text-decoration: none;font-family: Verdana,Arial;font-size: 8pt;font-weight: normal;color: #242424;margin-top: 20px;}
+.dgTxtR:hover{text-decoration: none;color: #66a4e5;font-family: Verdana,Arial;font-size: 8pt;font-weight: normal;text-decoration: none;}
+/* ================================
+CSS STYLES FOR input & combo boxes
+================================ */
+.dgBox{font-size: 9px;font-family: Arial, Verdana, Sans-Serif;}
+.dlRadioButtonList label{width: auto;}
+/* ================================
+CSS STYLES FOR tables
+================================ */
+.dgTblInt{font-size: 11px;color: #242424;font-family: Arial, Verdana, Sans-Serif;vertical-align: top;}
+.dgTblInt a:hover{text-decoration: none;color: gainsboro;}
+.dgTbl{border: solid 1px #bde1ff;background-color: white;}
+.dgTbl TD{border-bottom: solid 1px #b8b8b8;}
+.dgTblInt TD{border-bottom: solid 0px;}
+.dgTblH{background-color: gainsboro;}
+.dgTblF{border-right: gainsboro thin solid 1px;border-left: gainsboro thin solid 1px;border-bottom: gainsboro thin solid 1px;background-color: #ffffff;}
+.dgRowH{/*background-color: ghostwhite;*/background-color: #dcdcea;}
+.dgDBar{background-color: #ffffff;}
+.dgRowExpired{background-color: #EEEEEE;border-style: dashed;border-width: 2px;border-color: #777777;}
+/* ================================
+CSS STYLES FOR Tree
+================================ */
+a.prnnode{font-family: Verdana,Arial;font-size: 8pt;font-weight: normal;color: #660066;text-decoration: none;cursor: pointer;padding: 1px 2px 1px 2px;}
+a.prnnode:hover{background-color: #ffffff;font-weight: normal;}
+a.node{font-family: Verdana,Arial;font-size: 8pt;color: #660066;text-decoration: none;cursor: pointer;padding: 1px 2px 1px 2px;}
+a.node:hover{background-color: #ffffff;text-decoration: underline;}
+a.selnode{font-family: Verdana,Arial;font-size: 8pt;background-color: #FFFFFF;color: #660066;text-decoration: none;cursor: pointer;padding: 1px 2px 1px 2px;}
+a.selnode:hover{}
+a.selprnnode{font-family: Verdana,Arial;font-size: 8pt;background-color: #FFFFFF;color: #660066;text-decoration: none;cursor: pointer;padding: 1px 2px 1px 2px;font-weight: normal;}
+a.selprnnode:hover{}
+div.row{font-family: Verdana,Arial;font-size: 8pt;color: #660066;text-decoration: none;cursor: pointer;padding: 1px;}
+div.row:hover{font-weight: bold;}
+div.selrow{font-family: Verdana,Arial;font-size: 8pt;background-color: #ffffff;color: #660066;text-decoration: none;cursor: pointer;font-weight: normal;border: #c0c0c0 1px solid;}
+div.selrow:hover{}
+input.nodeedit{font-family: Verdana,Arial;font-size: 8pt;color: #666666;text-decoration: none;position: absolute;height: 20px;border: #cfcfcf 1px solid;z-index: 1;}
+input.nodeedit:hover{}
+/* ================================
+CSS STYLES FOR Tree Context Menu
+=================================*/
+.ctxmenu{position: absolute;border-top: #dddddd 1px solid;border-left: #dddddd 1px solid;border-bottom: #999999 1px solid;border-right: #999999 1px solid;z-index: 1;background-color: #ffffff;padding: 1px 1px 1px 1px;}
+.ctxsidebar{background-color: #f0f0f0;width: 25px;cursor: pointer;}
+.ctxtext{font-family: Verdana,Arial;font-size: 8pt;color: #333333;cursor: pointer;text-decoration: none;}
+.ctxitem{background-color: #ffffff;padding: 3px 5px 3px 5px;cursor: pointer;}
+.ctxitemover{background-color: #f0f0f0;padding: 3px 5px 3px 5px;cursor: pointer;}
+.ctxsidebarover{background-color: #f0f0f0;width: 25px;cursor: pointer;}
+.ctxtextover{font-family: Verdana,Arial;font-size: 8pt;color: #333333;cursor: pointer;text-decoration: none;}
+.ctxtextdisable{font-family: Verdana,Arial;font-size: 8pt;color: #999999;cursor: pointer;text-decoration: none;}
+.ctxtextoverdisable{font-family: Verdana,Arial;font-size: 8pt;color: #999999;cursor: pointer;text-decoration: none;}
+.ctxseparator{border-top: #cccccc 1px solid;font-size: 1px;}
+/* ================================
+CSS STYLES FOR Download Window
+================================*/
+.boxpanel{margin: 0 auto; /* center for now */width: 17em; /* ems so it will grow */background-color: White;font-size: 100%;width: 320;}
+.boxhead{background-color: White;margin: 0 -2px 0 0;padding: 0;text-align: center;height: 24px;width: 100%;}
+.boxhead h2{background-color: White;margin: 0;padding: 7px 0 2px 15px;font-weight: bold;text-align: left;font-family: "Trebuchet MS" , verdana, arial;font-size: 10px;color: #378080;}
+.boxbody{background-color: White;padding: 0 2px 0 0;margin: 0;}
+.boxfooter{height: 15px;background-color: White;margin: 0;padding: 5px 0 2px 15px;}
+.boxcontent{overflow: auto;padding: 0;margin-right: 3px;margin-left: 2px;background-image: url(images/box_bg.jpg);text-align: left;height: 275;}
+/* ================================
+CSS STYLES FOR tools menu
+================================ */
+.tools_nlsmenu{z-index: 1;}
+.tools_nlsitem{font-family: verdana;font-size: 8pt;color: #000000;padding: 2px 5px 2px 5px;}
+.tools_nlsitemover{font-family: verdana;font-size: 8pt;color: #000000;padding: 2px 5px 2px 5px;}
+.nlsmenu{border-top: #dddddd 1px solid;border-left: #dddddd 1px solid;border-bottom: #999999 1px solid;border-right: #999999 1px solid;z-index: 1;background-color: #ffffff;padding: 1px 1px 1px 1px;}
+.nlsiconcell{background-color: #f0f0f0;width: 25px;cursor: pointer;}
+.nlsiconcellover{background-color: #f0f0f0;width: 25px;cursor: pointer;}
+.nlsiconcellsel{width: 20px;}
+.nlsitem{font-family: verdana;font-size: 8pt;color: #000000;padding: 0px 5px 2px 5px;}
+.nlsitemover{font-family: verdana;font-size: 8pt;color: #000000;padding: 0px 5px 2px 5px;}
+.nlssubmenucell{width: 20px;}
+.nlssubmenucellover{width: 20px;}
+.nlssubmenucellsel{width: 20px;}
+.nlsitemcontainer{height: 20px;padding: 0px;}
+.nlsitemcontainerover{height: 20px;padding: 0px;background-color: #f0f0f0;}
+.nlsitemcontainersel{height: 20px;background-color: #f0f0f0;}
+.nlsitemsel{font-family: verdana;font-size: 8pt;color: #000000;padding: 2px 10px 2px 10px;}
+.nlsitemdisable{font-family: verdana;font-size: 8pt;color: #999999;padding: 2px 5px 2px 5px;}
+.nlsseparatorcontainer{padding-left: 25px;}
+.nlsseparator{height: 3px;background-image: url(img/hseparator.gif);background-position: center center;background-repeat: repeat-x;}
+.mtopleft{height: 0px;width: 0px;}
+.mtopright{height: 0px;width: 0px;}
+.mbottomleft{width: 0px;height: 0px;}
+.mbottomright{width: 0px;height: 0px;}
+.mtop{height: 0px;}
+.mbottom{height: 0px;}
+.mleft{width: 0px;}
+.mright{width: 0px;}
+/* ================================
+CSS STYLES FOR WYSIWYG
+================================ */
+.toolbar1{border: 1px solid #666666;height: 26px;}
+.toolbar2{border: 1px solid #666666;height: 24px;border-bottom: 0px;border-top: 0px;}
+.button{width: 20px;height: 20px;border: 0px solid transparent;margin: 1px;padding: 0px;background: transparent;}
+.buttonOver{width: 20px;height: 20px;border: 1px solid #999999;margin: 0;padding: 0px;}
+.dropdown{background-color: #FFFFFF;border: 1px solid #333333;height: 140px;overflow: auto;padding: 1px;}
+button.mouseOver{background-color: #EEEEEE;border: 1px solid #CCCCCC;padding: 3px;cursor: default;text-align: left;}
+button.mouseOut{background-color: #FFFFFF;border: 1px solid #FFFFFF;padding: 3px;cursor: default;text-align: left;}
+.on{background-color: #EEEEEE;border: 1px solid #CCCCCC;padding: 6px;width: 140px;cursor: default;height: 5px;}
+.off{background-color: #FFFFFF;border: 1px solid #FFFFFF;padding: 6px;width: 140px;cursor: default;height: 5px;}
+.selectColorTable{border: 1px solid #7E7E81;background-color: #F7F7F7;padding: 1px;}
+.selectColorBorder{border: 1px solid #F7F7F7;}
+.selectColorOn{border: 1px solid #999999;background-color: #CCCCCC;}
+.selectColorOff{border: 1px solid #F7F7F7;background-color: #F7F7F7;}
+.selectColorBox{border: 1px solid #FFFFFF;font-size: 1px;height: 13px;width: 13px;}

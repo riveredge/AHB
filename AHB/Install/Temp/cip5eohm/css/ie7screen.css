@@ -1,0 +1,75 @@
+body
+{
+	text-align:center;
+}
+
+.pagemaster
+{
+	width:920px;
+}
+
+img.cornerleft{
+   	border: none;
+   	display: block !important;
+   	position:relative;
+   	bottom:0px;
+   	left:-10px;
+   	float:left;
+   	z-index:10;
+}
+
+.box{
+	background:#3c90cb url(../images/botr.png) no-repeat bottom right;
+	padding:0px 10px 20px 10px;
+	z-index:1;
+	position:relative;
+}
+
+.content
+{
+	position:relative;
+	z-index:2;
+}
+
+
+
+.whitebottom
+{
+	background-color:White;
+	display: block !important;
+	position:absolute;
+   	width:900px;
+    	font-size:0px;
+   	height:10px;
+	float:left;
+	z-index:9;
+	left:0;
+}
+
+#dnn_dnnLOGO_imgLogo
+{
+	position:relative;
+	top:15px;
+	left:0px;
+}
+
+.headerMenu
+{
+
+	position:relative;
+	top:0;
+	float:right;
+	height:27px;
+	padding:3px 0 0 0;
+}
+
+.menucorner
+{
+	display:block !important;
+	position:relative;
+	top:-3px;
+	left:-30px;
+	padding:0;
+	margin:0;
+	float:left;
+}

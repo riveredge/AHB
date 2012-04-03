@@ -1,0 +1,191 @@
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/* Add New Tab Permissions */
+/***************************/
+
+IF (SELECT COUNT(*) FROM {databaseOwner}{objectQualifier}Permission WHERE PermissionCode = 'SYSTEM_TAB' AND PermissionKey = 'ADD') = 0
+	BEGIN
+		INSERT INTO {databaseOwner}{objectQualifier}Permission ([PermissionCode],[ModuleDefID],[PermissionKey],[PermissionName], ViewOrder)
+			 VALUES ('SYSTEM_TAB',-1,'ADD','Add', 1)
+		INSERT INTO {databaseOwner}{objectQualifier}Permission ([PermissionCode],[ModuleDefID],[PermissionKey],[PermissionName], ViewOrder)
+			 VALUES ('SYSTEM_TAB',-1,'CONTENT','Add Content', 2)
+		INSERT INTO {databaseOwner}{objectQualifier}Permission ([PermissionCode],[ModuleDefID],[PermissionKey],[PermissionName], ViewOrder)
+			 VALUES ('SYSTEM_TAB',-1,'COPY','Copy', 3)
+		INSERT INTO {databaseOwner}{objectQualifier}Permission ([PermissionCode],[ModuleDefID],[PermissionKey],[PermissionName], ViewOrder)
+			 VALUES ('SYSTEM_TAB',-1,'DELETE','Delete', 4)
+		INSERT INTO {databaseOwner}{objectQualifier}Permission ([PermissionCode],[ModuleDefID],[PermissionKey],[PermissionName], ViewOrder)
+			 VALUES ('SYSTEM_TAB',-1,'EXPORT','Export', 5)
+		INSERT INTO {databaseOwner}{objectQualifier}Permission ([PermissionCode],[ModuleDefID],[PermissionKey],[PermissionName], ViewOrder)
+			 VALUES ('SYSTEM_TAB',-1,'IMPORT','Import', 6)
+		INSERT INTO {databaseOwner}{objectQualifier}Permission ([PermissionCode],[ModuleDefID],[PermissionKey],[PermissionName], ViewOrder)
+			 VALUES ('SYSTEM_TAB',-1,'MANAGE','Manage Settings', 7)
+		INSERT INTO {databaseOwner}{objectQualifier}Permission ([PermissionCode],[ModuleDefID],[PermissionKey],[PermissionName], ViewOrder)
+			 VALUES ('SYSTEM_TAB',-1,'NAVIGATE','Navigate', 8)
+	END
+GO
+
+/* Add New Module Permissions */
+/******************************/
+
+IF (SELECT COUNT(*) FROM {databaseOwner}{objectQualifier}Permission WHERE PermissionCode = 'SYSTEM_MODULE_DEFINITION' AND PermissionKey = 'CONTENT') = 0
+	BEGIN
+		INSERT INTO {databaseOwner}{objectQualifier}Permission ([PermissionCode],[ModuleDefID],[PermissionKey],[PermissionName], ViewOrder)
+			 VALUES ('SYSTEM_MODULE_DEFINITION',-1,'CONTENT','Edit Content', 1)
+		INSERT INTO {databaseOwner}{objectQualifier}Permission ([PermissionCode],[ModuleDefID],[PermissionKey],[PermissionName], ViewOrder)
+			 VALUES ('SYSTEM_MODULE_DEFINITION',-1,'DELETE','Delete', 2)
+		INSERT INTO {databaseOwner}{objectQualifier}Permission ([PermissionCode],[ModuleDefID],[PermissionKey],[PermissionName], ViewOrder)
+			 VALUES ('SYSTEM_MODULE_DEFINITION',-1,'EXPORT','Export', 3)
+		INSERT INTO {databaseOwner}{objectQualifier}Permission ([PermissionCode],[ModuleDefID],[PermissionKey],[PermissionName], ViewOrder)
+			 VALUES ('SYSTEM_MODULE_DEFINITION',-1,'IMPORT','Import', 4)
+		INSERT INTO {databaseOwner}{objectQualifier}Permission ([PermissionCode],[ModuleDefID],[PermissionKey],[PermissionName], ViewOrder)
+			 VALUES ('SYSTEM_MODULE_DEFINITION',-1,'MANAGE','Manage Settings', 5)
+	END
+GO
+
+/* Add New Folder Permissions */
+/******************************/
+
+IF (SELECT COUNT(*) FROM {databaseOwner}{objectQualifier}Permission WHERE PermissionCode = 'SYSTEM_FOLDER' AND PermissionKey = 'ADD') = 0
+	BEGIN
+		INSERT INTO {databaseOwner}{objectQualifier}Permission ([PermissionCode],[ModuleDefID],[PermissionKey],[PermissionName], ViewOrder)
+			 VALUES ('SYSTEM_FOLDER',-1,'ADD','Add', 1)
+		INSERT INTO {databaseOwner}{objectQualifier}Permission ([PermissionCode],[ModuleDefID],[PermissionKey],[PermissionName], ViewOrder)
+			 VALUES ('SYSTEM_FOLDER',-1,'COPY','Copy', 2)
+		INSERT INTO {databaseOwner}{objectQualifier}Permission ([PermissionCode],[ModuleDefID],[PermissionKey],[PermissionName], ViewOrder)
+			 VALUES ('SYSTEM_FOLDER',-1,'DELETE','Delete', 3)
+		INSERT INTO {databaseOwner}{objectQualifier}Permission ([PermissionCode],[ModuleDefID],[PermissionKey],[PermissionName], ViewOrder)
+			 VALUES ('SYSTEM_FOLDER',-1,'MANAGE','Manage Settings', 4)
+	END
+GO     
+
+/* add helper proc to create/update core audit events */
+/********************************/
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}SaveCoreAuditTypes]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}SaveCoreAuditTypes
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}SaveCoreAuditTypes
+	@LogTypeKey nvarchar(35),  
+	@LogTypeFriendlyName nvarchar(50),  
+	@LogTypeOwner nvarchar(100),  
+	@LogTypeCSSClass nvarchar(40) ,
+	@LoggingIsActive bit,  
+	@KeepMostRecent int,  
+	@EmailNotificationIsActive bit  
+
+AS  
+ IF NOT EXISTS (SELECT * FROM {databaseOwner}{objectQualifier}EventLogTypes WHERE LogTypeKey = @LogTypeKey)  
+	BEGIN  
+		-- Add new Event Type  
+		EXEC {databaseOwner}{objectQualifier}AddEventLogType @LogTypeKey, @LogTypeFriendlyName, N'', @LogTypeOwner, @LogTypeCSSClass  
+
+		-- Add new Event Type Config  
+		EXEC {databaseOwner}{objectQualifier}AddEventLogConfig @LogTypeKey, NULL, @LoggingIsActive, @KeepMostRecent, @EmailNotificationIsActive, 1, 1, 1, N'', N''  
+		  
+		-- exit  
+		Return
+	END
+  ELSE
+
+		UPDATE {databaseOwner}{objectQualifier}EventLogTypes SET LogTypeFriendlyName = @LogTypeFriendlyName WHERE LogTypeKey = @LogTypeKey  
+
+		UPDATE {databaseOwner}{objectQualifier}EventLogConfig
+		SET LoggingIsActive=@LoggingIsActive,
+		KeepMostRecent=@KeepMostRecent,
+		EmailNotificationIsActive=@EmailNotificationIsActive
+		WHERE LogTypeKey = @LogTypeKey  
+
+GO
+
+/* save friendly names and states of core audit events */
+/*******************************************************/
+
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'LISTENTRY_CREATED',N'List entry created',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'LISTENTRY_UPDATED',N'List entry updated',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'LISTENTRY_DELETED',N'List entry deleted',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'DESKTOPMODULE_CREATED',N'Desktop module created',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'DESKTOPMODULE_UPDATED',N'Desktop module updated',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'DESKTOPMODULE_DELETED',N'Desktop module deleted',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'SKINCONTROL_CREATED',N'Skin control created',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'SKINCONTROL_UPDATED',N'Skin control updated',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'SKINCONTROL_DELETED',N'Skin control deleted',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'PORTALALIAS_CREATED',N'Portal alias created',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'PORTALALIAS_UPDATED',N'Portal alias updated',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'PORTALALIAS_DELETED',N'Portal alias deleted',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'PROFILEPROPERTY_CREATED',N'Profile property created',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'PROFILEPROPERTY_UPDATED',N'Profile property updated',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'PROFILEPROPERTY_DELETED',N'Profile property deleted',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'USER_UPDATED',N'User updated',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'DESKTOPMODULEPERMISSION_CREATED',N'Desktop module permission created',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'DESKTOPMODULEPERMISSION_UPDATED',N'Desktop module permission updated',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'DESKTOPMODULEPERMISSION_DELETED',N'Desktop module permission deleted',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'PERMISSION_CREATED',N'Permission created',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'PERMISSION_UPDATED',N'Permission updated',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'PERMISSION_DELETED',N'Permission deleted',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'TABPERMISSION_CREATED',N'Tab permission created',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'TABPERMISSION_UPDATED',N'Tab permission updated',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'TABPERMISSION_DELETED',N'Tab permission deleted',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'AUTHENTICATION_CREATED',N'Authentication system created',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'AUTHENTICATION_UPDATED',N'Authentication system updated',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'AUTHENTICATION_DELETED',N'Authentication system deleted',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'FOLDER_CREATED',N'Folder created',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'FOLDER_UPDATED',N'Folder updated',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'FOLDER_DELETED',N'Folder deleted',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'PACKAGE_CREATED',N'Package created',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'PACKAGE_UPDATED',N'Package updated',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'PACKAGE_DELETED',N'Package deleted',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'LANGUAGEPACK_CREATED',N'Language pack created',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'LANGUAGEPACK_UPDATED',N'Language pack updated',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'LANGUAGEPACK_DELETED',N'Language pack deleted',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'LANGUAGE_CREATED',N'Language created',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'LANGUAGE_UPDATED',N'Language updated',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'LANGUAGE_DELETED',N'Language deleted',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'SKINPACKAGE_CREATED',N'Skin package created',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'SKINPACKAGE_UPDATED',N'Skin package updated',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'SKINPACKAGE_DELETED',N'Skin package deleted',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'SCHEDULE_CREATED',N'Schedule created',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'SCHEDULE_UPDATED',N'Schedule updated',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'SCHEDULE_DELETED',N'Schedule deleted',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'HOST_SETTING_CREATED',N'Host setting created',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'HOST_SETTING_UPDATED',N'Host setting updated',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'HOST_SETTING_DELETED',N'Host setting deleted',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'PORTALDESKTOPMODULE_CREATED',N'Portal desktop module created',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'PORTALDESKTOPMODULE_UPDATED',N'Portal desktop module updated',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'PORTALDESKTOPMODULE_DELETED',N'Portal desktop module deleted',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'TABMODULE_CREATED',N'Tab module created',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'TABMODULE_UPDATED',N'Tab module updated',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'TABMODULE_DELETED',N'Tab module deleted',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'TABMODULE_SETTING_CREATED',N'Tab module setting created',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'TABMODULE_SETTING_UPDATED',N'Tab module setting updated',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'TABMODULE_SETTING_DELETED',N'Tab module setting deleted',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'MODULE_SETTING_CREATED',N'Module setting created',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'MODULE_SETTING_UPDATED',N'Module setting updated',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'MODULE_SETTING_DELETED',N'Module setting deleted',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'PORTAL_SETTING_CREATED',N'Portal setting created',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'PORTAL_SETTING_UPDATED',N'Portal setting updated',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'PORTAL_SETTING_DELETED',N'Portal setting deleted',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'PORTALINFO_CREATED',N'Portal info created',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'PORTALINFO_UPDATED',N'Portal info updated',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'PORTALINFO_DELETED',N'Portal info deleted',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'AUTHENTICATION_USER_CREATED',N'User authentication added',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'AUTHENTICATION_USER_UPDATED',N'User authentication updated',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'AUTHENTICATION_USER_DELETED',N'User authentication deleted',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'LANGUAGETOPORTAL_CREATED',N'Language created on portal',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'LANGUAGETOPORTAL_UPDATED',N'Language updated on portal',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'LANGUAGETOPORTAL_DELETED',N'Language deleted on portal',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,1,10,0
+EXEC {databaseOwner}{objectQualifier}SaveCoreAuditTypes N'TAB_ORDER_UPDATED',N'Tab order updated',N'DotNetNuke.Logging.EventLogType',N'GeneralAdminOperation' ,0,-1,0
+
+
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

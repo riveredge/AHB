@@ -1,0 +1,158 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.Columns WHERE TABLE_NAME='{objectQualifier}DNNPRO_License' AND COLUMN_NAME='AdditionalInfo')
+    BEGIN
+        ALTER TABLE {databaseOwner}{objectQualifier}DNNPRO_License
+	        ADD [AdditionalInfo] [nvarchar](max) NULL
+    END
+GO
+
+
+/****** Object:  Stored Procedure {databaseOwner}{objectQualifier}DNNPRO_DeleteLicense    Script Date: Sunday, January 25, 2009 ******/
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNPRO_DeleteLicense') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}DNNPRO_DeleteLicense
+GO
+
+/****** Object:  Stored Procedure {databaseOwner}{objectQualifier}DNNPRO_GetLicense    Script Date: Sunday, January 25, 2009 ******/
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNPRO_GetLicense') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}DNNPRO_GetLicense
+GO
+
+/****** Object:  Stored Procedure {databaseOwner}{objectQualifier}DNNPRO_GetLicenseList    Script Date: Sunday, January 25, 2009 ******/
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNPRO_GetLicenseList') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}DNNPRO_GetLicenseList
+GO
+
+/****** Object:  Stored Procedure {databaseOwner}{objectQualifier}DNNPRO_AddLicense    Script Date: Sunday, January 25, 2009 ******/
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNPRO_AddLicense') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}DNNPRO_AddLicense
+GO
+
+/****** Object:  Stored Procedure {databaseOwner}{objectQualifier}DNNPRO_UpdateLicense    Script Date: Sunday, January 25, 2009 ******/
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNPRO_UpdateLicense') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}DNNPRO_UpdateLicense
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}DNNPRO_DeleteLicense
+	@LicenseID int
+AS
+
+DELETE FROM {databaseOwner}{objectQualifier}DNNPRO_License
+WHERE
+	[LicenseID] = @LicenseID
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}DNNPRO_GetLicense
+	@LicenseID int
+AS
+
+SELECT
+	[LicenseID],
+	[Email],
+	[Invoice],
+	[Expires],
+	[ServiceEndDate],
+	[Signature],
+	[HostName],
+	[Environment],
+	[AdditionalInfo]
+FROM
+	{databaseOwner}{objectQualifier}DNNPRO_License
+WHERE
+	[LicenseID] = @LicenseID
+
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}DNNPRO_GetLicenseList
+AS
+
+SELECT
+	[LicenseID],
+	[Email],
+	[Invoice],
+	[Expires],
+	[ServiceEndDate],
+	[Signature],
+	[HostName],
+	[Environment],
+	[AdditionalInfo]
+FROM
+	{databaseOwner}{objectQualifier}DNNPRO_License
+
+GO
+
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}DNNPRO_AddLicense
+	@Email nvarchar(150),
+	@Invoice nvarchar(50),
+	@Expires nvarchar(20),
+	@ServiceEndDate nvarchar(20),
+	@Signature nvarchar(60),
+	@HostName nvarchar(100),
+	@Environment int,
+	@AdditionalInfo nvarchar(max)
+AS
+
+INSERT INTO {databaseOwner}{objectQualifier}DNNPRO_License (
+	[Email],
+	[Invoice],
+	[Expires],
+	[ServiceEndDate],
+	[Signature],
+	[HostName],
+	[Environment],
+	[AdditionalInfo]
+) VALUES (
+	@Email,
+	@Invoice,
+	@Expires,
+	@ServiceEndDate,
+	@Signature,
+	@HostName,
+	@Environment,
+	@AdditionalInfo
+)
+
+select SCOPE_IDENTITY()
+
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}DNNPRO_UpdateLicense
+	@LicenseID int, 
+	@Email nvarchar(150), 
+	@Invoice nvarchar(50), 
+	@Expires nvarchar(20), 
+	@ServiceEndDate nvarchar(20), 
+	@Signature nvarchar(60), 
+	@HostName nvarchar(100), 
+	@Environment int,
+	@AdditionalInfo nvarchar(max)
+AS
+
+UPDATE {databaseOwner}{objectQualifier}DNNPRO_License SET
+	[Email] = @Email,
+	[Invoice] = @Invoice,
+	[Expires] = @Expires,
+	[ServiceEndDate] = @ServiceEndDate,
+	[Signature] = @Signature,
+	[HostName] = @HostName,
+	[Environment] = @Environment,
+	[AdditionalInfo] = @AdditionalInfo
+WHERE
+	[LicenseID] = @LicenseID
+
+GO
+
+
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

@@ -1,0 +1,326 @@
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}sc_AddScheduleItemSettings') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}sc_AddScheduleItemSettings
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}sc_AddUrl') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}sc_AddUrl
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}sc_DeleteUrl') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}sc_DeleteUrl
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}sc_SelectUrl') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}sc_SelectUrl
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}sc_SelectUrlById') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}sc_SelectUrlById
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}sc_UpdateUrl') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}sc_UpdateUrl
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}sc_UpdateUrlActive') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}sc_UpdateUrlActive
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}sc_Url') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table {databaseOwner}{objectQualifier}sc_Url
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}sc_UpgradeModule') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}sc_UpgradeModule
+GO
+
+CREATE TABLE {databaseOwner}{objectQualifier}sc_Url
+(
+	[UrlId] [int] IDENTITY (1, 1) NOT NULL,
+	[Url] [nvarchar] (256)  NULL,
+	[UrlActive] [bit] NULL,
+	[UrlDNNRole] [nvarchar] (50)  NULL,
+	[UrlDNNUser] [nvarchar] (50)  NULL,
+	[UrlWinAuthentication] [bit] NULL,
+	[UrlWinDomain] [nvarchar] (50)  NULL,
+	[UrlWinUser] [nvarchar] (50)  NULL,
+	[UrlWinPassword] [nvarchar] (50)  NULL 
+)
+GO
+
+ALTER TABLE {databaseOwner}{objectQualifier}sc_Url WITH NOCHECK ADD CONSTRAINT [PK_sc_Url] PRIMARY KEY  CLUSTERED ([UrlId])
+GO
+
+ALTER TABLE {databaseOwner}{objectQualifier}sc_Url ADD 
+	CONSTRAINT [DF_sc_Url_UrlActive] DEFAULT (1) FOR [UrlActive],
+	CONSTRAINT [DF_sc_Url_UrlWinAuthentication] DEFAULT (0) FOR [UrlWinAuthentication]
+GO
+
+CREATE procedure {databaseOwner}{objectQualifier}sc_AddScheduleItemSettings
+	@ScheduleID int,
+	@SettingName nvarchar(50),
+	@SettingValue nvarchar(4000)
+AS
+
+if exists (select ScheduleID from {databaseOwner}{objectQualifier}ScheduleItemSettings where ScheduleID = @ScheduleID and SettingName = @SettingName) begin
+	delete
+	from {databaseOwner}{objectQualifier}ScheduleItemSettings
+	where ScheduleID = @ScheduleID and SettingName = @SettingName
+end
+
+insert into {databaseOwner}{objectQualifier}ScheduleItemSettings
+(
+	ScheduleID,
+	SettingName,
+	SettingValue
+)
+values
+(
+	@ScheduleID,
+	@SettingName,
+	@SettingValue
+)
+
+if @@ERROR <> 0 begin
+	set @SettingValue = substring(@SettingValue,1,256)
+
+	insert into {databaseOwner}{objectQualifier}ScheduleItemSettings
+	(
+		ScheduleID,
+		SettingName,
+		SettingValue
+	)
+	values
+	(
+		@ScheduleID,
+		@SettingName,
+		@SettingValue
+	)
+end
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}sc_AddUrl
+	@Url nvarchar(256)
+AS
+	insert into {databaseOwner}{objectQualifier}sc_Url (Url)
+	values (@Url)
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}sc_DeleteUrl
+	@UrlId int
+AS
+	delete
+	from {databaseOwner}{objectQualifier}sc_Url
+	where UrlId = @UrlId
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}sc_SelectUrl
+AS
+	select
+		UrlId,
+		Url,
+		UrlActive,
+		UrlDNNRole,
+		UrlDNNUser,
+		UrlWinAuthentication,
+		UrlWinDomain,
+		UrlWinUser,
+		UrlWinPassword
+	from {databaseOwner}{objectQualifier}sc_Url
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}sc_SelectUrlById
+	@UrlId int
+AS
+	select
+		UrlId,
+		Url,
+		UrlActive,
+		UrlDNNRole,
+		UrlDNNUser,
+		UrlWinAuthentication,
+		UrlWinDomain,
+		UrlWinUser,
+		UrlWinPassword
+	from {databaseOwner}{objectQualifier}sc_Url
+	where UrlId = @UrlId
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}sc_UpdateUrl
+	@UrlId int,
+	@Url nvarchar(256),
+	@UrlActive bit,
+	@UrlDNNRole nvarchar(50),
+	@UrlDNNUser nvarchar(50),
+	@UrlWinAuthentication bit,
+	@UrlWinDomain nvarchar(50),
+	@UrlWinUser nvarchar(50),
+	@UrlWinPassword nvarchar(50)
+AS
+	update {databaseOwner}{objectQualifier}sc_Url
+	set	Url = @Url,
+		UrlActive = @UrlActive,
+		UrlDNNRole = @UrlDNNRole,
+		UrlDNNUser = @UrlDNNUser,
+		UrlWinAuthentication = @UrlWinAuthentication,
+		UrlWinDomain = @UrlWinDomain,
+		UrlWinUser = @UrlWinUser,
+		UrlWinPassword = @UrlWinPassword
+	where UrlId = @UrlId
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}sc_UpdateUrlActive
+	@UrlId int,
+	@UrlActive bit
+AS
+	update {databaseOwner}{objectQualifier}sc_Url
+	set	UrlActive = @UrlActive
+	where UrlId = @UrlId
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}sc_UpgradeModule
+AS
+	delete from {databaseOwner}{objectQualifier}Tabs
+	where TabName = 'SearchCrawler Admin'
+
+	declare @ParentID int
+	select @ParentID = TabId
+	from {databaseOwner}{objectQualifier}Tabs
+	where TabPath = '//Host//ProfessionalFeatures'
+
+	declare @TabOrder int
+	select @TabOrder = max(TabOrder) + 2
+	from {databaseOwner}{objectQualifier}Tabs
+	where ParentID = @ParentID
+
+	declare @TabID int
+	insert into {databaseOwner}{objectQualifier}Tabs
+	(
+		TabOrder,
+		PortalID,
+		TabName,
+		IsVisible,
+		ParentID,
+		Level,
+		IconFile,
+		DisableLink,
+		IsDeleted,
+		IconFileLarge,
+		[Description]
+	)
+	values
+	(
+		@TabOrder,
+		null,
+		'SearchCrawler Admin',
+		1,
+		@ParentID,
+		2,
+		'~/images/SearchCrawler_16px.gif',
+		0,
+		0,
+		'~/images/SearchCrawler_32px.gif',
+		'Administration of spider''s attributes.'
+	)
+	set @TabID = @@identity
+
+	declare @ModuleDefID int
+	select @ModuleDefID = ModuleDefID
+	from {databaseOwner}{objectQualifier}ModuleDefinitions
+	where FriendlyName = 'SearchCrawlerAdmin'
+
+	declare @ModuleID int
+
+	insert into {databaseOwner}{objectQualifier}Modules
+	(
+		ModuleDefID,
+		InheritViewPermissions
+	)
+	values
+	(
+		@ModuleDefID,
+		1
+	)
+
+	set @ModuleID = @@identity
+	
+	insert 	into {databaseOwner}{objectQualifier}TabModules
+	(
+		TabID,
+		ModuleID,
+		PaneName,
+		ModuleOrder,
+		CacheTime,
+		IconFile,
+		Visibility,
+		DisplayTitle,
+		DisplayPrint,
+		DisplaySyndicate,
+		ModuleTitle
+	)
+	values
+	(
+		@TabID,
+		@ModuleID,
+		'ContentPane',
+		1,
+		0,
+		'~/images/SearchCrawler_32px.gif',
+		0,
+		1,
+		0,
+		0,
+		'SearchCrawler Admin'
+	)
+GO
+
+--disable CE crawler
+IF EXISTS(SELECT * FROM {databaseOwner}[{objectQualifier}Schedule] WHERE TypeFullName = 'DotNetNuke.Services.Search.SearchEngineScheduler, DOTNETNUKE' AND Enabled = 1)
+BEGIN
+	UPDATE {databaseOwner}[{objectQualifier}Schedule]
+	SET Enabled = 0
+	WHERE TypeFullName = 'DotNetNuke.Services.Search.SearchEngineScheduler, DOTNETNUKE' AND Enabled = 1
+END
+
+--add new crawler
+if not exists (select ScheduleID from {databaseOwner}{objectQualifier}Schedule where TypeFullName = 'DotNetNuke.Professional.SearchCrawler.SearchSpider.SearchSpider, DotNetNuke.Professional.SearchCrawler') begin
+	insert into {databaseOwner}{objectQualifier}Schedule
+	(
+		FriendlyName,
+		TypeFullName,
+		TimeLapse,
+		TimeLapseMeasurement,
+		RetryTimeLapse,
+		RetryTimeLapseMeasurement,
+		RetainHistoryNum,
+		AttachToEvent,
+		CatchUpEnabled,
+		Enabled,
+		ObjectDependencies
+	)
+	values
+	(
+		'SearchCrawler',
+		'DotNetNuke.Professional.SearchCrawler.SearchSpider.SearchSpider, DotNetNuke.Professional.SearchCrawler',
+		1,
+		'd',
+		30,
+		'm',
+		5,
+		'',
+		0,
+		1,
+		'SearchCrawler'
+	)
+
+	declare @ScheduleID int
+	set @ScheduleID = @@identity
+
+	insert into {databaseOwner}{objectQualifier}ScheduleItemSettings(ScheduleID, SettingName, SettingValue) values(@ScheduleID, 'IndexThreads', '1')
+	insert into {databaseOwner}{objectQualifier}ScheduleItemSettings(ScheduleID, SettingName, SettingValue) values(@ScheduleID, 'IndexPath', 'DesktopModules\DNNCorp\SearchCrawler\Input\index')
+	insert into {databaseOwner}{objectQualifier}ScheduleItemSettings(ScheduleID, SettingName, SettingValue) values(@ScheduleID, 'IndexExcludedExtensions', '.xml')	
+	insert into {databaseOwner}{objectQualifier}ScheduleItemSettings(ScheduleID, SettingName, SettingValue) values(@ScheduleID, 'IndexEnableDL', 'True')	
+end
+
+GO
+

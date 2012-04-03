@@ -1,0 +1,174 @@
+@import url("menu.css");
+
+body 
+{
+	background-color:#cbb391;
+	margin:0;
+	padding:0;
+}
+
+#form
+{
+	width:920px;
+	margin:0 auto 0 auto;
+	padding:0;
+}
+
+.pagemaster
+{
+	width:920px;
+	margin:0 auto 0 auto;
+	padding:0;
+}
+
+/*-------- Default Style --------*/
+/*body,th,td,div,p,table,h1,h2,h3,h4,h5,h6,.Normal,.NormalDisabled,.Head,.SubHead,.SubSubHead, a:link, a:visited, a:hover, input, .CommandButton{color:#2E3D47; font-family:Verdana, Arial, Helvetica, sans-serif;}
+body,th,td,div,p,table,.Normal,.NormalDisabled,.Head,.SubHead,.SubSubHead, a:link, a:visited, a:hover{font-size:12px;}
+h1, h2, h3, h4, h5, h6{color:#375162;}
+h1, h3, h5, h1 input{font-weight:bold;}
+h2, h4, h6{font-weight:normal}
+h1, h2, h1 input{font-size:14px;margin:10px 0;}
+h3, h4{font-size:12px;margin:8px 0;}
+h5, h6{font-size:10px;margin:6px 0;}
+
+
+a,a:link,a:visited,a:active{color:#096173; text-decoration:none; font-weight:normal; }
+a:hover{color:#a61e55; text-decoration:underline; }
+.Head, .SubHead, .SubSubHead, .Normal, .NormalDisabled, .NormalDisabled, .NormalBold, .NormalRed, .NormalTextBox
+{font-family:Verdana, Arial, Helvetica, sans-serif;}
+.Head{color:#2E3D47;font-weight:bold;}
+.SubHead {color:#4C6171;}
+.SubSubHead{color:#6E8AA0;}
+.NormalRed {color:#FF0000;}
+
+/*-------- Header Style --------*/
+
+.controlpanel
+{
+
+}
+
+.header
+{
+	background: #3c90cb url(../images/header.jpg) no-repeat bottom center;
+	margin:0;
+	padding:10px 10px 0px 10px;
+	height:160px;
+	
+}
+
+#dnn_dnnLOGO_imgLogo
+{
+	position:relative;
+	top:15px;
+	left:30px;
+}
+
+.headerMenu
+{
+	background-color: #3c90cb;
+	position:relative;
+	top:0;
+	float:right;
+	-webkit-border-bottom-left-radius: 20px;
+	-moz-border-radius-bottomleft: 20px;
+	border-radius-bottomright: 20px;
+	height:27px;
+	
+	padding:3px 0 0 0;
+	
+}
+
+.box 
+{
+	 margin: 0;
+	 padding: 0px 10px 10px 10px;
+	 
+	 background-color: #3c90cb;
+
+	 min-height: 400px;
+	 -webkit-border-bottom-left-radius: 20px;
+	 -webkit-border-bottom-right-radius: 20px;
+	 -moz-border-radius-bottomleft: 20px;
+	 -moz-border-radius-bottomright: 20px;
+	 border-radius-bottomright: 20px;
+	 border-radius-bottomleft: 20px;
+}
+
+.userbar
+{
+	float:right;
+	padding-top:-25px;
+}
+
+.content
+{
+	 padding:10px 10px 10px 10px;
+	 margin:0;
+	 clear:both;	
+
+	 background-color:White;
+	 
+	 min-height: 400px;
+	 -webkit-border-bottom-left-radius: 20px;
+	 -webkit-border-bottom-right-radius: 20px;
+	 -moz-border-radius-bottomleft: 20px;
+	 -moz-border-radius-bottomright: 20px;
+	 border-radius-bottomright: 20px;
+	 border-radius-bottomleft: 20px;
+}
+
+.bottom
+{
+	margin:20px 0 0 0;
+	padding:0;
+	color:White;
+	background-color:#504e4e;
+	-webkit-border-top-left-radius: 20px;
+	-webkit-border-top-right-radius: 20px;
+	-moz-border-radius-topleft: 20px;
+	-moz-border-radius-topright: 20px;
+	border-radius-topright: 20px;
+	border-radius-topleft: 20px;
+	min-height:50px;
+}
+
+.searchbar
+{
+	float:right;
+	width:300px;
+}
+
+.contentpane
+{
+	display:inline-block;
+	float:left;
+	width:50%;
+}
+
+.rightpane
+{
+	display:inline-block;
+	float:left;
+	margin-left:10px;
+	width:210px;
+}
+
+.rightpane2
+{
+	display:inline-block;
+	float:left;
+	margin-left:10px;
+	width:210px;
+}
+
+.bottompane
+{
+	clear:both;
+}
+
+.center
+{
+	display:table-row;
+	
+}

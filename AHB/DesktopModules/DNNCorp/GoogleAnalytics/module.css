@@ -1,0 +1,5 @@
+﻿#dnnGoogleAnalyticsPro input, #dnnGoogleAnalyticsPro textarea, #dnnGoogleAnalyticsPro select {width:40%;}
+    #dnnGoogleAnalyticsPro input[type='checkbox'], #dnnGoogleAnalyticsPro input[type='radio'], #dnnGoogleAnalyticsPro input[type='image']  {width:auto;}
+.dnnEditSegmentRule .dnnActions {width:75%;margin: 0 auto;}
+#dnnGoogleAnalyticsPro .dnnFormExpandContent {position:static;text-align:right;}
+p.dnnFormRequired span {border-left: 5px solid #F00; padding-left: 0.5em;}

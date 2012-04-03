@@ -1,0 +1,69 @@
+﻿<h3>Multifunction 01.01.03</h3>
+<p class="Contributor">
+    Chris Hammond <br />
+    <a href="mailto:skins@christoc.com">skins@christoc.com</a><br />
+    <a href="http://www.christoc.com">http://www.christoc.com</a><br />
+</p>
+<hr/>
+<div class="License">
+    <h3>About the MultiFunction Skin and Container Package</h3>
+
+	 <p class="Owner">
+        <b>Version 01.01.03</b><br /><br />
+    </p>
+    <p>
+		<ul>
+			<li>Added some CSS for H1/2/3/4 to fix DotNetNuke 6.1.4 issues. </li>
+			<li>Compiled against v6.1.3, requires 6.1.3.</li>
+			<li>There is a MobileHome skin available in the Source package, it is not complete, not recommended for use.</li>
+		</ul>
+	</p>
+
+	 <p class="Owner">
+        <b>Version 01.01.02</b><br /><br />
+    </p>
+    <p>
+		<ul>
+			<li>Modified location of OrangeBox js to remove CDN delivery and include with skin, as to better ulitize the DotNetNuke 6.1.0 client dependancy framework </li>
+			
+		</ul>
+	</p>
+
+	 <p class="Owner">
+        <b>Version 01.01.01</b><br /><br />
+    </p>
+    <p>
+		<ul>
+			<li>Fixed a CSS issue with the Manage button/menu for modules in the footer </li>
+			
+		</ul>
+	</p>
+
+    <p class="Owner">
+        <b>Version 01.01.00</b><br /><br />
+    </p>
+    <p>
+		<ul>
+			<li>Includes OrangeBox jQuery plugin for lightbox effects. <a href="http://multifunction.codeplex.com/wikipage?title=Lightbox%20Documentation&referringTitle=Documentation">See Documentation for Use</a></li>
+			<li>Configured for DotNetNuke 6.0.2+ only</li>
+		</ul>
+	</p>
+
+
+    <p class="Owner">
+        <b>Version 01.00.01</b><br /><br />
+    </p>
+    <p>
+		<ul>
+			<li>Has fix for z-index issues on DnnModule class</li>
+			<li>Removed WatchersNet Module Action Menu</li>
+			<li>Configured for DotNetNuke 6.0+ only</li>
+		</ul>
+	</p>
+
+    <p class="Owner">
+        <b>Version 01.00.00</b><br /><br />
+    </p>
+    <p>This initial release of the skin and container package starts out very simply. You can use the INSTALL package to easily install the skin into production, or the SOURCE package to get the PSDs and make modifications to the package.</p>
+    
+</div>

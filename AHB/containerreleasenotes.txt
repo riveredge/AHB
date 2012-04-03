@@ -1,0 +1,17 @@
+<h3>Recipe Container Package</h3>
+<p class="Contributor">
+	dnnprofis.at<br />
+	<a href="mailto:office@becker.or.at">office@becker.or.at</a><br />
+	<a href="http://www.dnnprofis.at">http://www.dnnprofis.at</a><br />
+</p>
+<hr/>
+<div class="License">
+	<p class="Owner">
+		<h3>About Recipe (Skin & Container Set)</h3>
+		<b>Verion 1.0.0 </b><br /><br />
+
+		A DotNetNuke Design Challenge container package submitted to the "Standards" category by dnnprofis.at.   For mobile devices the skin changes to a mobile format.  It demonstrates the capabilities of building versatile web sites. br /><br />
+		
+		For more information about  the Recipe Skin project, or to check for the latest version, please visit the project on CodePlex at: <a href="http://dnnskinrecipe.codeplex.com">http://dnnskinrecipe.codeplex.com</a>.
+	</p>
+</div>

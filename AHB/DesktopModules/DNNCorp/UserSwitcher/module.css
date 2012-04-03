@@ -1,0 +1,7 @@
+#dnnUserSwitcher .usContent select {padding:5px; margin-left:5px; width:20%;}
+#dnnUserSwitcher .usContent input {width:40%;}
+#dnnUserSwitcher .usLetterSearch{padding-top:10px;padding-bottom:10px;text-align: center;}
+    #dnnUserSwitcher .usLetterSearch li{list-style-type:none; display:inline; padding-left: 1em;}
+#dnnUserSwitcher .dnnUserSwitcherGrid {width:100%;}
+#dnnUserSwitcher .dnnGridHeader {vertical-align:top;}
+#dnnUserSwitcher .dnnGridItem {text-align:left;}

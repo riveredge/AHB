@@ -1,0 +1,32 @@
+<table>
+  [PRODUCTGROUP]
+	<tr>
+		<td colspan="4"></td>
+	</tr>
+	<tr>
+		<td class="aptblhdr" colspan="4">[PRODUCT:GROUPNAME]</td>
+	</tr>
+	<tr>
+		<td>[tRESX:ProductName]</td>
+		<td>[tRESX:Price]</td>
+		<td>[tRESX:Qty]</td>
+		<td></td>
+	</tr>
+	[PRODUCTS]
+	<tr>
+		<td style="width:100%">[PRODUCT:PRODUCTNAME]</td>
+		<td>[PRODUCT:PRICE]</td>
+		<td>
+			<input type="text" name="[PRODVAR:qtySKU]" id="[PRODVAR:qtySKU]" onkeypress="return dnn_comm.utils.OnlyNumbers(event)" style="width:20px;" value="1" class="amqtytxt"></td>
+			  
+		<td>[PRODUCT:BUYNOW]</td>
+	</tr>          
+	<tr>
+		<td>[PRODUCT:DESCRIPTION]</td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	[/PRODUCTS]
+	[/PRODUCTGROUP]
+</table>

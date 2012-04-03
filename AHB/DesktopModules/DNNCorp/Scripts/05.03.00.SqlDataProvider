@@ -1,0 +1,25 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/* Add RibbonBar Control Panel */
+/*******************************/
+
+IF NOT EXISTS(SELECT * FROM {databaseOwner}{objectQualifier}ModuleControls WHERE ControlKey='CONTROLPANEL:RIBBONBAR')
+	BEGIN
+		INSERT {databaseOwner}{objectQualifier}ModuleControls (ControlKey, ControlSrc, ControlType)
+		VALUES('CONTROLPANEL:RIBBONBAR', 'Admin/ControlPanel/RibbonBar.ascx', -3)
+	END
+
+GO
+
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

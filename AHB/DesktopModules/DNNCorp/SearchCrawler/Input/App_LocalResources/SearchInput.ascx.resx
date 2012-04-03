@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="imgSearch.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/SearchCrawler/Input/images/search.gif</value>
+  </data>
+  <data name="imgGo.ImageUrl" xml:space="preserve">
+    <value>~/DesktopModules/DNNCorp/SearchCrawler/Input/images/search_go.gif</value>
+  </data>
+  <data name="ModuleHelp.Text" xml:space="preserve">
+    <value>&lt;h1&gt;About SearchCrawler Input&lt;/h1&gt;
+		&lt;p&gt;The SearchCrawler Input module enables a user to enter a word or phrase and search the websites designated by the administrator for any relevant match.&lt;/p&gt; 
+		&lt;p&gt;&lt;b&gt;Sample Query Syntax&lt;b&gt;&lt;/p&gt; 
+		&lt;TABLE cellSpacing=0 cellPadding=2 border=1&gt;
+		&lt;TBODY class="normal"&gt;
+			&lt;TR&gt;
+			&lt;TD vAlign=top&gt;&lt;B&gt;Query&lt;/B&gt;&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;&lt;B&gt;Example&lt;/B&gt;&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;&lt;B&gt;Notes&lt;/B&gt;&lt;/TD&gt;
+			&lt;/TR&gt;
+			&lt;TR&gt;
+			&lt;TD vAlign=top&gt;single term&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;document&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;Searches for documents that contain "document" term in the default field.&lt;/TD&gt;
+			&lt;/TR&gt;
+			&lt;TR&gt;
+			&lt;TD vAlign=top&gt;phrase&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;"important document"&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;Searches for documents that contain the phrase "important document" in the default fiels.&lt;/TD&gt;
+			&lt;/TR&gt;
+			&lt;TR&gt;
+			&lt;TD vAlign=top &gt;searching fields&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;title:document&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;Searches for documents that contain "document" term in the "title" field.&lt;/TD&gt;
+			&lt;/TR&gt;
+			&lt;TR&gt;
+			&lt;TD vAlign=top&gt;wildcard search&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;doc?ment&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;Single-character wildcard search. It will match "document" and "dociment" but not "docooment".&lt;/TD&gt;
+			&lt;/TR&gt;
+			&lt;TR&gt;
+			&lt;TD vAlign=top&gt;&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;document*&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;Multi-character wildcard search. It will match "document" and "documentation".&lt;/TD&gt;
+			&lt;/TR&gt;
+			&lt;TR&gt;
+			&lt;TD vAlign=top&gt;fuzzy search&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;document~&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;Search based on similar spelling.&lt;/TD&gt;
+			&lt;/TR&gt;
+			&lt;TR&gt;
+			&lt;TD vAlign=top&gt;&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;document~0.9&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;Search based on similar spelling. 0.9 is the required similarity (default: 0.5)&lt;/TD&gt;
+			&lt;/TR&gt;
+			&lt;TR&gt;
+			&lt;TD vAlign=top&gt;proximity search&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;"important document"~5&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;Find words of a phrase that are not next to each other. Maximum distance in this example is 5 words.&lt;/TD&gt;
+			&lt;/TR&gt;
+			&lt;TR&gt;
+			&lt;TD vAlign=top&gt;range search&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;author:{Einstein TO Newton}&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;Searches for document with "author" field value between specified values.&lt;/TD&gt;
+			&lt;/TR&gt;
+			&lt;TR&gt;
+			&lt;TD vAlign=top&gt;&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;date:{20050101 TO 20050201}&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;Searches for document with "date" field (DateTime type) value between specified dates.&lt;/TD&gt;
+			&lt;/TR&gt;
+			&lt;TR&gt;
+			&lt;TD vAlign=top&gt;relevance&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;important^4 document&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;Set boost factor of the term "important" to 4. Default boost factor is 1.&lt;/TD&gt;
+			&lt;/TR&gt;
+			&lt;TR&gt;
+			&lt;TD vAlign=top&gt;&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;"important document"^4 "search engine"&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;You can set boost factor for phrases too.&lt;/TD&gt;
+			&lt;/TR&gt;
+			&lt;TR&gt;
+			&lt;TD vAlign=top&gt;OR operator&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;important document&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;"OR" is the default operator.&lt;/TD&gt;
+			&lt;/TR&gt;
+			&lt;TR&gt;
+			&lt;TD vAlign=top&gt;&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;important OR document&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;The default field must contain either "important" or "document".&lt;/TD&gt;
+			&lt;/TR&gt;
+			&lt;TR&gt;
+			&lt;TD vAlign=top&gt;AND operator&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;important AND document&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;The default field must contain both word.&lt;/TD&gt;
+			&lt;/TR&gt;
+			&lt;TR&gt;
+			&lt;TD vAlign=top&gt;+ operator&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;important +document&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;The default field must contain "document" and may contain "important".&lt;/TD&gt;
+			&lt;/TR&gt;
+			&lt;TR&gt;
+			&lt;TD vAlign=top&gt;NOT/- operator&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;-important document&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;The default field must contain "document" but not "important".&lt;/TD&gt;
+			&lt;/TR&gt;
+			&lt;TR&gt;
+			&lt;TD vAlign=top&gt;grouping&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;(important OR office) AND document&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;Use parentheses for expression grouping.&lt;/TD&gt;
+			&lt;/TR&gt;
+			&lt;TR&gt;
+			&lt;TD vAlign=top&gt;&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;author:(Einstein OR Newton)&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;Parentheses work with fields as well.&lt;/TD&gt;
+			&lt;/TR&gt;
+		&lt;/TBODY&gt;
+		&lt;/TABLE&gt;
+		&lt;p&gt;&lt;b&gt;Prohibited Queries&lt;/b&gt;&lt;/p&gt;
+		&lt;TABLE cellSpacing=0 cellPadding=2 border=1&gt;
+		&lt;TBODY class=normal&gt;
+			&lt;TR&gt;
+			&lt;TD vAlign=top&gt;&lt;B&gt;Query&lt;/B&gt;&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;&lt;B&gt;Examples&lt;/B&gt;&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;&lt;B&gt;Notes&lt;/B&gt;&lt;/TD&gt;
+			&lt;/TR&gt;
+			&lt;TR&gt;
+			&lt;TD vAlign=top&gt;wildcard at the beginning of a term&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;?ocument, *ocument&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;Throws Lucene.Net.QueryParsers.ParseException.&lt;/TD&gt;
+			&lt;/TR&gt;
+			&lt;TR&gt;
+			&lt;TD vAlign=top&gt;stop words&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;a, the, and&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;Stop words are not indexed.&lt;/TD&gt;
+			&lt;/TR&gt;
+			&lt;TR&gt;
+			&lt;TD vAlign=top&gt;special characters: + - &amp;&amp; || ! ( ) { } [ ] ^ " ~ * ? : \&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;\+, \:&lt;/TD&gt;
+			&lt;TD vAlign=top&gt;Use a backslash to escape the special characters.&lt;/TD&gt;
+			&lt;/TR&gt;
+		&lt;/TBODY&gt;
+		&lt;/TABLE&gt;</value>
+  </data>
+  <data name="lblSearch.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="imgGo.Text" xml:space="preserve">
+    <value>Execute Search</value>
+  </data>
+  <data name="cmdGo.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="NoResultsModuleFound.Text" xml:space="preserve">
+    <value>No Search Results module found. You need to add at least one Search Results module to a tab in order to perform a search.</value>
+  </data>
+</root>

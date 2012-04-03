@@ -1,0 +1,350 @@
+﻿.dnn-modcp-shell * {font-size:100%;list-style:none;}
+.dnn-modcp-shell{margin-top:8px;border:1px solid #375162;background-color:#A1B3C1;}
+.dnn-modcp-shell label{font-weight:bold;}
+.dnn-modcp-shell input{padding:2px;}
+.dnn-modcp-shell .dnnForm{width:99%;}
+.dnn-modcp-shell .dnnFormItem span.dnnFormMessage.dnnFormError{left:65%;}
+.dnn-modcp-shell .dnnFormItem.form-required span.dnnFormMessage.dnnFormError{display:inline;}
+.dnn-modcp-shell .dnnFormItem.form-valid span.dnnFormMessage.dnnFormError{left:65%;display:none;}
+.Normal .dnn-modcp-shell ul, .Normal .dnn-modcp-shell ul li{margin:1px}
+
+.Normal .dnn-modcp-shell .ui-tabs .ui-tabs-nav ul li{margin: 0px 1px 1px 0px}
+
+.dnn-modcp-vshim{height:450px;width:1px;float:right;}
+.dnn-modcp-sprite16{background-image:url(images/dnn-ui-sprite-icons16.png);background-repeat:no-repeat;width:16px;height:16px;display:block;}
+.dnn-modcp-edit12{background-position:-336px 0px;display:block;width:16px;height:12px;}
+.dnn-modcp-edit12:hover{background-position:-320px 0px;display:block;width:16px;height:12px;}
+.dnn-modcp-delete12{background-position:-368px 0px;display:block;width:16px;height:12px;}
+.dnn-modcp-delete12:hover{background-position:-352px 0px;display:block;width:16px;height:12px;}
+.dnn-modcp-useradd16{background-position:-240px 0px;}
+.dnn-modcp-edit16{background-position:-96px 0px;}
+.dnn-modcp-shell .roundall{border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;}
+.dnn-modcp-shell .floatRight{float:right;}
+.dnn-modcp-shell .buttonArea{position:relative;right:10px;top:8px;}
+
+.dnn-modcp-modal{display:none;border:8px solid #cdcdcd;border-radius:8px;-moz-border-radius: 8px; -webkit-border-radius: 8px;position:absolute;}
+.dnn-modcp-modal .dnn-modcp-modal-inner{background-color:#fff;border:1px solid #999;}
+.dnn-modcp-modal-hd{height:26px; background-color:#ffffcc;border-bottom:1px solid #999;}
+.dnn-modcp-modal-hd-text{float:left;padding:3px;padding-top:8px;padding-left:10px;font-weight:bold;}
+.dnn-modcp-modal-hd-close{display:block;float:right;background-image:url(images/close.gif);width:28px;height:15px;margin-top:5px;cursor:pointer;margin-right:6px; background-repeat:no-repeat;}
+
+
+.alignCenter{text-align:center;}
+.alignRight{text-align:right;}
+.alignLeft{text-align:left;}
+
+ .clearfix:after {content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;} 
+.clearfix {display: inline-block;}
+html[xmlns]  .clearfix {display: block;}
+* html  .clearfix {height: 1px;}
+.clearDiv:after, .clearDiv:after{content:".";display:block;height:0;font-size:0;clear:both;visibility:hidden;}
+.clearDiv{min-height:1px;}
+* html .clearDiv{min-height:1px;}
+
+.dnn-modcp-menu{width:180px;float:left;margin-top:12px;}
+.dnn-modcp-icon{}
+.dnn-modcp-content{margin-left:180px;background-color:#fff;padding:3px; vertical-align:top;}
+.dnn-modcp-footer{padding:1px;padding-right:6px;background-color:#ccc;}
+.dnn-modcp-footer span{float:right;font-size:smaller;}
+.dnn-modcp-callback{width:100%;}
+.dnn-modcp-actionarea{position:relative;bottom:0px;}
+
+#dnn-modcp-msgarea{position:absolute;z-index:10;width:400px;display:none;background-color:#dcdcdc;}
+#dnn-modcp-msgarea div{position:relative;top:-2px;left:-2px;font-weight:bold;line-height:200%;margin:0;padding:5px 10px 6px 40px;background-repeat:no-repeat; background-position:4px center}
+#dnn-modcp-msgarea .positive{background-image:url(images/check_32.png);background-color:#E6EFC2;border:1px solid #C6D880;color:#529214;}
+#dnn-modcp-msgarea .info{background-image:url(images/info_32.png);background-color:#dff4ff;border:1px solid #c2e1ef;color:#336699;}
+#dnn-modcp-msgarea .negative{background-image:url(images/warning_32.png);background-color:#ffffcc;border:1px solid #F5B75F;color:#DF8505;}
+#dnn-modcp-msgarea .warn{background-image:url(images/warning_32.png);background-color:#fbe3e4;border:1px solid #fbc2c4;color:#d12f19;}
+#dnn-modcp-msgarea .loading{background-image:url(images/spinner-lg.gif);background-color:#f5f5f5;border:1px solid #999;color:#000;}
+
+.dnn-modcp-shell .dnn-modcp-menu ul {margin-left:18px;}
+.dnn-modcp-shell .dnn-modcp-menu li{font-size:10pt; cursor:pointer;}
+.dnn-modcp-shell .dnn-modcp-menu ul li{padding:0;margin:0;margin-bottom:2px;}
+.dnn-modcp-shell .dnn-modcp-menu ul div{padding-bottom:2px;padding-left:4px;}
+.dnn-modcp-shell .dnn-modcp-menu ul li.selected,.dnn-modcp-shell .dnn-modcp-menu ul li ul li.selected{background-color:#fff;border-top:1px solid #999;border-left:1px solid #999;border-bottom:1px solid #fff;
+                            -webkit-border-top-left-radius: 4px;
+-webkit-border-bottom-left-radius: 4px;
+-moz-border-radius-topleft: 4px;
+-moz-border-radius-bottomleft: 4px;
+border-top-left-radius: 4px;
+border-bottom-left-radius: 4px;}
+.dnn-modcp-menu ul li.selected div,.dnn-modcp-menu ul li ul li.selected div{border-top:1px solid #ccc;border-left:1px solid #ccc;border-bottom:1px solid #f5f5f5;
+                                -webkit-border-top-left-radius: 4px;
+-webkit-border-bottom-left-radius: 4px;
+-moz-border-radius-topleft: 4px;
+-moz-border-radius-bottomleft: 4px;
+border-top-left-radius: 4px;
+border-bottom-left-radius: 4px;}
+.dnn-modcp-menu ul li.selected div ul li div{border-style:none;}
+.dnn-modcp-menu ul li.selected *, .dnn-modcp-menu ul li ul li.selected *{color:#375162;}
+.dnn-modcp-menu ul li *, .dnn-modcp-menu ul li ul li *{color:#f5f5f5;}
+.dnn-modcp-menu ul li ul{display:none;}
+.dnn-modcp-menu ul li ul li{}
+.dnn-modcp-menu li.selected ul{display:block;}
+
+.dnn-modcp-tabstrip{border-bottom:1px solid #cdcdcd;}
+.dnn-modcp-tabstrip ul{margin:0px;padding:0px;padding-top:4px;padding-left:8px;display:inline-block;}
+.dnn-modcp-tabstrip li{position:relative;bottom:-1px;line-height:1.2;background-color:#E1E5E5; cursor:pointer;top:1px;display:inline-block;padding-left:4px;padding-right:4px;border:1px solid #cdcdcd;list-style-type:none;float:left;padding-bottom:2px;padding-top:2px;margin-right:4px;
+                    -webkit-border-top-right-radius: 6px;
+-webkit-border-top-left-radius: 6px;
+-moz-border-radius-topright: 6px;
+-moz-border-radius-topleft: 6px;
+border-top-right-radius: 6px;
+border-top-left-radius: 6px;margin-top:2px;
+                    }
+
+.dnn-modcp-tabstrip li span{display:block;padding:2px;}
+li.tab-selected{border-bottom-color:#fff;background-color:#fff;margin-top:0px;padding-top:4px;}
+.dnn-modcp-tab-content{position:relative;overflow:auto;}
+.dnn-modcp-contentInner{position:relative;overflow:auto;}
+
+.dnn-modcp-money,.dnn-modcp-number{text-align:right;}
+
+/*Token list items*/
+.dnn-modcp-tokens{margin-top:10px;margin-left:200px;}
+.dnn-modcp-tokens input[type=button]{color:#000;border:solid 1px #dea303;padding:2px;background-image:url(btn20back.png);font-size:11px;cursor:pointer;}
+.dnn-modcp-tokens ul{margin:0px;padding:0px;}
+.dnn-modcp-tokens ul li{list-style-type:none;float:left;border-radius:4px;-moz-border-radius: 4px; -webkit-border-radius: 4px; border:1px solid #cdcdcd; background-color:#ffc;padding:2px;margin-right:2px;margin-bottom:2px;}
+.dnn-modcp-tokens ul li b{cursor:pointer;display:inline-block;width:14px;height:12px; background-image:url(images/dnn-ui-sprite-icons16.png); background-repeat:no-repeat; background-position:-272px -2px;margin-right:4px;position:relative;top:1px;}
+.dnn-modcp-tokens ul li span{padding-right:4px;}
+/*Unordered List for displaying data rows */
+.dnn-modcp-datalist{padding-left:10px;}
+.dnn-modcp-datalist li{list-style-type:none;margin-bottom:6px;margin-right:10px;border:1px solid #ccc;padding:6px;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;}
+.dnn-modcp-datalist li:hover{background-color:#FFC;border:1px solid #999;cursor:pointer;}
+.dnn-modcp-shell ul.dnn-modcp-datalist li{margin-bottom:6px;}
+/*picker*/
+.dnn-modcp-picker{width:175px;display:inline-block; border:1px inset #F0F0F0;margin:2px;padding:2px;margin-left:0px;}
+.dnn-modcp-picker span.dnn-modcp-sprite16{margin-left:2px;margin-right:2px;float:left; cursor:pointer;}
+.dnn-modcp-picker-value{display:inline-block;}
+.dnn-modcp-picker-value a{color:#336699;text-decoration:underline; cursor:pointer;padding:1px;}
+
+/*Buttons*/
+a.btnadd,a.btnadd:link,a.btnadd:visited{font-weight:bold !important;background-color:#ffffcc;background-image:url(images/add-circle.png);color:#808080 !important; border:1px solid #cdcdcd; background-repeat:no-repeat; background-position:4px center;padding:4px;padding-left:22px;}
+a.btnadd:hover{text-decoration:none;border-color:#666;color:#000 !important;}
+
+.orderGrid{width:99%;padding:0px;margin:0px; border-collapse:collapse;}
+.orderGrid thead{font-weight:bold;background-color:#999;background-image:url(images/dashHeaderBg.gif);}
+.orderGrid thead tr td{color:#000;margin:2px;padding:2px;font-size:10px;}
+.orderGrid .hover-actions{width:36px;}
+.orderGrid .hover-actions span{display:inline-block;cursor:pointer;}
+.orderGrid .dnn-modcp-number{text-align:center;}
+.orderGrid .dnn-modcp-money{padding-right:4px;}
+.orderGrid tbody tr td{margin:2px;padding:2px;padding-bottom:10px;border:1px solid #cdcdcd;}
+.orderGrid tbody tr:nth-child(odd){background-color:#FCFCE8;}
+.orderGrid tbody tr:nth-child(even){background-color:#fff;}
+.orderGridFooter .footer-left, .orderGridFooter .footer-right{text-align:right;padding-right:12px;}
+.orderGridFooter .footer-left{font-weight:bold;font-size:14px;white-space:nowrap;}
+.orderGridFooter .footer-right input{font-size:14px; text-align:right;padding:2px; width:100px;}
+
+
+
+
+.dnn-modcp-form{margin:0px;padding:0px;margin-top:10px;}
+.dnn-modcp-form input,.dnn-modcp-form textarea,.dnn-modcp-form select{border:1px inset #F0F0F0;background-color:#f5f5f5;}
+.dnn-modcp-form input:focus,.dnn-modcp-form textarea:focus, .dnn-modcp-form select:focus{outline:0px;background-color:#ffc; border:1px inset #F0F0F0;}
+.dnn-modcp-form textarea{resize:none; border:1px inset #F0F0F0;}
+.dnn-modcp-form input[type=text],.dnn-modcp-form textarea{width:98%;}
+table.dnn-modcp-form td{vertical-align:top;text-align:left;}
+table.dnn-modcp-form td label{font-size:11px; font-weight:bold; white-space:nowrap;}
+table.dnn-modcp-form td input,table.dnn-modcp-form td textarea{font-size:11px;width:225px;}
+table.dnn-modcp-form td input[type=checkbox]{width:auto;}
+div.dnn-modcp-form{margin:10px;}
+div.dnn-modcp-form label{}
+
+.dashOuter{ border: 1px solid #f5f5f5;}
+.dashOuterHeader{padding:4px;font-family:Tahoma;font-size:12px;border-right: #dcdcdc 1px solid;
+	border-top: #dcdcdc 1px solid;
+	border-left: #dcdcdc 1px solid;background-image:url(images/dashHeaderBg.gif);}
+.dashInner
+{
+	border-right: #b3b3b3 1px solid;
+	border-top: #b3b3b3 1px solid;
+	border-left: #b3b3b3 1px solid;
+	border-bottom: #b3b3b3 1px solid;
+}
+.dashHD{font-family:Tahoma;font-size:11px;font-weight:bold;}
+.dashRow{font-family:Tahoma;font-size:11px;}
+.ap-order-grid-footer-right,.ap-order-grid-footer-left{text-align:right;padding-right:12px;}
+.ap-order-grid-footer-left{font-weight:bold;font-size:14px;white-space:nowrap;}
+.ap-order-grid-footer-right input{font-size:14px; text-align:right;padding:2px; width:100px;}
+
+
+
+.ap-order-item{font-weight:bold;}
+.ap-order-item-product{cursor:pointer;}
+.ap-order-subitems{margin-top:4px;margin-left:2px;}
+.ap-order-subitem{font-weight:normal;white-space:nowrap;}
+
+table.orderform{margin-bottom:10px;margin-left:4px;}
+table.orderform td label{font-size:12px;padding:1px;color:#333;margin:1px;margin-left:4px;}
+.dnn-modcp-tab-content fieldset #Billing,.dnn-modcp-tab-content fieldset #Shipping{height:60px;}
+.orderform fieldset{margin-left:8px;margin-top:8px;}
+.orderform fieldset table,.orderform fieldset table td{margin:0;padding:0;}
+fieldset legend{font-size:12px;font-weight:bold;line-height:20px;}
+fieldset legend .dnn-modcp-sprite16{margin-left:6px;display:inline-block;position:relative; top:3px;}
+
+.dnn-modcp-grid{width:90%;}
+.dnn-modcp-grid thead tr td{font-weight:bold;padding:4px;}
+.dnn-modcp-grid tbody tr td.am-ui-largecell div{padding:2px;font-size:11px;margin-left:6px;}
+.dnn-modcp-grid tbody tr td.am-ui-largecell i{font-size:9px; font-style:normal;display:block;margin-left:6px;}
+
+.paid-icon{background-image:url(images/check.gif);height:16px;background-position:right center;width:50px; background-repeat:no-repeat;float:right;display:block;}
+.notpaid-icon{background-image:url(images/stop.gif);display:block;height:16px;float:right;background-position:right center;width:50px; background-repeat:no-repeat;}
+.am-ui-edit12{background-position:-336px 0px;display:block;width:16px;height:12px;}
+.am-ui-edit12:hover{background-position:-320px 0px;display:block;width:16px;height:12px;}
+.am-ui-delete12{background-position:-368px 0px;display:block;width:16px;height:12px;}
+.am-ui-delete12:hover{background-position:-352px 0px;display:block;width:16px;height:12px;}
+.useradd-icon{background-position:-240px 0px;}
+.edit16-icon{background-position:-96px 0px;}
+
+#ul-orderlist li{border:1px solid #cdcdcd; margin-bottom:6px;}
+
+.searchbox{width:450px;margin-left:auto;margin-right:auto;margin-top:15px;border-collapse:collapse;margin-bottom:8px;}
+.searchbox .searchinput{border:1px solid #cdcdcd;border-right-style:none;}
+.searchbox .searchinput input{border-style:none;width:100%;height:22px;padding-bottom:1px;padding-top:1px;}
+.searchbox .searchbutton{border:1px solid #cdcdcd;background-color:#f5f5f5;width:60px;text-align:center;font-size:16px;cursor:pointer;}
+#searchFilters{padding:4px;padding-left:6px;width:475px;margin-left:auto;margin-right:auto;font-size:11px;position:absolute;display:none;z-index:10;top:30px;right:-33px;border:1px solid #FBE694;background-color:#FCFCE8;}
+#searchFilters select{font-size:11px;}
+.searchToggle_select,.searchToggle{display:block;background-image:url(images/filteroptions_16.png); background-position:center 6px; background-repeat:no-repeat;width:32px;position:absolute;top:-1px;}
+.searchToggle_select{height:31px;border:1px solid #FBE694;background-color:#FCFCE8;border-bottom-style:none;z-index:11;}
+.searchToggle{height:26px;border:1px solid transparent;}
+
+
+.dnnFormItem label{white-space:nowrap;}
+.dnnForm .dnnFormItem select{min-width:36%;
+                                background: none repeat scroll 0 0 #FFFFF5;
+                                border-color: #BCB691;
+                                border-radius: 3px 3px 3px 3px;
+                                border-width: 1px;
+                                box-shadow: 0 0 3px 3px #FFFBE1 inset;
+                                float: left;
+                                margin: 0;
+                                padding: 5px;
+                                
+                             }
+.dnnForm input[type="checkbox"],.dnnForm input[type="radio"],.dnnForm input[type="button"]{width:auto;}
+.dnnForm .dnnFormItem label,.dnnForm .dnnFormItem .dnnToolTip label{padding-right:8px;}
+
+.dnn-modcp-modal .dnnForm ul.dnnActions{margin-left:10px;margin-right:10px;}
+
+.orderBox{background-color:#f5f5f5;border:1px solid #cdcdcd;margin:4px;font-family:Arial, Helvetica, Sans-Serif; }
+.orderBox .orderBox-head{background-color:#A1B3C1; width:100%;color:#fff;font-weight:bold;padding-top:2px;padding-bottom:2px;}
+.orderBox .orderBox-head span{margin-left:10px;}
+.orderBox .orderBox-head a{float:right;color:#fff;text-decoration:underline;margin-right:6px;font-family:Arial, Helvetica, Sans-Serif; font-size:12px; font-weight:bold;}
+.orderBox-left{float:left;width:48%}
+.orderBox-right{float:right;width:48%}
+.orderBox table{width:100%;}
+.orderBox table tr td{padding:4px;}
+.orderBox table td.label{width:25%;text-align:right;font-weight:bold;}
+.orderBox select{padding:3px;}
+.orderBox .addrBlock{font-size:12px;margin:12px;}
+
+
+.dnnForm#optTab1 .dnnFormItem input[type="text"]{width:200px;}
+.dnn-modcp-radiobuttons{display:block;}
+.dnn-modcp-radiobuttons label{width:auto !important;font-weight:normal !important;}
+.dnn-modcp-pickerButton{float:none !important;padding:2px !important;}
+
+#discountEditor .dnnForm .dnnFormItem input[type="text"].dnn-modcp-money{width:65px;min-width:65px;}
+#discountEditor .dnnForm .dnnFormItem input[type="text"].dnn-modcp-number{width:65px;min-width:65px;}
+#discountEditor .dnnForm .dnnFormItem .dnnFormRadioButtons label{width:inherit;}
+#discountEditor .dnnForm .dnnFormItem .dnnFormRadioButtons label{float:left;}
+#discountEditor .dnnForm .dnnFormItem .dnnFormRadioButtons input{float:left;}
+
+#prodTabs .dnnForm .dnnFormItem input[type="text"]{width:200px;}
+#prodTabs .dnnForm .dnnFormItem select{width:200px;}
+#prodTabs .dnnForm .dnnFormItem textarea{width:300px;}
+.dnnForm .dnnFormItem input[type="text"].dnn-modcp-money{width:75px; min-width:inherit}
+.dnnForm .dnnFormItem span.dnnFormMessage.dnnFormError{display:none;}
+.dnnForm .dnnFormItem.form-required span.dnnFormMessage.dnnFormError{left: 65%;display:inline;}
+
+#propview .dnnForm{min-width:400px;width:400px;margin-left:auto;margin-right:auto;}
+#propview .dnnForm .dnnFormItem input[type="text"]{width:200px;}
+#propview .dnnForm .dnnFormItem select{width:200px;}
+
+#propview .dnnForm .dnnFormItem .dnnFormRadioButtons label{width:inherit;}
+
+
+
+
+
+#uploadFile .dnnForm{min-width:400px;width:400px;margin-left:auto;margin-right:auto;}
+#uploadFile .dnnForm .dnnFormItem input[type="text"]{width:200px;}
+#uploadFile .dnnForm .dnnFormItem select{width:200px;}
+
+
+.modalForm .dnnForm .dnnFormItem label{width:125px;}
+.modalForm .dnnForm{min-width:400px;width:400px;margin-left:auto;margin-right:auto;}
+.modalForm .dnnForm .dnnFormItem input[type="text"]{width:200px;}
+.modalForm .dnnForm .dnnFormItem select{width:200px;}
+#proplist li{height:22px;}
+.dragHandle {display: block;visibility:hidden;float: left;width: 16px;height: 22px;cursor: move;margin-left:4px;margin-right:4px;background-image:url(images/sort_16.png);background-repeat:no-repeat;background-position:top center;}
+#proplist li:HOVER .dragHandle{visibility:visible;}
+.myItemHover {background: #f5f5f5;}
+.myDragTarget {background: #FFFFCC;opacity: 0.7;border: 2px dashed #f90;padding: 10px;margin:0px;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;}
+#proplist .myDropTarget {background: #ccc;display:block;padding:10px;margin:0px;border: 2px none #f90;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;}
+#proplist .row-title{font-weight:bold; font-size:14px;}
+#proplist .disabled{font-weight:normal; font-style:italic;}
+
+
+#restrlist li b {font-size:14px;}
+#restrlist li span{padding-left:12px;}
+#restrlist li a{float:right;}
+
+a.dnnFormHelp, .dnnForm .dnnFormItem a.dnnFormHelp, .dnnTooltip label a.dnnFormHelp{z-index:auto !important;}
+.inputSample{font-size:11px;padding-left:8px;}
+.dnnForm .dnnFormItem input.dnnFormDatePicker{width:80px;min-width:inherit;}
+.dnnForm .ui-datepicker{background-color:#fff;border:1px solid #666;width:200px;}
+.dnnForm .ui-datepicker table{border-collapse: collapse;font-size: 0.9em;margin: 0 0 0.4em;width: 100%;}
+.dnnForm .ui-datepicker td span, .dnnForm .ui-datepicker td a 
+{
+    display: block;
+    padding: 0.2em;
+    text-align: right;
+    text-decoration: none;
+}
+.dnnForm .ui-datepicker .ui-state-active a, 
+    .dnnForm .ui-datepicker .ui-state-active a:link, 
+    .dnnForm .ui-datepicker .ui-state-active a:visited, 
+    .dnnForm .ui-datepicker .ui-state-active, 
+    .dnnForm .ui-datepicker .ui-widget-content .ui-state-active, 
+    .dnnForm .ui-datepicker .ui-widget-header .ui-state-active{background:inherit !important;}
+.dnnForm .ui-datepicker .ui-datepicker-header a.ui-datepicker-prev{left: 2px;}
+.dnnForm .ui-datepicker .ui-datepicker-header a.ui-datepicker-next{right: 2px;}
+.dnnForm .ui-datepicker-header{background-color:#ccc;padding: 0.2em 0;
+    position: relative;}
+.dnnForm .ui-datepicker-title{color:#000;line-height: 1.8em;
+    margin: 0 2.3em;
+    text-align: center;}
+.dnnForm .ui-datepicker td{border: 0 none;padding: 1px;}
+.dnnForm .ui-datepicker-calendar tbody td a.ui-state-default{border: 1px solid #D3D3D3;
+    color: #555555;
+    font-weight: normal;
+    outline: medium none;color:#000 !important;}
+.dnnForm .ui-datepicker-calendar tbody td a.ui-state-active{background-color:#FFFFCC}
+.dnnForm .ui-datepicker-calendar tbody td.ui-datepicker-current-day{background-color:#c2e1ef}
+.dnnForm .ui-datepicker-calendar tbody td.ui-datepicker-current-day a.ui-state-active,
+    .dnnForm .ui-datepicker-calendar tbody td.ui-datepicker-current-day a.ui-state-active:active,
+    .dnnForm .ui-datepicker-calendar tbody td.ui-datepicker-current-day a.ui-state-active:visited{background-color:#c2e1ef !important;}
+.dnnForm .ui-datepicker .ui-datepicker-prev, 
+    .dnnForm .ui-datepicker .ui-datepicker-next 
+    {
+        height: 1.8em;
+    position: absolute;
+    top: 2px;
+    width: 1.8em;
+    }
+.dnnForm .ui-datepicker .ui-datepicker-prev span, .dnnForm .ui-datepicker .ui-datepicker-next span {display: block;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    position: absolute;
+    height:16px;
+    width:16px;
+    top: 50%;
+    text-indent: -99999px;
+    overflow:hidden;}
+.dnnForm .ui-datepicker .ui-icon-circle-triangle-w{background-image:url(images/arrow-left.png); background-repeat:no-repeat;}
+.dnnForm .ui-datepicker .ui-icon-circle-triangle-e{background-image:url(images/arrow-right.png); background-repeat:no-repeat;}
+#drpprod_RolesOptions{padding-top:20px;margin-left:32%;}
+div.dnn-modcp-shell div.dnnForm div.dnnFormMessage {padding: 10px 10px 10px 40px;margin: 0.5em 1em;}

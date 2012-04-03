@@ -1,0 +1,126 @@
+﻿@import url("boxy.css");
+
+.labelcol
+{
+	width: 200px;
+}
+
+.licxTabs
+{
+	clear:both;
+	margin: 20px 10px;
+}
+
+.licxPanel
+{
+	padding: 10px;
+	border: solid 2px #1979d6;
+}
+
+.licxBenefits
+{
+	margin: 10px 10px 20px 10px;
+	padding: 5px;
+	border: solid 2px #1979d6;
+}
+
+.licxGrid
+{
+	border: solid 2px #1979d6;
+	border-collapse:collapse;
+	margin: 10px;
+}
+
+.licxGrid th
+{
+	padding: 7px 10px;
+	font-size: 1.1em;
+	font-weight: bold;
+	color: white;
+	background-color: #1979d6;
+	/*border: solid 1px #eee;*/
+}
+
+table.licxGrid td
+{
+	padding: 2px 7px;
+	/*border: solid 1px #eee;*/
+}
+
+tr.licxGridAlt
+{
+	background-color: #eee;
+}
+
+
+tr.licxGridAlt td
+{
+	background-color: #eee;
+	padding: 2px 7px;
+}
+
+a.linkbutton
+{
+	/*background: url("images/buttonleft.gif") no-repeat left top;*/
+	text-decoration: none;
+	margin: 2px 10px 2px 5px;
+	display: block;
+	float: left;
+}
+
+/*a.linkbutton span
+{
+	background: url("images/buttonright.gif") no-repeat right top;
+	height: 14px;
+	padding: 5px 15px;
+	color: #444;
+	display: block;
+	cursor: pointer;
+}*/
+
+a.disabled
+{
+	background-position: left -24px;
+}
+
+a.disabled span
+{
+	background-position: right -24px;
+	color: #aaa;
+	cursor: default;
+}
+
+a.linkbutton:hover span
+{
+	color: #1979d6;
+}
+
+a.disabled:hover span
+{
+	color: #aaa;
+}
+
+.clear
+{
+	clear: both;
+	line-height: .1em;
+	font-size: .1em;
+}
+
+hr.separator
+{
+	width: 80%;
+	margin: 15px auto;
+	/*border: solid 2px #ccc;*/
+	/* height:1px;*/
+	text-align:center;
+}
+
+.licxPanel p.CommandRow
+{
+    margin-top: 1em;
+}
+
+.dnnLicenseList .dnnFormMessage.dnnFormHelpContent{	max-width:100%; }
+#TrialName {width: 60%; float: left;}
+#TrialName input { float: none;width: 35%;}

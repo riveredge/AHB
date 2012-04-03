@@ -1,0 +1,126 @@
+
+/*--------- dnn menu style ----------*/
+/* main menu td */
+.mainMenu 
+{
+	cursor:pointer;
+	font-size: 11px; 
+	background-color:transparent;
+}
+
+
+/* Main Menu Normal */
+.mainMenu .root
+{	
+	color: #ffffff;
+	font-size: 13px; 
+	font-weight:bold; 	
+	text-align:center; 
+	padding:0px 10px 0px 14px;
+	margin-right:1px;
+	white-space:nowrap;
+	margin-right:1px;	
+	float:left;
+	font-family:Tahoma,Meiryo,Verdana;
+	z-index:1000;
+}
+
+
+/* Main menu hover */
+.mainMenu .hov{ 
+	color:#fe9393;
+	/*background:url(../images/menu_hover.gif) repeat-x top left;*/
+}
+
+/* Main menu selected */
+.mainMenu .sel, .mainMenu .bc {
+color:#fee693;
+	/*background:url(../images/menu_active.gif) repeat-x top left;*/
+}
+.mainMenu table{
+	border:1px solid #3c90cb;
+	margin:11px 0 0 0;
+	z-index:1000;
+	}
+
+/* SUB Menu Normal */
+.mainMenu tr.mi{
+	background-color:#e6e6e6;
+	z-index:1000;	
+	font-size: 11px; 
+	font-weight:bold;
+	text-align:left;
+	color:#000000	;
+	line-height:2em;
+	text-transform:none;
+	font-family:Tahoma,Meiryo,Verdana;
+}
+.mainMenu tr.mi td{
+	z-index:1000;
+	padding: 0 2px;
+	text-transform:none;
+}
+
+/* SUB Menu hover & selected */
+.mainMenu tr.hov { 
+background: #3c90cb;
+z-index:1000;
+}
+
+.mainMenu tr.hov td{
+color:#fff;
+z-index:1000;
+}
+
+.mainMenu tr.sel, .mainMenu tr.bc{
+background: #3c90cb;
+z-index:1000;
+}
+
+.mainMenu tr.sel td, .mainMenu tr.bc td{
+	color:#fff;
+}
+
+.main_dnnmenu_break{
+	height: 2px;
+	background-color: #3c90cb;
+}
+
+
+/* Module Action Menus */
+.ModuleTitle_SubMenu
+{
+	border:1px solid #3c90cb;
+}
+
+.ModuleTitle_SubMenu td{
+	background-color:#e6e6e6;
+	white-space: nowrap;
+} 
+
+
+.ModuleTitle_MenuIcon {
+	background-color:#F8FAFF; 
+	border:none;
+	padding: 0px 2px;
+}
+
+.ModuleTitle_MenuItemSel td, .ModuleTitle_MenuItemSel .ModuleTitle_MenuIcon{
+	background: #3c90cb;
+	color: #fff;
+}
+
+.ModuleTitle_MenuBreak td, .ModuleTitle_MenuBreak .ModuleTitle_MenuIcon
+{
+	height: 2px;
+	background-color: #3c90cb;
+}
+
+.ModuleTitle_RootMenuArrow
+{
+    display:none;
+}
+
+
+
+

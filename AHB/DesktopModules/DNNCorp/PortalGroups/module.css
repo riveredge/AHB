@@ -1,0 +1,23 @@
+.dnnPortalGroups.dnnForm .dnnFormItem input {width:50%;}
+.dnnFormItem .dnnPortals { min-width:35%; }
+.dnnFormItem textarea { min-height: 50px; width:455px; }
+.dnnPortalGroups.dnnForm .dnnFormItem .dnnFormLabel { width: auto; }
+
+.managePortalProgress .RadUploadProgressArea{width: 900px;}
+	.managePortalProgress .RadUploadProgressArea .ruShadow{margin:0px; padding:0px; border-bottom:none;}
+	.managePortalProgress .RadUploadProgressArea .ruShadow > div{margin:10px; background-image:none; padding-left:20px;}
+	.managePortalProgress .RadUploadProgressArea .ruShadow .ruProgress li{margin-bottom:14px;list-style-type: none;}
+	.managePortalProgress .RadUploadProgressArea .ruShadow .ruProgress li.ruProgressHeader{margin-bottom:24px;}
+	.managePortalProgress .RadUploadProgressArea .ruShadow .ruProgress li.ruCurrentFile{margin-top:10px;}
+	.managePortalProgress .RadUploadProgressArea .ruShadow .ruProgress li.ruTimeSpeed{margin-bottom:10px;}
+	
+	.managePortalProgress .RadUploadProgressArea_Simple .ruProgress {background-image:none; padding-left:20px;}
+	.managePortalProgress .RadUploadProgressArea_Simple .ruProgress .ruBar div {background-image:none; background:#ccc; border-right: 1px solid #333 }
+	.managePortalProgress .RadUploadProgressArea > .ruShadow {background-image:none;}
+	
+	.managePortalProgress .RadUploadProgressArea ul li { list-style-type: none; }
+
+
+.dnnPortalGroups.dnnForm .dnnFormItem .portalsDualListBox { float: left; }
+.dnnPortalGroups.dnnForm .dnnFormItem .portalsDualListBox .dnnTooltip { width: 60%;  }
+.dnnPortalGroups.dnnForm .dnnFormItem .portalsDualListBox input { width: 25px;  }

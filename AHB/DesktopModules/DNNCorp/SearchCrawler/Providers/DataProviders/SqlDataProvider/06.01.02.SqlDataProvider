@@ -1,0 +1,86 @@
+/* Add Sitemap spidering */
+
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.Columns WHERE TABLE_NAME='{objectQualifier}sc_Url' AND COLUMN_NAME='UrlSitemap')
+	BEGIN
+		ALTER TABLE {databaseOwner}{objectQualifier}sc_Url 
+			ADD UrlSitemap nvarchar(256) NULL
+	END
+GO
+
+
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}sc_SelectUrl]') AND type in (N'P', N'PC'))
+	DROP PROCEDURE {databaseOwner}[{objectQualifier}sc_SelectUrl]
+GO
+
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}sc_SelectUrlById]') AND type in (N'P', N'PC'))
+	DROP PROCEDURE {databaseOwner}[{objectQualifier}sc_SelectUrlById]
+GO
+
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}sc_UpdateUrl]') AND type in (N'P', N'PC'))
+	DROP PROCEDURE {databaseOwner}[{objectQualifier}sc_UpdateUrl]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}sc_SelectUrl]
+AS
+BEGIN
+	SELECT
+		UrlId,
+		Url,
+		UrlActive,
+		UrlDNNRole,
+		UrlDNNUser,
+		UrlWinAuthentication,
+		UrlWinDomain,
+		UrlWinUser,
+		UrlWinPassword,
+		UrlSitemap
+	FROM {objectQualifier}sc_Url
+END
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}sc_SelectUrlById]
+	@UrlId int
+AS
+BEGIN
+	SELECT
+		UrlId,
+		Url,
+		UrlActive,
+		UrlDNNRole,
+		UrlDNNUser,
+		UrlWinAuthentication,
+		UrlWinDomain,
+		UrlWinUser,
+		UrlWinPassword,
+		UrlSitemap
+	FROM {objectQualifier}sc_Url
+	WHERE UrlId = @UrlId
+END
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}sc_UpdateUrl]
+	@UrlId int,
+	@Url nvarchar(256),
+	@UrlActive bit,
+	@UrlDNNRole nvarchar(50),
+	@UrlDNNUser nvarchar(50),
+	@UrlWinAuthentication bit,
+	@UrlWinDomain nvarchar(50),
+	@UrlWinUser nvarchar(50),
+	@UrlWinPassword nvarchar(50),
+	@UrlSitemap nvarchar(256)
+AS
+BEGIN
+	UPDATE {objectQualifier}sc_Url
+	SET	Url = @Url,
+		UrlActive = @UrlActive,
+		UrlDNNRole = @UrlDNNRole,
+		UrlDNNUser = @UrlDNNUser,
+		UrlWinAuthentication = @UrlWinAuthentication,
+		UrlWinDomain = @UrlWinDomain,
+		UrlWinUser = @UrlWinUser,
+		UrlWinPassword = @UrlWinPassword,
+		UrlSitemap = @UrlSitemap
+	WHERE UrlId = @UrlId
+END
+GO

@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="nameLabel.Text" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="nameLabel.Help" xml:space="preserve">
+    <value>Enter a name for the Site Group</value>
+  </data>
+  <data name="descriptionLabel.Text" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="descriptionLabel.Help" xml:space="preserve">
+    <value>Enter a description for the Site Group</value>
+  </data>
+  <data name="masterPortalLabel.Help" xml:space="preserve">
+    <value>The master site is the site which is used to authenticate the shared users.</value>
+  </data>
+  <data name="masterPortalLabel.Text" xml:space="preserve">
+    <value>Master Site:</value>
+  </data>
+  <data name="memberPortalsLabel.Help" xml:space="preserve">
+    <value>You can manage the members of this site group using the list boxes on the right.</value>
+  </data>
+  <data name="memberPortalsLabel.Text" xml:space="preserve">
+    <value>Member Sites:</value>
+  </data>
+  <data name="PortalName.Header" xml:space="preserve">
+    <value>Site Name</value>
+  </data>
+  <data name="createPortalGroup.Text" xml:space="preserve">
+    <value>Create Site Group</value>
+  </data>
+  <data name="deletePortalGroup.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="savePortalGroup.Text" xml:space="preserve">
+    <value>Update Site Group</value>
+  </data>
+  <data name="AddPortal.Text" xml:space="preserve">
+    <value>Add Site to Group</value>
+  </data>
+  <data name="RemovePortal.Text" xml:space="preserve">
+    <value>Remove Site from Group</value>
+  </data>
+  <data name="ControlTitle_edit.Text" xml:space="preserve">
+    <value>Edit Site Group</value>
+  </data>
+  <data name="AddPortalGroup.Text" xml:space="preserve">
+    <value>Please provide the detail information about your new site group below.
+Once you click 'Create', there will be an option to select the member sites on the next screen.</value>
+  </data>
+  <data name="Processing.Text" xml:space="preserve">
+    <value>Processing:</value>
+  </data>
+  <data name="Progress.Text" xml:space="preserve">
+    <value>Progress</value>
+  </data>
+  <data name="TotalPortals.Text" xml:space="preserve">
+    <value>Total Sites</value>
+  </data>
+  <data name="TotalProgress.Text" xml:space="preserve">
+    <value>Total Progress</value>
+  </data>
+  <data name="TotalUsers.Text" xml:space="preserve">
+    <value>Total Users</value>
+  </data>
+  <data name="AddAllPortals.Text" xml:space="preserve">
+    <value>Add All Sites to Group</value>
+  </data>
+  <data name="portalsDualListBox.Text" xml:space="preserve">
+    <value>Manage Site Members</value>
+  </data>
+  <data name="portalsDualListBox_Available.Text" xml:space="preserve">
+    <value>Available Sites</value>
+  </data>
+  <data name="portalsDualListBox_Selected.Text" xml:space="preserve">
+    <value>Member Sites</value>
+  </data>
+  <data name="RemoveAllPortals.Text" xml:space="preserve">
+    <value>Remove All Sites from Group</value>
+  </data>
+  <data name="CopyingUser.Text" xml:space="preserve">
+    <value>{0}: Copying User {1} of {2} - {3}</value>
+  </data>
+  <data name="MovingUser.Text" xml:space="preserve">
+    <value>{0}: Moving User {1} of {2} - {3}</value>
+  </data>
+  <data name="domainLabel.Help" xml:space="preserve">
+    <value>Site Groups allow users to be shared across multiple sites.  In addition, users can remain signed-on when switching between sites in a site group because they share a common domain. </value>
+  </data>
+  <data name="domainLabel.Text" xml:space="preserve">
+    <value>Authentication Domain:</value>
+  </data>
+  <data name="Delete.Text" xml:space="preserve">
+    <value>Are you sure you want to delete this site group.</value>
+  </data>
+  <data name="copyUsers.Text" xml:space="preserve">
+    <value>Copy Users?</value>
+  </data>
+  <data name="copyUsers.Help" xml:space="preserve">
+    <value>Check this box to optionally copy users from the Master Site to the Member Site when removing the Member Site from the Site Group.</value>
+  </data>
+  <data name="NoPortals.Text" xml:space="preserve">
+    <value>There are no available sites that share the authentication domain.  Make sure that the authentication domain is the lowest common denominator for all the sites you wish to add to this group.</value>
+  </data>
+  <data name="valDomain.Text" xml:space="preserve">
+    <value>You must input a valid domain.</value>
+  </data>
+  <data name="valGroupDesc.Text" xml:space="preserve">
+    <value>You must input the group description.</value>
+  </data>
+  <data name="valGroupName.Text" xml:space="preserve">
+    <value>You must input the group name.</value>
+  </data>
+  <data name="RemovePortalFromGroup.Text" xml:space="preserve">
+    <value>Are you sure you want to remove the site from the group?</value>
+  </data>
+</root>

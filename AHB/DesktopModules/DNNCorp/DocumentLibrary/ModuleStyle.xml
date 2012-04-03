@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<moduleStyles>
+  <moduleStyle name="module_White.css" displayName="white"></moduleStyle>
+  <moduleStyle name="module_Gray.css" displayName="gray"></moduleStyle>
+  <moduleStyle name="module_WhiteWeb2.css" displayName="white Web2.0"></moduleStyle>
+  <moduleStyle name="module_GrayWeb2.css" displayName="gray Web2.0"></moduleStyle>
+</moduleStyles>

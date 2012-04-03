@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="ResMimeType">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="Version">
+		<value>1.0.0.0</value>
+	</resheader>
+	<resheader name="Reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="Writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="imgFirst.ImageUrl">
+		<value>~/DesktopModules/DNNCorp/DocumentLibrary/images/dgArrowLL.png</value>
+	</data>
+	<data name="imgFirst.ImageUrlOff">
+		<value>~/DesktopModules/DNNCorp/DocumentLibrary/images/dgArrowLLOff.png</value>
+	</data>
+	<data name="imgFirst.Text">
+		<value>first page</value>
+	</data>
+	<data name="imgPrevious.ImageUrl">
+		<value>~/DesktopModules/DNNCorp/DocumentLibrary/images/dgArrowL.png</value>
+	</data>
+	<data name="imgPrevious.ImageUrlOff">
+		<value>~/DesktopModules/DNNCorp/DocumentLibrary/images/dgArrowLOff.png</value>
+	</data>
+	<data name="imgPrevious.Text">
+		<value>previous page</value>
+	</data>
+	<data name="imgNext.ImageUrl">
+		<value>~/DesktopModules/DNNCorp/DocumentLibrary/images/dgArrowR.png</value>
+	</data>
+	<data name="imgNext.ImageUrlOff">
+		<value>~/DesktopModules/DNNCorp/DocumentLibrary/images/dgArrowROff.png</value>
+	</data>
+	<data name="imgNext.Text">
+		<value>next page</value>
+	</data>
+	<data name="imgLast.ImageUrl">
+		<value>~/DesktopModules/DNNCorp/DocumentLibrary/images/dgArrowRR.png</value>
+	</data>
+	<data name="imgLast.ImageUrlOff">
+		<value>~/DesktopModules/DNNCorp/DocumentLibrary/images/dgArrowRROff.png</value>
+	</data>
+	<data name="imgLast.Text">
+		<value>last page</value>
+	</data>
+	<data name="lblPageCount.Text">
+		<value>page {0} of {1}</value>
+	</data>
+	<data name="lblTotalRecords.Text">
+		<value>total recs. </value>
+	</data>
+	<data name="lblPageSize.Text">
+		<value>recs. x page </value>
+	</data>
+	<data name="FolderHierarchy.Header">
+		<value>Document Path</value>
+	</data>
+	<data name="DocumentName.Header">
+		<value>Document Name</value>
+	</data>
+	<data name="TabName.Header">
+		<value>Module Page</value>
+	</data>
+	<data name="DocumentDownloadCount.Header">
+		<value>Downloads</value>
+	</data>
+	<data name="actionStats.Text">
+		<value>Statistics</value>
+	</data>	
+	<data name="actionStatsDoc.Text">
+		<value>by Document</value>
+	</data>
+	<data name="actionStatsFol.Text">
+		<value>by Folder</value>
+	</data>
+	<data name="actionStatsCat.Text">
+		<value>by Category</value>
+	</data>
+	<data name="actionBack.Text">
+		<value>cancel</value>
+	</data>
+	<data name="cmdBack.Text">
+		<value>cancel</value>
+	</data>
+	<data name="lblFilterOptions.Text">
+		<value>Filter Options</value>
+	</data>	
+	<data name="cboFolder.Text">
+		<value>- folder - </value>
+	</data>
+	<data name="lblUser.Text">
+		<value>User Name</value>
+	</data>
+	<data name="imgUser.ImageUrl">
+		<value>~/DesktopModules/DNNCorp/DocumentLibrary/images/User.png</value>
+	</data>
+	<data name="imgUser.AlternateText">
+		<value>select a user</value>
+	</data>	
+	<data name="valUser.ErrorMessage">
+		<value>user not found</value>
+	</data>
+	<data name="lblDateStart.Text">
+		<value>Start Date</value>
+	</data>
+	<data name="imgDateStart.ImageUrl">
+		<value>~/DesktopModules/DNNCorp/DocumentLibrary/images/Calendar.png</value>
+	</data>
+	<data name="imgDateStart.AlternateText">
+		<value>select a start date</value>
+	</data>	
+	<data name="valDateStartCompare.ErrorMessage">
+		<value>start date must be less or equal to end date</value>
+	</data>
+	<data name="valDateStartDataType.ErrorMessage">
+		<value>invalid date</value>
+	</data>
+	<data name="lblDateEnd.Text">
+		<value>End Date</value>
+	</data>
+	<data name="imgDateEnd.ImageUrl">
+		<value>~/DesktopModules/DNNCorp/DocumentLibrary/images/Calendar.png</value>
+	</data>
+	<data name="imgDateEnd.AlternateText">
+		<value>select an end date</value>
+	</data>	
+	<data name="valDateEndCompare.ErrorMessage">
+		<value>end date must be greater or equal to start date</value>
+	</data>
+	<data name="valDateEndDataType.ErrorMessage">
+		<value>invalid date</value>
+	</data>
+	<data name="cmdViewStatistics.Text">
+		<value>view statistics</value>
+	</data>
+	<data name="lblDownloadDetails.Text">
+		<value>Download Details</value>
+	</data>
+	<data name="cmdDetails.ImageUrl">
+		<value>~/DesktopModules/DNNCorp/DocumentLibrary/images/Details.png</value>
+	</data>
+	<data name="cmdDetails.AlternateText">
+		<value>view details</value>
+	</data>	
+	<data name="lblDetFolderHierarchy.Text">
+		<value>Document Path</value>
+	</data>	
+	<data name="lblDetDocumentName.Text">
+		<value>Document Name</value>
+	</data>	
+	<data name="lblDetTabName.Text">
+		<value>Module Page</value>
+	</data>	
+	<data name="lblDetDocumentDownloads.Text">
+		<value>Download Details</value>
+	</data>	
+	<data name="lblDetDNNUserName.Text">
+		<value>User Name</value>
+	</data>	
+	<data name="lblDocumentStatsTimestamp.Text">
+		<value>Timestamp</value>
+	</data>	
+	<data name="UserName.Header">
+		<value>User Name</value>
+	</data>
+	<data name="FirstName.Header">
+		<value>First Name</value>
+	</data>
+	<data name="LastName.Header">
+		<value>Last Name</value>
+	</data>
+	<data name="cmdSelect.ImageUrl">
+		<value>~/DesktopModules/DNNCorp/DocumentLibrary/images/Details.png</value>
+	</data>
+	<data name="cmdSelect.AlternateText">
+		<value>select user</value>
+	</data>	
+	<data name="lnkClose.Text">
+		<value>close window</value>
+	</data>
+	<data name="UserLetterFilter.Text">
+		<value>A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z</value>
+	</data>
+	<data name="ControlTitle_statsdoc.Text">
+		<value>Document Statistics</value>
+	</data>
+	
+	<data name="lblDocument.Text">
+		<value>no items found</value>
+	</data>
+
+</root>

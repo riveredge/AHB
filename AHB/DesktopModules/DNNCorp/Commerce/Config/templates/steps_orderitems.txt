@@ -1,0 +1,50 @@
+<table cellspacing="0" cellpadding="2" width="95%">
+    <tbody>
+        <tr>
+            <td class="aptblhdr" align="center">Qty</td>
+            <td class="aptblhdr" align="center">Name</td>
+            <td class="aptblhdr" align="center">Price</td>
+            <td class="aptblhdr" align="center">Discount</td>
+            <td class="aptblhdr" align="center">Total</td>
+        </tr>
+	[ORDER:ORDERDETAILS]
+        <tr>
+            <td class="apnormal" style="border-left: #333 1px solid; border-bottom: #333 1px solid" align="center">[ORDERDETAILS:QTY]</td>
+            <td class="apnormal" style="border-left: #333 1px solid; border-bottom: #333 1px solid">[ORDERDETAILS:PRODUCTNAME][ORDERDETAILS:NOTE]</td>
+            <td class="apnormal" style="border-left: #333 1px solid; border-bottom: #333 1px solid" align="right" nowrap>[ORDERDETAILS:PRICE]</td>
+            <td class="apnormal" style="border-left: #333 1px solid; border-bottom: #333 1px solid" align="right" nowrap>[ORDERDETAILS:DISCOUNT]</td>
+            <td class="apnormal" style="border-right: #333 1px solid; border-left: #333 1px solid; border-bottom: #333 1px solid" align="right" nowrap>[ORDERDETAILS:SUBTOTAL]</td>
+        </tr>
+	[/ORDER:ORDERDETAILS]
+        <tr>
+            <td width="100%" colspan="3">&nbsp;</td>
+            <td class="apbold" align="right">Sub Total:</td>
+            <td class="apnormal" align="right" nowrap>[ORDER:SUBTOTAL]</td>
+        </tr>
+        <tr>
+            <td width="100%" colspan="3"></td>
+            <td class="apbold" align="right">Tax:</td>
+            <td class="apnormal" align="right" nowrap>[ORDER:TAX]</td>
+        </tr>
+        <tr>
+            <td width="100%" colspan="3"></td>
+            <td class="apbold" align="right">Misc:</td>
+            <td class="apnormal" align="right" nowrap>[ORDER:MISC]</td>
+        </tr>
+        <tr>
+            <td class="apnormal" align="right" width="100%" colspan="3"></td>
+            <td class="apbold" align="right">Discount:</td>
+            <td class="apnormal" align="right" nowrap>[ORDER:DISC]</td>
+        </tr>
+        <tr>
+            <td width="100%" colspan="3"></td>
+            <td class="apbold" align="right">Shipping:</td>
+            <td class="apnormal" align="right" nowrap>[ORDER:SHIPPING]</td>
+        </tr>
+        <tr>
+            <td width="100%" colspan="3"></td>
+            <td class="apbold" nowrap="nowrap" align="right">Grand Total:</td>
+            <td class="apnormal" align="right" nowrap>[ORDER:GRANDTOTAL]</td>
+        </tr>
+    </tbody>
+</table>

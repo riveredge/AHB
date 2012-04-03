@@ -1,0 +1,128 @@
+body
+{
+	width:320px;
+	margin:0 auto 0 auto;
+	padding:0;
+}
+
+#form
+{
+	width:320px;
+	margin:0 auto 0 auto;
+	padding:0;
+}
+
+.pagemaster
+{
+	width:320px;
+	margin:0 auto 0 auto;
+	padding:0;
+}
+
+.contentpane
+{
+	width:100%;
+}
+
+.contentpane img
+{
+	max-width:100%;
+	max-height:150px;
+}
+
+.header
+{
+	background: #3c90cb url(../images/header-handheld.jpg) no-repeat bottom center;
+	margin:0;
+	padding:0px 10px 0px 10px;
+	height:100px;
+	
+}
+
+.headerMenu
+{
+	background-color: #3c90cb;
+	position:inherit;
+	top:0;
+	float:none;
+	
+	height:10px;
+	width:300px;
+	padding:0 0 0 0;
+	
+}
+
+.controlpanel
+{
+	display:none;
+}
+
+
+
+/******* meineRezepte Menu Style *******/
+
+.MainMenu_MenuContainer
+{
+     margin-left:10px;
+}
+
+.MainMenu_MenuBar 
+{
+	color:White;
+	cursor: pointer; 
+	font-size:9pt;	
+		
+} 
+
+.MainMenu_RootMenuArrow
+{
+    display: none;
+}
+
+.MainMenu_RootMenuItem
+{
+
+} 
+
+.MainMenu_RootMenuItemSelected
+{
+	background-color: Transparent;
+    color:#fc9292;
+    font-size:9pt;
+}
+
+.MainMenu_RootMenuItemActive
+{
+    background-color: Transparent;
+    color:#98c670;
+}
+
+.MainMenu_RootMenuItemBreadcrumb
+{  
+	display:none;
+}
+
+.rightpane
+{
+	width:280px;
+	clear:both;
+	margin:10px 0 0 0;
+	padding:0;
+}
+
+.rightpane2
+{
+	width:280px;
+	clear:both;
+	margin:10px 0 0 0;
+	padding:0;
+}
+
+#dnn_dnnLOGO_imgLogo
+{
+	position:relative;
+	top:0px;
+	left:15px;
+}
+
+

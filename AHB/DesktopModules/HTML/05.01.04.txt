@@ -1,0 +1,5 @@
+' remove previous package
+Install\Module\HTML_05.01.03_Install.zip
+
+' remove Community Version Assembly
+bin\DotNetNuke.Modules.Html.dll

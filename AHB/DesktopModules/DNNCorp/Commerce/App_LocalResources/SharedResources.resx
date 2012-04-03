@@ -1,0 +1,1011 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="[RESX:Account].Text" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="[RESX:Active].Text" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="[RESX:Amount].Text" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="[RESX:And].Text" xml:space="preserve">
+    <value>And</value>
+  </data>
+  <data name="[RESX:AppliestoProducts].Text" xml:space="preserve">
+    <value>Applies to Products</value>
+  </data>
+  <data name="[RESX:Authorization].Text" xml:space="preserve">
+    <value>Authorization</value>
+  </data>
+  <data name="[RESX:AuthorizeNET].Text" xml:space="preserve">
+    <value>Authorize.Net</value>
+  </data>
+  <data name="[RESX:Between].Text" xml:space="preserve">
+    <value>Between</value>
+  </data>
+  <data name="[RESX:BillTo].Text" xml:space="preserve">
+    <value>Bill To</value>
+  </data>
+  <data name="[RESX:Button:Add].Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="[RESX:Button:AddItems].Text" xml:space="preserve">
+    <value>Add Items</value>
+  </data>
+  <data name="[RESX:Button:Cancel].Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="[RESX:Button:Delete].Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="[RESX:Button:Edit].Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="[RESX:Button:Save].Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="[RESX:Company].Text" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="[RESX:Date].Text" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="[RESX:DateCreated].Text" xml:space="preserve">
+    <value>Date Created</value>
+  </data>
+  <data name="[RESX:DateFormat].Text" xml:space="preserve">
+    <value>Date Format</value>
+  </data>
+  <data name="[RESX:Description].Text" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="[RESX:Details].Text" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="[RESX:Discount].Text" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="[RESX:DiscountCode].Text" xml:space="preserve">
+    <value>Discount Code</value>
+  </data>
+  <data name="[RESX:Discounts].Text" xml:space="preserve">
+    <value>Discounts</value>
+  </data>
+  <data name="[RESX:DisplayName].Text" xml:space="preserve">
+    <value>Display Name</value>
+  </data>
+  <data name="[RESX:Email].Text" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="[RESX:Enabled].Text" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="[RESX:EndDate].Text" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="[RESX:FirstName].Text" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="[RESX:FromEmail].Text" xml:space="preserve">
+    <value>Store Email</value>
+  </data>
+  <data name="[RESX:General].Text" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="[RESX:GrandTotal].Text" xml:space="preserve">
+    <value>Grand Total</value>
+  </data>
+  <data name="[RESX:GroupName].Text" xml:space="preserve">
+    <value>Group Name</value>
+  </data>
+  <data name="[RESX:HTML].Text" xml:space="preserve">
+    <value>HTML</value>
+  </data>
+  <data name="[RESX:HTMLContent].Text" xml:space="preserve">
+    <value>HTML Content</value>
+  </data>
+  <data name="[RESX:Invoice].Text" xml:space="preserve">
+    <value>Invoice</value>
+  </data>
+  <data name="[RESX:Last4].Text" xml:space="preserve">
+    <value>Last 4</value>
+  </data>
+  <data name="[RESX:LastActive].Text" xml:space="preserve">
+    <value>Last Active</value>
+  </data>
+  <data name="[RESX:LastLogin].Text" xml:space="preserve">
+    <value>Last Login</value>
+  </data>
+  <data name="[RESX:LastName].Text" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="[RESX:LockedOut].Text" xml:space="preserve">
+    <value>Locked Out</value>
+  </data>
+  <data name="[RESX:LoginID].Text" xml:space="preserve">
+    <value>Login ID</value>
+  </data>
+  <data name="[RESX:MaxUsePerUser].Text" xml:space="preserve">
+    <value>Max Use Per User</value>
+  </data>
+  <data name="[RESX:MaxUseTotal].Text" xml:space="preserve">
+    <value>Max Use Total</value>
+  </data>
+  <data name="[RESX:Misc].Text" xml:space="preserve">
+    <value>Misc</value>
+  </data>
+  <data name="[RESX:Month].Text" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="[RESX:Name].Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="[RESX:NoCustomers].Text" xml:space="preserve">
+    <value>No Customers Found</value>
+  </data>
+  <data name="[RESX:NoOrders].Text" xml:space="preserve">
+    <value>No Orders Founds</value>
+  </data>
+  <data name="[RESX:Order].Text" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="[RESX:OrderNumber].Text" xml:space="preserve">
+    <value>Order Number</value>
+  </data>
+  <data name="[RESX:Orders].Text" xml:space="preserve">
+    <value>Orders</value>
+  </data>
+  <data name="[RESX:OrderShipped].Text" xml:space="preserve">
+    <value>Order Shipped Template</value>
+  </data>
+  <data name="[RESX:OrderSources].Text" xml:space="preserve">
+    <value>Order Sources</value>
+  </data>
+  <data name="[RESX:OrderStatusOptions].Text" xml:space="preserve">
+    <value>Order Status Options</value>
+  </data>
+  <data name="[RESX:OrderSteps].Text" xml:space="preserve">
+    <value>Order Steps</value>
+  </data>
+  <data name="[RESX:PaymentDetails].Text" xml:space="preserve">
+    <value>Payment Details</value>
+  </data>
+  <data name="[RESX:PaymentMethod].Text" xml:space="preserve">
+    <value>Method</value>
+  </data>
+  <data name="[RESX:PaymentOptions].Text" xml:space="preserve">
+    <value>Payment Options</value>
+  </data>
+  <data name="[RESX:Percent].Text" xml:space="preserve">
+    <value>Percent</value>
+  </data>
+  <data name="[RESX:PlainText].Text" xml:space="preserve">
+    <value>Plain Text</value>
+  </data>
+  <data name="[RESX:Price].Text" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="[RESX:PrimaryEmail].Text" xml:space="preserve">
+    <value>Primary Email</value>
+  </data>
+  <data name="[RESX:PrimaryPhone].Text" xml:space="preserve">
+    <value>Primary Phone</value>
+  </data>
+  <data name="[RESX:Product].Text" xml:space="preserve">
+    <value>Product</value>
+  </data>
+  <data name="[RESX:Products].Text" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  <data name="[RESX:Profile].Text" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="[RESX:Qty].Text" xml:space="preserve">
+    <value>Qty</value>
+  </data>
+  <data name="[RESX:Search].Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="[RESX:SecondaryEmail].Text" xml:space="preserve">
+    <value>Secondary Email</value>
+  </data>
+  <data name="[RESX:SecondaryPhone].Text" xml:space="preserve">
+    <value>Secondary Phone</value>
+  </data>
+  <data name="[RESX:Select].Text" xml:space="preserve">
+    <value>-- Please Select --</value>
+  </data>
+  <data name="[RESX:Shipping].Text" xml:space="preserve">
+    <value>Shipping</value>
+  </data>
+  <data name="[RESX:ShipTo].Text" xml:space="preserve">
+    <value>Ship To</value>
+  </data>
+  <data name="[RESX:SKU].Text" xml:space="preserve">
+    <value>SKU</value>
+  </data>
+  <data name="[RESX:StartDate].Text" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="[RESX:Status].Text" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="[RESX:Subject].Text" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="[RESX:SubTotal].Text" xml:space="preserve">
+    <value>Sub Total</value>
+  </data>
+  <data name="[RESX:Title].Text" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="[RESX:Total].Text" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="[RESX:TransactionId].Text" xml:space="preserve">
+    <value>Transaction Id</value>
+  </data>
+  <data name="[RESX:TransactionKey].Text" xml:space="preserve">
+    <value>Transaction Key</value>
+  </data>
+  <data name="[RESX:UnitsSold].Text" xml:space="preserve">
+    <value>Units</value>
+  </data>
+  <data name="[RESX:UsageCount].Text" xml:space="preserve">
+    <value>Usage Count</value>
+  </data>
+  <data name="[RESX:UserId].Text" xml:space="preserve">
+    <value>User Id</value>
+  </data>
+  <data name="[RESX:UserName].Text" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="[RESX:VALIDATE:MustNumeric].Text" xml:space="preserve">
+    <value>You must enter a numeric value.</value>
+  </data>
+  <data name="[RESX:Year].Text" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="ControlPanel.Text" xml:space="preserve">
+    <value>Control Panel</value>
+  </data>
+  <data name="[RESX:ContactDetails].Text" xml:space="preserve">
+    <value>Contact Details</value>
+  </data>
+  <data name="[RESX:Phone].Text" xml:space="preserve">
+    <value>Telephone</value>
+  </data>
+  <data name="[RESX:BillingAddress].Text" xml:space="preserve">
+    <value>Billing Address</value>
+  </data>
+  <data name="[RESX:ShippingAddress].Text" xml:space="preserve">
+    <value>Shipping Address</value>
+  </data>
+  <data name="[RESX:Address].Text" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="[RESX:City].Text" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="[RESX:Region].Text" xml:space="preserve">
+    <value>Region</value>
+  </data>
+  <data name="[RESX:PostalCode].Text" xml:space="preserve">
+    <value>Postal Code</value>
+  </data>
+  <data name="[RESX:Country].Text" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="[RESX:No].Text" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="[RESX:Yes].Text" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="[RESX:CheckOut:ChoosePayment].Text" xml:space="preserve">
+    <value>Choose a Payment Method and Complete Order</value>
+  </data>
+  <data name="[RESX:CheckOut:PayCredit].Text" xml:space="preserve">
+    <value>Pay using Credit Card</value>
+  </data>
+  <data name="[RESX:CheckOut:PayPayPal].Text" xml:space="preserve">
+    <value>Pay using PayPal</value>
+  </data>
+  <data name="[RESX:CheckOut:PayPalMessage].Text" xml:space="preserve">
+    <value>After clicking on the process order button, you will be prompted to login to your PayPal account as part of the payment authorization process.</value>
+  </data>
+  <data name="[RESX:CheckOut:ApplyCode].Text" xml:space="preserve">
+    <value>Apply Discount Code?</value>
+  </data>
+  <data name="[RESX:CheckOut:CardNumber].Text" xml:space="preserve">
+    <value>Card Number</value>
+  </data>
+  <data name="[RESX:CheckOut:CCV].Text" xml:space="preserve">
+    <value>CCV</value>
+  </data>
+  <data name="[RESX:CheckOut:EXP].Text" xml:space="preserve">
+    <value>Expiration Date</value>
+  </data>
+  <data name="[RESX:CheckOut:NameOnCard].Text" xml:space="preserve">
+    <value>Name on Card</value>
+  </data>
+  <data name="[RESX:CheckOut:Notes].Text" xml:space="preserve">
+    <value>Any special instructions or comments?</value>
+  </data>
+  <data name="[RESX:CheckOut:PaymentMethod].Text" xml:space="preserve">
+    <value>Payment Method</value>
+  </data>
+  <data name="[RESX:VALIDATE:Tax].Text" xml:space="preserve">
+    <value>Please enter a valid tax rate.</value>
+  </data>
+  <data name="[RESX:Action].Text" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="[RESX:Button:Payment].Text" xml:space="preserve">
+    <value>Payment</value>
+  </data>
+  <data name="[RESX:Button:Process].Text" xml:space="preserve">
+    <value>Process Payment</value>
+  </data>
+  <data name="[RESX:DateTime].Text" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="[RESX:IsPaid].Text" xml:space="preserve">
+    <value>Paid?</value>
+  </data>
+  <data name="[RESX:Note].Text" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="[RESX:NotPaid].Text" xml:space="preserve">
+    <value>Not Paid</value>
+  </data>
+  <data name="[RESX:OrderPostLog].Text" xml:space="preserve">
+    <value>Post Purchase Log</value>
+  </data>
+  <data name="[RESX:PaymentStatus].Text" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="[RESX:Result].Text" xml:space="preserve">
+    <value>Results</value>
+  </data>
+  <data name="[RESX:Next].Text" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="[RESX:BankTransfer].Text" xml:space="preserve">
+    <value>Bank Transfer</value>
+  </data>
+  <data name="[RESX:Check].Text" xml:space="preserve">
+    <value>Check</value>
+  </data>
+  <data name="[RESX:CreditCard].Text" xml:space="preserve">
+    <value>Credit Card</value>
+  </data>
+  <data name="[RESX:Other].Text" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="[RESX:PaymentRef].Text" xml:space="preserve">
+    <value>Referrence Number</value>
+  </data>
+  <data name="[RESX:PleaseSelect].Text" xml:space="preserve">
+    <value>-- Please Select --</value>
+  </data>
+  <data name="[RESX:DiscountsCoupons].Text" xml:space="preserve">
+    <value>Discounts</value>
+  </data>
+  <data name="[RESX:About].Text" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="[RESX:Button:Email].Text" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="[RESX:Button:Send].Text" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="[RESX:CheckOut:CCMessage].Text" xml:space="preserve">
+    <value>You have selected to pay using a Credit Card.  Please complete the information below then click the process order button.  Your order will be processed immediately.  Your order will be complete once payment has been approved.  </value>
+  </data>
+  <data name="[RESX:CheckOut:OtherMessage].Text" xml:space="preserve">
+    <value>You have selected to pay using an alternative payment method.  Please click the process order button so that we will have a record of your pending order and can provide you with an invoice number.  Important: you will need to contact to us finalize payment.  Your order will not be processed until payment has been received.</value>
+  </data>
+  <data name="[RESX:CheckOut:TransferMessage].Text" xml:space="preserve">
+    <value>You have selected to pay using a Bank Transfer.  Please click the process order button so that we will have a record of your pending order and can provide you with an invoice number.  Important: Your order will not be processed until funds have been received.</value>
+  </data>
+  <data name="[RESX:DecreaseQty].Text" xml:space="preserve">
+    <value>Decrease Quantity</value>
+  </data>
+  <data name="[RESX:DeleteItem].Text" xml:space="preserve">
+    <value>Remove Item</value>
+  </data>
+  <data name="[RESX:IncreaseQty].Text" xml:space="preserve">
+    <value>Increase Quantity</value>
+  </data>
+  <data name="[RESX:apply].Text" xml:space="preserve">
+    <value>apply</value>
+  </data>
+  <data name="[RESX:Validate:CCExp].Text" xml:space="preserve">
+    <value>Please enter a valid expiration date</value>
+  </data>
+  <data name="[RESX:Validate:DiscApplied].Text" xml:space="preserve">
+    <value>Discount has already been applied.</value>
+  </data>
+  <data name="[RESX:Validate:DiscNotValid].Text" xml:space="preserve">
+    <value>You have entered an invalid code.</value>
+  </data>
+  <data name="[RESX:Validate:InvalidDisc].Text" xml:space="preserve">
+    <value>Discount code is no longer valid.</value>
+  </data>
+  <data name="[RESX:Validate:DiscNotQualified].Text" xml:space="preserve">
+    <value>You do not qualify for this discount.</value>
+  </data>
+  <data name="[RESX:Validate:NeedAuthNet].Text" xml:space="preserve">
+    <value>You must enter your Authorize.Net gateway information if you accept credit cards.</value>
+  </data>
+  <data name="[RESX:Validate:NeedPayPal].Text" xml:space="preserve">
+    <value>You must enter the proper PayPal information.</value>
+  </data>
+  <data name="[RESX:Validate:NoPaymentOptions].Text" xml:space="preserve">
+    <value>You must select a payment option to receive orders.</value>
+  </data>
+  <data name="[RESX:Validate:UserAccount].Text" xml:space="preserve">
+    <value>An account already exists for the email address you entered.  Please login or select another email address. Would you like to login?</value>
+  </data>
+  <data name="[RESX:IONKey].Text" xml:space="preserve">
+    <value>ION Security Key</value>
+  </data>
+  <data name="[RESX:RequireShipAddress].Text" xml:space="preserve">
+    <value>Requires Shipping</value>
+  </data>
+  <data name="[RESX:FileName].Text" xml:space="preserve">
+    <value>File Name</value>
+  </data>
+  <data name="[RESX:ExpirationTemplate].Text" xml:space="preserve">
+    <value>Expiration Email</value>
+  </data>
+  <data name="[RESX:Interval].Text" xml:space="preserve">
+    <value>Interval</value>
+  </data>
+  <data name="[RESX:AccountCreationAuto].Text" xml:space="preserve">
+    <value>Automatic</value>
+  </data>
+  <data name="[RESX:AccountCreationDisabled].Text" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="[RESX:AccountCreationOptional].Text" xml:space="preserve">
+    <value>Optional</value>
+  </data>
+  <data name="[RESX:AccountCreationRequired].Text" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="[RESX:CreateAccountOptional].Text" xml:space="preserve">
+    <value>Create an account (optional)</value>
+  </data>
+  <data name="[RESX:CreateAccountRequired].Text" xml:space="preserve">
+    <value>Create an account</value>
+  </data>
+  <data name="[RESX:EmailAccountExists].Text" xml:space="preserve">
+    <value>User account already exists for this email address.</value>
+  </data>
+  <data name="[RESX:EmailAddressReq].Text" xml:space="preserve">
+    <value>Email Address is required.</value>
+  </data>
+  <data name="[RESX:PasswordConfirm].Text" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="[RESX:PasswordMatch].Text" xml:space="preserve">
+    <value>Passwords do not match</value>
+  </data>
+  <data name="[RESX:PasswordMinLength].Text" xml:space="preserve">
+    <value>Password must be at least {0} characters.</value>
+  </data>
+  <data name="[RESX:PasswordNonAlpha].Text" xml:space="preserve">
+    <value>Password must contain at least {0} non-alphanumeric character(s).</value>
+  </data>
+  <data name="[RESX:Password].Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="[RESX:UsernameUnavailable].Text" xml:space="preserve">
+    <value>Please choose another username.</value>
+  </data>
+  <data name="[RESX:Auto].Text" xml:space="preserve">
+    <value>Auto Renew</value>
+  </data>
+  <data name="[RESX:CheckOut:PurchaseOrderMessage].Text" xml:space="preserve">
+    <value>Please provide a purchase order number below.</value>
+  </data>
+  <data name="[RESX:Never].Text" xml:space="preserve">
+    <value>Never</value>
+  </data>
+  <data name="[RESX:PurchaseOrderNumber].Text" xml:space="preserve">
+    <value>Purchase Order Number</value>
+  </data>
+  <data name="[RESX:PurchaseOrderRequired].Text" xml:space="preserve">
+    <value>Purchase Order Number is required.</value>
+  </data>
+  <data name="[RESX:PurchaseOrder].Text" xml:space="preserve">
+    <value>Purchase Order</value>
+  </data>
+  <data name="[RESX:UserChoice].Text" xml:space="preserve">
+    <value>Customer Choice</value>
+  </data>
+  <data name="[RESX:ControlPanel].Text" xml:space="preserve">
+    <value>Control Panel</value>
+  </data>
+  <data name="[RESX:MyOrders].Text" xml:space="preserve">
+    <value>My Orders</value>
+  </data>
+  <data name="[RESX:OrderDetails].Text" xml:space="preserve">
+    <value>Order Details</value>
+  </data>
+  <data name="[RESX:Exit].Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="[RESX:ProductOptions].Text" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="[RESX:Visible].Text" xml:space="preserve">
+    <value>Visible</value>
+  </data>
+  <data name="[RESX:CheckOut:NoPayMessage].Text" xml:space="preserve">
+    <value>No Payment Necessary - Click the process order button to complete your order</value>
+  </data>
+  <data name="[RESX:IsActive].Text" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="[RESX:LongDesc].Text" xml:space="preserve">
+    <value>Long Description</value>
+  </data>
+  <data name="[RESX:Save].Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="[RESX:Cancel].Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="[RESX:InstanceCount].Text" xml:space="preserve">
+    <value>Site Count</value>
+  </data>
+  <data name="[RESX:LicenseExpirationDays].Text" xml:space="preserve">
+    <value>Days To Expiration</value>
+  </data>
+  <data name="[RESX:LicenseExpires].Text" xml:space="preserve">
+    <value>Allow Expiration</value>
+  </data>
+  <data name="[RESX:Licenses].Text" xml:space="preserve">
+    <value>Licenses</value>
+  </data>
+  <data name="[RESX:LicenseTypes].Text" xml:space="preserve">
+    <value>License Types</value>
+  </data>
+  <data name="[RESX:MaxActivations].Text" xml:space="preserve">
+    <value>Max Activations</value>
+  </data>
+  <data name="[RESX:PleaseEnterSearch].Text" xml:space="preserve">
+    <value>Please enter a value you wish to use for search criteria.</value>
+  </data>
+  <data name="[RESX:ProdKey].Text" xml:space="preserve">
+    <value>Product Key</value>
+  </data>
+  <data name="[RESX:ProdSku].Text" xml:space="preserve">
+    <value>Product Sku</value>
+  </data>
+  <data name="[RESX:RequiredFields].Text" xml:space="preserve">
+    <value>Please enter values for all required fields.</value>
+  </data>
+  <data name="[RESX:ProductDetails].Text" xml:space="preserve">
+    <value>Product Details</value>
+  </data>
+  <data name="[RESX:Options].Text" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="[RESX:IsRequired].Text" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="[RESX:Label].Text" xml:space="preserve">
+    <value>Label</value>
+  </data>
+  <data name="[RESX:ValidationExpression].Text" xml:space="preserve">
+    <value>Input Validation</value>
+  </data>
+  <data name="[RESX:ContactId].Text" xml:space="preserve">
+    <value>Contact Id</value>
+  </data>
+  <data name="[RESX:InvoiceNumber].Text" xml:space="preserve">
+    <value>Invoice Number</value>
+  </data>
+  <data name="[RESX:LicenseId].Text" xml:space="preserve">
+    <value>License Id</value>
+  </data>
+  <data name="[RESX:LicenseType].Text" xml:space="preserve">
+    <value>License Type</value>
+  </data>
+  <data name="[RESX:IsDisabled].Text" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="[RESX:LicenseEditor].Text" xml:space="preserve">
+    <value>License Details</value>
+  </data>
+  <data name="[RESX:OrderDetailsEditor].Text" xml:space="preserve">
+    <value>Order Item Details</value>
+  </data>
+  <data name="[RESX:Street].Text" xml:space="preserve">
+    <value>Street</value>
+  </data>
+  <data name="[RESX:AccountInfo:Hint].Text" xml:space="preserve">
+    <value>Please create enter the information below to create your account.</value>
+  </data>
+  <data name="[RESX:AccountInfo].Text" xml:space="preserve">
+    <value>Account Information</value>
+  </data>
+  <data name="[RESX:Button:CreateAccount].Text" xml:space="preserve">
+    <value>Create Account</value>
+  </data>
+  <data name="[RESX:Button:Login].Text" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="[RESX:ContactInfo:Hint].Text" xml:space="preserve">
+    <value>Your contact information will be used for order processing.</value>
+  </data>
+  <data name="[RESX:ContactInfo].Text" xml:space="preserve">
+    <value>Contact Information</value>
+  </data>
+  <data name="[RESX:LoginInfo:Hint].Text" xml:space="preserve">
+    <value>Enter your Username and password if you already have an account or purchased items in the past.</value>
+  </data>
+  <data name="[RESX:LoginInfo].Text" xml:space="preserve">
+    <value>Account Login</value>
+  </data>
+  <data name="[RESX:MSG:LoginFailed].Text" xml:space="preserve">
+    <value>Login failed for the username and password you entered.</value>
+  </data>
+  <data name="[RESX:Tracker:Account].Text" xml:space="preserve">
+    <value>Billing &amp; Shipping</value>
+  </data>
+  <data name="[RESX:Tracker:Cart].Text" xml:space="preserve">
+    <value>Shopping Cart</value>
+  </data>
+  <data name="[RESX:Tracker:Finished].Text" xml:space="preserve">
+    <value>Order Completed</value>
+  </data>
+  <data name="[RESX:Tracker:Payment].Text" xml:space="preserve">
+    <value>Review &amp; Payment</value>
+  </data>
+  <data name="[RESX:Button:Checkout].Text" xml:space="preserve">
+    <value>Proceed to Checkout</value>
+  </data>
+  <data name="[RESX:Button:ContinueShopping].Text" xml:space="preserve">
+    <value>Back to Products</value>
+  </data>
+  <data name="[RESX:BillingInfo:Hint].Text" xml:space="preserve">
+    <value>The information below will be used for billing purposes.  Please make sure it matches the credit card you wish to use for payment.</value>
+  </data>
+  <data name="[RESX:BillingInfo].Text" xml:space="preserve">
+    <value>Billing Address</value>
+  </data>
+  <data name="[RESX:Button:ProceedPayment].Text" xml:space="preserve">
+    <value>Proceed To Payment</value>
+  </data>
+  <data name="[RESX:Button:ProcessPayment].Text" xml:space="preserve">
+    <value>Process My Order</value>
+  </data>
+  <data name="[RESX:Button:SaveAddress].Text" xml:space="preserve">
+    <value>Save Address</value>
+  </data>
+  <data name="[RESX:Button:SaveAndProceed].Text" xml:space="preserve">
+    <value>Save Address and Continue</value>
+  </data>
+  <data name="[RESX:CartHeader:Hint].Text" xml:space="preserve">
+    <value>Below are the items you have selected to purchase.</value>
+  </data>
+  <data name="[RESX:CartHeader].Text" xml:space="preserve">
+    <value>Your Order</value>
+  </data>
+  <data name="[RESX:ContactHeader:Hint].Text" xml:space="preserve">
+    <value>Your contact information will only be used if we need to contact you regarding your order.  You billing address will be used to validate your credit information.  You shipping address is where your items will be delivered.</value>
+  </data>
+  <data name="[RESX:ContactHeader].Text" xml:space="preserve">
+    <value>Your Billing and Shipping Information</value>
+  </data>
+  <data name="[RESX:PaymentHeader:Hint].Text" xml:space="preserve">
+    <value>Please enter your payment information below and click Process My Order when ready.</value>
+  </data>
+  <data name="[RESX:PaymentHeader].Text" xml:space="preserve">
+    <value>Your Payment Information</value>
+  </data>
+  <data name="[RESX:Button:BackToLogin].Text" xml:space="preserve">
+    <value>Back to Login</value>
+  </data>
+  <data name="[RESX:Button:SendPassword].Text" xml:space="preserve">
+    <value>Send Password</value>
+  </data>
+  <data name="[RESX:LoginFailed].Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="[RESX:PasswordReminder:Hint].Text" xml:space="preserve">
+    <value>Please enter your username or email address in the space provided below.  Your password will be emailed to you if possible.</value>
+  </data>
+  <data name="[RESX:PasswordReminder].Text" xml:space="preserve">
+    <value>Password Reminder</value>
+  </data>
+  <data name="[RESX:PleaseWait].Text" xml:space="preserve">
+    <value>Please Wait...</value>
+  </data>
+  <data name="[RESX:UserNameOrEmail].Text" xml:space="preserve">
+    <value>Username/Email</value>
+  </data>
+  <data name="[RESX:LoginSuccess].Text" xml:space="preserve">
+    <value>Success!  Please click the button below if the page does reload automatically.</value>
+  </data>
+  <data name="[RESX:Success].Text" xml:space="preserve">
+    <value>Success!</value>
+  </data>
+  <data name="[RESX:AccountHeader:Hint].Text" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="[RESX:AccountHeader].Text" xml:space="preserve">
+    <value>Billing &amp; Shipping Information</value>
+  </data>
+  <data name="[RESX:Button:PasswordReminder].Text" xml:space="preserve">
+    <value>Password Reminder</value>
+  </data>
+  <data name="[RESX:Button:Reload].Text" xml:space="preserve">
+    <value>Reload Page</value>
+  </data>
+  <data name="[RESX:Button:TryAgain].Text" xml:space="preserve">
+    <value>Try Again?</value>
+  </data>
+  <data name="[RESX:Problems].Text" xml:space="preserve">
+    <value>Problems?</value>
+  </data>
+  <data name="[RESX:YourInformation].Text" xml:space="preserve">
+    <value>Your Information</value>
+  </data>
+  <data name="[RESX:ExistingUser].Text" xml:space="preserve">
+    <value>Returning User?</value>
+  </data>
+  <data name="[RESX:Button:ProceedToPayment].Text" xml:space="preserve">
+    <value>Proceed To Payment</value>
+  </data>
+  <data name="[RESX:AccountOption:Hint].Text" xml:space="preserve">
+    <value>We will automatically generate a username and password for you or you can specify your own information below.</value>
+  </data>
+  <data name="[RESX:AccountOption].Text" xml:space="preserve">
+    <value>Optional Account Information</value>
+  </data>
+  <data name="[RESX:ApplyDiscountCode].Text" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="[RESX:CheckOut:DiscHint].Text" xml:space="preserve">
+    <value>Enter a discount code in the box below then click apply.</value>
+  </data>
+  <data name="[RESX:Finished:Hint].Text" xml:space="preserve">
+    <value>Your order is now complete.  Additional details are provided below.</value>
+  </data>
+  <data name="[RESX:Finished].Text" xml:space="preserve">
+    <value>Thank You!</value>
+  </data>
+  <data name="[RESX:OrderSummary].Text" xml:space="preserve">
+    <value>Order Summary</value>
+  </data>
+  <data name="[DownloadTemplate].Text" xml:space="preserve">
+    <value>&lt;span class="cart-download"&gt;&lt;a href="[URL]"&gt;[ICON]&lt;span&gt;&lt;b&gt;[TITLE]&lt;/b&gt;&lt;/span&gt;&lt;span&gt;[FILENAME]&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;</value>
+  </data>
+  <data name="[MyDownloadsTemplate].Text" xml:space="preserve">
+    <value>[TITLE]&lt;a href="[URL]"&gt;&lt;span&gt;[FILENAME]&lt;/span&gt;&lt;/a&gt;[SIZE]</value>
+  </data>
+  <data name="[RESX:Button:UpdateCart].Text" xml:space="preserve">
+    <value>Update Cart</value>
+  </data>
+  <data name="[RESX:MoreInformation:Hint].Text" xml:space="preserve">
+    <value>Looks like we need more information before you can purchase this item.</value>
+  </data>
+  <data name="[RESX:MoreInformation].Text" xml:space="preserve">
+    <value>More Information</value>
+  </data>
+  <data name="[RESX:Downloads].Text" xml:space="preserve">
+    <value>Downloads</value>
+  </data>
+  <data name="[RESX:SelectProductGroup].Text" xml:space="preserve">
+    <value>-- Select Product Group --</value>
+  </data>
+  <data name="[RESX:UseDefault].Text" xml:space="preserve">
+    <value>-- Use Default --</value>
+  </data>
+  <data name="[RESX:Addresses].Text" xml:space="preserve">
+    <value>Existing Addresses</value>
+  </data>
+  <data name="[RESX:Billing].Text" xml:space="preserve">
+    <value>Billing</value>
+  </data>
+  <data name="[RESX:Delete].Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="[RESX:NewAddress].Text" xml:space="preserve">
+    <value>Add New Address</value>
+  </data>
+  <data name="[RESX:NewUser].Text" xml:space="preserve">
+    <value>New Customer</value>
+  </data>
+  <data name="[RESX:PurchaseDate].Text" xml:space="preserve">
+    <value>Date of Purchase</value>
+  </data>
+  <data name="[RESX:SelectAddress].Text" xml:space="preserve">
+    <value>Select Address</value>
+  </data>
+  <data name="[RESX:OrderHistory].Text" xml:space="preserve">
+    <value>Order History</value>
+  </data>
+  <data name="[RESX:State].Text" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="[RESX:NewOrder].Text" xml:space="preserve">
+    <value>Create New Invoice</value>
+  </data>
+  <data name="[RESX:Button:SaveProperties].Text" xml:space="preserve">
+    <value>Save &amp; Continue</value>
+  </data>
+  <data name="[RESX:ActiveOnly].Text" xml:space="preserve">
+    <value>Active Only</value>
+  </data>
+  <data name="[RESX:ASC].Text" xml:space="preserve">
+    <value>Ascending</value>
+  </data>
+  <data name="[RESX:DESC].Text" xml:space="preserve">
+    <value>Descending</value>
+  </data>
+  <data name="[RESX:MaxRecords].Text" xml:space="preserve">
+    <value>Rows</value>
+  </data>
+  <data name="[RESX:SortColumn].Text" xml:space="preserve">
+    <value>Sort Column</value>
+  </data>
+  <data name="[RESX:SortDirection].Text" xml:space="preserve">
+    <value>Sort Order</value>
+  </data>
+  <data name="[RESX:Required].Text" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="[RESX:All].Text" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="[RESX:BuyNow].Text" xml:space="preserve">
+    <value>Buy Now</value>
+  </data>
+  <data name="[RESX:Tax].Text" xml:space="preserve">
+    <value>Tax</value>
+  </data>
+  <data name="[RESX:InvalidCode].Text" xml:space="preserve">
+    <value>Invalid Discount Code</value>
+  </data>
+  <data name="[RESX:Download].Text" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="Create Orders.Permission" xml:space="preserve">
+    <value>Create Orders</value>
+  </data>
+  <data name="Edit Orders.Permission" xml:space="preserve">
+    <value>Edit Orders</value>
+  </data>
+  <data name="Order Admin.Permission" xml:space="preserve">
+    <value>Order Admin</value>
+  </data>
+  <data name="Product Admin.Permission" xml:space="preserve">
+    <value>Product Admin</value>
+  </data>
+</root>

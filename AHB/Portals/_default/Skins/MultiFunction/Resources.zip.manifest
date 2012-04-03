@@ -1,0 +1,80 @@
+﻿<dotnetnuke type="ResourceFile" version="5.0">
+  <files>
+    <file>
+      <path />
+      <name>Edit.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>Edit.doctype.xml</name>
+    </file>
+    <file>
+      <path />
+      <name>edit.jpg</name>
+    </file>
+    <file>
+      <path />
+      <name>Home.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>home.doctype.xml</name>
+    </file>
+    <file>
+      <path />
+      <name>home.jpg</name>
+    </file>
+    <file>
+      <path />
+      <name>license.txt</name>
+    </file>
+    <file>
+      <path />
+      <name>releasenotes.txt</name>
+    </file>
+    <file>
+      <path />
+      <name>skin.css</name>
+    </file>
+    <file>
+      <path />
+      <name>TwoColumn.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>TwoColumn.doctype.xml</name>
+    </file>
+    <file>
+      <path />
+      <name>twocolumn.jpg</name>
+    </file>
+    <file>
+      <path>i/</path>
+      <name>contentbg_rp.png</name>
+    </file>
+    <file>
+      <path>i/</path>
+      <name>footerbg.jpg</name>
+    </file>
+    <file>
+      <path>i/</path>
+      <name>footerbg_rp.png</name>
+    </file>
+    <file>
+      <path>i/</path>
+      <name>headerbg.jpg</name>
+    </file>
+    <file>
+      <path>i/</path>
+      <name>headerbg_rp.png</name>
+    </file>
+    <file>
+      <path>i/</path>
+      <name>header_graphic.png</name>
+    </file>
+    <file>
+      <path>js/ob/</path>
+      <name>orangebox.min.js</name>
+    </file>
+  </files>
+</dotnetnuke>

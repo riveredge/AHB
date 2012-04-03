@@ -1,0 +1,19 @@
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+
+
+/***** REMOVE REDUNDANT CONTROLKEY ******/
+DELETE FROM {databaseOwner}{objectQualifier}ModuleControls WHERE ControlKey='Review' and ControlSrc='DesktopModules/HTML/EditHtml.ascx'
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

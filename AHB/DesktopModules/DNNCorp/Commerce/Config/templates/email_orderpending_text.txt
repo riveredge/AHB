@@ -1,0 +1,6 @@
+Dear [CONTACT:FIRSTNAME], 
+Your order has been received, but not processed.  We are still waiting for your payment.  Please send payment so that we may process your order promptly.
+
+Thank you,
+[PORTAL:PORTALNAME]
+[PORTAL:URL]

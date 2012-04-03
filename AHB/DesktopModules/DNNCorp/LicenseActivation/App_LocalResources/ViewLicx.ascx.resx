@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="plAccount.Text" xml:space="preserve">
+    <value>Account Email</value>
+  </data>
+  <data name="plAccount.Help" xml:space="preserve">
+    <value>The email address associated with your licenses. This can be found in the email you received when you purchased the license.</value>
+  </data>
+  <data name="plInvoice.Text" xml:space="preserve">
+    <value>Invoice Number</value>
+  </data>
+  <data name="plInvoice.Help" xml:space="preserve">
+    <value>The invoice number given to you when you purchased your license.</value>
+  </data>
+  <data name="plServerId.Text" xml:space="preserve">
+    <value>Server ID</value>
+  </data>
+  <data name="plServerId.Help" xml:space="preserve">
+    <value>The ID of this server</value>
+  </data>
+  <data name="plActivationKey.Text" xml:space="preserve">
+    <value>Activation Key</value>
+  </data>
+  <data name="plActivationKey.Help" xml:space="preserve">
+    <value>This is the key that has been sent to you by DotNetNuke Corp. after your request</value>
+  </data>
+  <data name="cmdSave.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="cmdCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ControlTitle_license.Text" xml:space="preserve">
+    <value>License Information</value>
+  </data>
+  <data name="B2MLicensing.Text" xml:space="preserve">
+    <value>DotNetNuke Professional Licensing</value>
+  </data>
+  <data name="Required.Error" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="RequestLicx.Text" xml:space="preserve">
+    <value>Request an activation key on DotNetNuke.com</value>
+  </data>
+  <data name="cmdManualActivation.Text" xml:space="preserve">
+    <value>Manual Activation</value>
+  </data>
+  <data name="cmdAutoActivation.Text" xml:space="preserve">
+    <value>Automatic Activation</value>
+  </data>
+  <data name="cmdUpload.Text" xml:space="preserve">
+    <value>Submit Activation Key</value>
+  </data>
+  <data name="plDevLicense.Help" xml:space="preserve">
+    <value>Check this to request a development license.  Development licenses can be used in any non-production environment but require an active production license.</value>
+  </data>
+  <data name="plDevLicense.Text" xml:space="preserve">
+    <value>Request Development License</value>
+  </data>
+  <data name="ControlHelp.Text" xml:space="preserve">
+    <value>&lt;p&gt;
+The License Manager allows you to activate your [DotNetNukeEdition] licenses. Activating a license will ensure that you continue to receive the benefits provided 
+to our customers. When you purchased [DotNetNukeEdition], you received an email with your account and invoice information. If you have questions about this 
+email please contact &lt;a href="mailto:sales@dotnetnuke.com"&gt;sales@dotnetnuke.com&lt;/a&gt;. If you have any questions about your current licenses, use your 
+account information to login and view &lt;a href="[LicenseUrl]" target="_blank"&gt;your licenses on DotNetNuke.com&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;You can activate a license using Automatic Activation or Manual Activation if for some reason you cannot use the automatic activation.&lt;/p&gt;</value>
+  </data>
+  <data name="ControlTitle.Text" xml:space="preserve">
+    <value>License Status and Activation</value>
+  </data>
+  <data name="plStatus.Help" xml:space="preserve">
+    <value>This is the status of the currently stored license</value>
+  </data>
+  <data name="plStatus.Text" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="lblCheckLicense.Text" xml:space="preserve">
+    <value>If you have questions about your current licenses, please check &lt;a href="{0}" target="_blank"&gt;your licenses on DotNetNuke.com&lt;/a&gt;. Log in using the account you received when you first bought the product.</value>
+  </data>
+  <data name="Step1.Text" xml:space="preserve">
+    <value>STEP 1. Copy the server ID below to the clipboard</value>
+  </data>
+  <data name="Step2.Text" xml:space="preserve">
+    <value>STEP 2. Click the link below to open a new browser window, login with your account information and follow the onscreen instructions to retrieve your activation key.</value>
+  </data>
+  <data name="Step3.Text" xml:space="preserve">
+    <value>STEP 3. Paste the activation key to the textbox below.</value>
+  </data>
+  <data name="Step4.Text" xml:space="preserve">
+    <value>STEP 4. Click the button below to parse the activation key and store the result.</value>
+  </data>
+  <data name="plActivated.Help" xml:space="preserve">
+    <value>Shows whether the license has been activated.</value>
+  </data>
+  <data name="plActivated.Text" xml:space="preserve">
+    <value>Activated</value>
+  </data>
+  <data name="LicenseNotActive.Text" xml:space="preserve">
+    <value>&lt;span class="NormalRed"&gt;No Active License&lt;/span&gt;</value>
+  </data>
+  <data name="ManualAct.Text" xml:space="preserve">
+    <value>Manual Activation</value>
+  </data>
+  <data name="OnlineAct.Text" xml:space="preserve">
+    <value>Online Activation</value>
+  </data>
+  <data name="plLicenseType.Help" xml:space="preserve">
+    <value>Shows the type of license currently activated for this site.</value>
+  </data>
+  <data name="plLicenseType.Text" xml:space="preserve">
+    <value>License Type</value>
+  </data>
+  <data name="plMachine.Help" xml:space="preserve">
+    <value>Enter the name of the machine that is running DotNetNuke.  This value is defaulted to the name of the current web server and may need to be changed when operating in a web farm.</value>
+  </data>
+  <data name="plMachine.Text" xml:space="preserve">
+    <value>Web Server</value>
+  </data>
+  <data name="plTrialLicense.Help" xml:space="preserve">
+    <value>Check this box to request a trial license.  A trial license is a time limited license that can be used in a non-production environment.</value>
+  </data>
+  <data name="plTrialLicense.Text" xml:space="preserve">
+    <value>Request Trial License</value>
+  </data>
+  <data name="cmdAddLicense.Text" xml:space="preserve">
+    <value>Add License</value>
+  </data>
+  <data name="NoLicenses.Text" xml:space="preserve">
+    <value>No Licenses have been activated.</value>
+  </data>
+  <data name="cmdGenLicenseKey.Text" xml:space="preserve">
+    <value>Manual Activation</value>
+  </data>
+  <data name="Account.Required" xml:space="preserve">
+    <value>Please enter the email address for your license. This can be found in the email you received when you purchased the license.</value>
+  </data>
+  <data name="Invoice.Required" xml:space="preserve">
+    <value>Please enter your invoice number.  You can find this number on the email received with your license purchase.</value>
+  </data>
+  <data name="Machine.Required" xml:space="preserve">
+    <value>Please enter the name of the computer that is being activated.</value>
+  </data>
+  <data name="lnkDeactivate.Text" xml:space="preserve">
+    <value>Deactivate License</value>
+  </data>
+  <data name="cmdExtendTrial.Text" xml:space="preserve">
+    <value>Request Extended Trial License</value>
+  </data>
+  <data name="plCompany.Help" xml:space="preserve">
+    <value>Enter your Company Name</value>
+  </data>
+  <data name="plCompany.Text" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="plEmail.Help" xml:space="preserve">
+    <value>Enter an email address where you wish to recieve your extended license information.</value>
+  </data>
+  <data name="plEmail.Text" xml:space="preserve">
+    <value>Email Address</value>
+  </data>
+  <data name="plFirstName.Help" xml:space="preserve">
+    <value>Enter your First name</value>
+  </data>
+  <data name="plFirstName.Text" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="cmdActivateExtension.Text" xml:space="preserve">
+    <value>Complete Activation</value>
+  </data>
+  <data name="cmdActivateTrial.Text" xml:space="preserve">
+    <value>Activate Extended Trial License</value>
+  </data>
+  <data name="cmdRequestExtension.Text" xml:space="preserve">
+    <value>Submit Request</value>
+  </data>
+  <data name="email.extension.body" xml:space="preserve">
+    <value>&lt;p&gt;The following customer has requested an extension of their Trial License:&lt;br /&gt;
+&lt;br /&gt;
+&lt;strong&gt;Product&lt;/strong&gt;: {6}&lt;br /&gt;
+&lt;strong&gt;Customer Name&lt;/strong&gt;: {0} {1}&lt;br /&gt;
+&lt;strong&gt;Email&lt;/strong&gt;: {2}&lt;br /&gt;
+&lt;strong&gt;Company&lt;/strong&gt;: {3}&lt;br /&gt;
+&lt;strong&gt;Host Identifier&lt;/strong&gt;: {4}&lt;br /&gt;
+&lt;strong&gt;Host Server&lt;/strong&gt;: {5}&lt;br /&gt;
+&lt;strong&gt;Installation Date&lt;/strong&gt;: {7}&lt;br /&gt;
+&lt;strong&gt;Number of Days in Trial&lt;/strong&gt;: {8}&lt;br /&gt;
+&lt;/p&gt;</value>
+  </data>
+  <data name="email.extension.subj" xml:space="preserve">
+    <value>DotNetNuke Trial Extension Request</value>
+  </data>
+  <data name="email.extension.to" xml:space="preserve">
+    <value>sales@dnncorp.com</value>
+  </data>
+  <data name="Email.Required" xml:space="preserve">
+    <value>Please enter a valid email address.</value>
+  </data>
+  <data name="FirstName.Required" xml:space="preserve">
+    <value>Please enter your first name.</value>
+  </data>
+  <data name="LastName.Required" xml:space="preserve">
+    <value>Please enter your last name.</value>
+  </data>
+  <data name="lblExtendTrial.Text" xml:space="preserve">
+    <value>Fill in your Email, Company and Name information and submit your request for a 15 day extension to your trial license.  You will recieve an email response with instructions on how to unlock your extended license.  If you have not configured SMTP settings for this installation, then you may call DotNetNuke Corp. Sales Dept. at 650-288-3150 for a license extension.</value>
+  </data>
+  <data name="plLicenseKey.Text" xml:space="preserve">
+    <value>Extended Trial Key</value>
+  </data>
+  <data name="Delete.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Renew.Text" xml:space="preserve">
+    <value>Renew</value>
+  </data>
+  <data name="HostServerList.ToolTip" xml:space="preserve">
+    <value>Server Name (IIS Application Name)</value>
+  </data>
+  <data name="LicenseType.Development" xml:space="preserve">
+    <value>Development</value>
+  </data>
+  <data name="LicenseType.Production" xml:space="preserve">
+    <value>Production</value>
+  </data>
+  <data name="plSelectLicenseType.Help" xml:space="preserve">
+    <value>Select the type of license you are activating. If this is a development environment, select Development.</value>
+  </data>
+  <data name="plSelectLicenseType.Text" xml:space="preserve">
+    <value>License Type</value>
+  </data>
+  <data name="Activated.Header" xml:space="preserve">
+    <value>Activated</value>
+  </data>
+  <data name="Invoice.Header" xml:space="preserve">
+    <value>Invoice Number</value>
+  </data>
+  <data name="LicenseType.Header" xml:space="preserve">
+    <value>License Type</value>
+  </data>
+  <data name="ServiceEndDate.Header" xml:space="preserve">
+    <value>Expires</value>
+  </data>
+  <data name="HostName.Header" xml:space="preserve">
+    <value>Web Server</value>
+  </data>
+  <data name="GoBack.Text" xml:space="preserve">
+    <value>View License List</value>
+  </data>
+  <data name="valActivationKey.Text" xml:space="preserve">
+    <value>An activation key is required!</value>
+  </data>
+  <data name="valLicenseKey.Text" xml:space="preserve">
+    <value>A license key is required!</value>
+  </data>
+  <data name="plLastName.Help" xml:space="preserve">
+    <value>Enter your Last name</value>
+  </data>
+  <data name="plLastName.Text" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+</root>

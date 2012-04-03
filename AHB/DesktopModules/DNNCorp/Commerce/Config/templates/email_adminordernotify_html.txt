@@ -1,0 +1,117 @@
+<style type="text/css">
+
+.apnormal{font-family:Tahoma;font-size:11px;}
+.apbold{font-family:Tahoma;font-size:11px; font-weight:bold;}
+.amheader{font-family:Tahoma;font-size:12px;font-weight:bold;}
+.amcptblhdr{font-family:Tahoma;font-size:11px; font-weight:bold;background-color:#666666;color:#fff;}
+</style>
+<div style="font-family:Tahoma;font-size:11px;">
+Dear [USER:FIRSTNAME], <br />
+You have received a new order.  The details are listed below.<br />
+<br />
+<table cellspacing="0" cellpadding="2" width="95%">
+    <tbody>
+        <tr>
+            <td class="apbold">Order Number:<span class="apnormal">[ORDER:INVOICENUMBER]</span></td>
+            <td class="apbold" colspan="2">Date:<span class="apnormal">[ORDER:PURCHASEDATE]</span></td>
+        </tr>
+        <tr>
+            <td class="amheader" colspan="3">Contact Details</td>
+        </tr>
+        <tr>
+            <td valign="top">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="apbold">First Name:</td>
+                        <td class="apnormal">[CONTACT:FIRSTNAME]</td>
+                    </tr>
+                    <tr>
+                        <td class="apbold">Last Name:</td>
+                        <td class="apnormal">[CONTACT:LASTNAME]</td>
+                    </tr>
+                    <tr>
+                        <td class="apbold">Email:</td>
+                        <td class="apnormal">[CONTACT:EMAIL]</td>
+                    </tr>
+                </tbody>
+            </table>
+            </td>
+            <td valign="top">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="amheader">Billing Address</td>
+                    </tr>
+                    <tr>
+                        <td class="apnormal">[ORDER:BILLINGADDRESS]</td>
+                    </tr>
+                </tbody>
+            </table>
+            </td>
+            <td valign="top">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="amheader">Shipping Address</td>
+                    </tr>
+                    <tr>
+                        <td class="apnormal">[ORDER:SHIPPINGADDRESS]</td>
+                    </tr>
+                </tbody>
+            </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<table cellspacing="0" cellpadding="2" width="95%">
+    <tbody>
+        <tr>
+            <td class="amcptblhdr" align="center">Qty</td>
+            <td class="amcptblhdr" align="center">Name</td>
+            <td class="amcptblhdr" align="center">Price</td>
+            <td class="amcptblhdr" align="center">Discount</td>
+            <td class="amcptblhdr" align="center">Total</td>
+        </tr>
+	[ORDER:ORDERDETAILS]
+        <tr>
+            <td class="apnormal" style="border-left: #333 1px solid; border-bottom: #333 1px solid" align="center">[ORDERDETAILS:QTY]</td>
+            <td class="apnormal" style="border-left: #333 1px solid; border-bottom: #333 1px solid">[ORDERDETAILS:PRODUCTNAME][ORDERDETAILS:NOTE]</td>
+            <td class="apnormal" style="border-left: #333 1px solid; border-bottom: #333 1px solid" align="right" nowrap>[ORDERDETAILS:PRICE]</td>
+            <td class="apnormal" style="border-left: #333 1px solid; border-bottom: #333 1px solid" align="right" nowrap>[ORDERDETAILS:DISC]</td>
+            <td class="apnormal" style="border-right: #333 1px solid; border-left: #333 1px solid; border-bottom: #333 1px solid" align="right" nowrap>[ORDERDETAILS:SUBTOTAL]</td>
+        </tr>
+	[/ORDER:ORDERDETAILS]
+        <tr>
+            <td width="100%" colspan="3">&nbsp;</td>
+            <td class="apbold" align="right">Sub Total:</td>
+            <td class="apnormal" align="right" nowrap>[ORDER:SUBTOTAL]</td>
+        </tr>
+        <tr>
+            <td width="100%" colspan="3">&nbsp;</td>
+            <td class="apbold" align="right">Tax:</td>
+            <td class="apnormal" align="right" nowrap>[ORDER:TAX]</td>
+        </tr>
+        <tr>
+            <td width="100%" colspan="3">&nbsp;</td>
+            <td class="apbold" align="right">Misc:</td>
+            <td class="apnormal" align="right" nowrap>[ORDER:MISC]</td>
+        </tr>
+        <tr>
+            <td class="apnormal" align="right" width="100%" colspan="3">&nbsp;</td>
+            <td class="apbold" align="right">Discount:</td>
+            <td class="apnormal" align="right" nowrap>[ORDER:DISC]</td>
+        </tr>
+        <tr>
+            <td width="100%" colspan="3">&nbsp;</td>
+            <td class="apbold" align="right">Shipping:</td>
+            <td class="apnormal" align="right" nowrap>[ORDER:SHIPPING]</td>
+        </tr>
+        <tr>
+            <td width="100%" colspan="3">&nbsp;</td>
+            <td class="apbold" nowrap="nowrap" align="right">Grand Total:</td>
+            <td class="apnormal" align="right" nowrap>[ORDER:GRANDTOTAL]</td>
+        </tr>
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,53 @@
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}sc_AddScheduleItemSettings') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}sc_AddScheduleItemSettings
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}sc_AddUrl') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}sc_AddUrl
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}sc_DeleteUrl') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}sc_DeleteUrl
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}sc_SelectUrl') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}sc_SelectUrl
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}sc_SelectUrlById') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}sc_SelectUrlById
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}sc_UpdateUrl') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}sc_UpdateUrl
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}sc_UpdateUrlActive') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}sc_UpdateUrlActive
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}sc_Url') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table {databaseOwner}{objectQualifier}sc_Url
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}sc_UpgradeModule') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}sc_UpgradeModule
+GO
+
+declare @ScheduleID int
+set @ScheduleID = null
+
+select @ScheduleID = ScheduleID
+from {databaseOwner}{objectQualifier}Schedule
+where TypeFullName = 'DotNetNuke.Professional.SearchCrawler.SearchSpider.SearchSpider, DotNetNuke.Professional.SearchCrawler'
+
+if @ScheduleID is not null begin
+	delete from {databaseOwner}{objectQualifier}ScheduleItemSettings where ScheduleID = @ScheduleID
+	delete from {databaseOwner}{objectQualifier}Schedule where ScheduleID = @ScheduleID
+end
+GO
+
+delete from {databaseOwner}{objectQualifier}Tabs
+where TabName = 'SearchCrawler Admin'
+GO
+

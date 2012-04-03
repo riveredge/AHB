@@ -1,0 +1,36 @@
+Dear [CONTACT:FIRSTNAME],
+Thank you for your order. Details of your order are below.
+
+Thanks, 
+[PORTAL:PORTALNAME]
+-----------------------------------------------------------------
+|	Order Number:	[ORDER:INVOICENUMBER]	Order Date: [ORDER:PURCHASEDATE]	|
+-----------------------------------------------------------------
+
+First Name:	[CONTACT:FIRSTNAME]
+Last Name:	[CONTACT:LASTNAME]
+Email:		[CONTACT:EMAIL]
+
+Billing Address:
+[ORDER:BILLINGADDRESS]
+
+Shipping Address:
+[ORDER:SHIPPINGADDRESS]
+
+
+-----------------------------------------------------------------
+|			ORDER DETAILS				|
+-----------------------------------------------------------------
+Qty	Name			Price			Total
+-----------------------------------------------------------------
+[ORDER:ORDERDETAILS]
+[ORDERDETAILS:QTY]	[ORDERDETAILS:PRODUCTNAME]			[ORDERDETAILS:PRICE]			[ORDERDETAILS:SUBTOTAL]
+	[ORDERDETAILS:NOTE]            
+-----------------------------------------------------------------
+[/ORDER:ORDERDETAILS]
+Sub Total:		[ORDER:SUBTOTAL]
+Tax:			[ORDER:TAX]
+Misc:			[ORDER:MISC]
+Discount:		[ORDER:DISC]
+Shipping:		[ORDER:SHIPPING]
+Grand Total:		[ORDER:GRANDTOTAL]

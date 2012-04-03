@@ -1,0 +1,309 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/* Add New ModuleCache Table */
+/*****************************/
+
+IF  NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}{objectQualifier}ModuleCache') AND OBJECTPROPERTY(id, N'IsTable') = 1)
+	BEGIN
+		CREATE TABLE {databaseOwner}{objectQualifier}ModuleCache
+			(
+				[CacheKey] [varchar](36) NOT NULL,
+				[ItemId] [int] NOT NULL,
+				[Data] [ntext] NOT NULL,
+				[Expiration] [datetime] NOT NULL,
+				CONSTRAINT [PK_{objectQualifier}ModuleCache] PRIMARY KEY CLUSTERED ( [CacheKey] ASC )
+			)
+	END
+GO
+
+/* Add New ModuleCacheGetItem  */
+/*******************************/
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}ModuleCacheGetItem]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}ModuleCacheGetItem
+GO
+	
+CREATE PROCEDURE {databaseOwner}{objectQualifier}ModuleCacheGetItem
+	@CacheKey [varchar](36)
+AS
+    SELECT *
+    FROM {databaseOwner}{objectQualifier}ModuleCache
+    WHERE CacheKey = @CacheKey
+GO
+
+/* Add New ModuleCacheAddItem  */
+/*******************************/
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}ModuleCacheAddItem]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}ModuleCacheAddItem
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}ModuleCacheAddItem
+	@ItemId int,
+	@CacheKey [varchar](36),
+	@Data	ntext,
+	@Expiration	datetime
+AS
+    INSERT INTO {databaseOwner}{objectQualifier}ModuleCache
+		(ItemId, 
+		CacheKey, 
+		Data, 
+		Expiration)
+    VALUES
+		(@ItemId, 
+		@CacheKey, 
+		@Data, 
+		@Expiration)
+GO
+
+/* Add New ModuleCacheGetItemCount  */
+/************************************/
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}ModuleCacheGetItemCount]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}ModuleCacheGetItemCount
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}ModuleCacheGetItemCount
+	@ItemId int
+AS
+    SELECT COUNT(*)
+    FROM {databaseOwner}{objectQualifier}ModuleCache
+    WHERE ItemId = @ItemId
+GO
+
+/* Add New ModuleCachePurgeCache  */
+/**********************************/
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}ModuleCachePurgeCache]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}ModuleCachePurgeCache
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}ModuleCachePurgeCache
+AS
+    DELETE
+    FROM {databaseOwner}{objectQualifier}ModuleCache
+GO
+
+/* Add New ModuleCachePurgeExpiredItems  */
+/*****************************************/
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}ModuleCachePurgeExpiredItems]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}ModuleCachePurgeExpiredItems
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}ModuleCachePurgeExpiredItems
+	@CurrentUtcDateTime datetime
+AS
+    DELETE
+    FROM {databaseOwner}{objectQualifier}ModuleCache
+    WHERE Expiration <= @CurrentUtcDateTime
+GO
+
+/* Add New ModuleCacheRemoveItem  */
+/**********************************/
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}ModuleCacheRemoveItem]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}ModuleCacheRemoveItem
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}ModuleCacheRemoveItem
+	@ItemId int
+AS
+    DELETE
+    FROM {databaseOwner}{objectQualifier}ModuleCache
+    WHERE ItemId = @ItemId
+GO
+
+/* Add New ModuleCacheGetKeys  */
+/*******************************/
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}ModuleCacheGetKeys]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}ModuleCacheGetKeys
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}ModuleCacheGetKeys
+	@ItemId int
+AS
+    DELETE
+    FROM {databaseOwner}{objectQualifier}ModuleCache
+    WHERE ItemId = @ItemId or @ItemId IS NULL
+GO
+
+
+/* Add New OutputCache Table */
+/*****************************/
+
+IF  NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}{objectQualifier}OutputCache') AND OBJECTPROPERTY(id, N'IsTable') = 1)
+	BEGIN
+		CREATE TABLE {databaseOwner}{objectQualifier}OutputCache
+			(
+				[CacheKey] [varchar](36) NOT NULL,
+				[ItemId] [int] NOT NULL,
+				[Data] [ntext] NOT NULL,
+				[Expiration] [datetime] NOT NULL,
+				CONSTRAINT [PK_{objectQualifier}OutputCache] PRIMARY KEY CLUSTERED ( [CacheKey] ASC )
+			)
+	END
+GO
+
+/* Add New OutputCacheGetItem  */
+/*******************************/
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}OutputCacheGetItem]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}OutputCacheGetItem
+GO
+	
+CREATE PROCEDURE {databaseOwner}{objectQualifier}OutputCacheGetItem
+	@CacheKey [varchar](36)
+AS
+    SELECT *
+    FROM {databaseOwner}{objectQualifier}OutputCache
+    WHERE CacheKey = @CacheKey
+GO
+
+/* Add New OutputCacheAddItem  */
+/*******************************/
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}OutputCacheAddItem]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}OutputCacheAddItem
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}OutputCacheAddItem
+	@ItemId int,
+	@CacheKey [varchar](36),
+	@Data	ntext,
+	@Expiration	datetime
+AS
+    INSERT INTO {databaseOwner}{objectQualifier}OutputCache
+		(ItemId, 
+		CacheKey, 
+		Data, 
+		Expiration)
+    VALUES
+		(@ItemId, 
+		@CacheKey, 
+		@Data, 
+		@Expiration)
+GO
+
+/* Add New OutputCacheGetItemCount  */
+/************************************/
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}OutputCacheGetItemCount]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}OutputCacheGetItemCount
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}OutputCacheGetItemCount
+	@ItemId int
+AS
+    SELECT COUNT(*)
+    FROM {databaseOwner}{objectQualifier}OutputCache
+    WHERE ItemId = @ItemId
+GO
+
+/* Add New OutputCachePurgeCache  */
+/**********************************/
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}OutputCachePurgeCache]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}OutputCachePurgeCache
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}OutputCachePurgeCache
+AS
+    DELETE
+    FROM {databaseOwner}{objectQualifier}OutputCache
+GO
+
+/* Add New OutputCachePurgeExpiredItems  */
+/*****************************************/
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}OutputCachePurgeExpiredItems]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}OutputCachePurgeExpiredItems
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}OutputCachePurgeExpiredItems
+	@CurrentUtcDateTime datetime
+AS
+    DELETE
+    FROM {databaseOwner}{objectQualifier}OutputCache
+    WHERE Expiration <= @CurrentUtcDateTime
+GO
+
+/* Add New OutputCacheRemoveItem  */
+/**********************************/
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}OutputCacheRemoveItem]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}OutputCacheRemoveItem
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}OutputCacheRemoveItem
+	@ItemId int
+AS
+    DELETE
+    FROM {databaseOwner}{objectQualifier}OutputCache
+    WHERE ItemId = @ItemId
+GO
+
+/* Add New OutputCacheGetKeys  */
+/*******************************/
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}OutputCacheGetKeys]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}OutputCacheGetKeys
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}OutputCacheGetKeys
+	@ItemId int
+AS
+    DELETE
+    FROM {databaseOwner}{objectQualifier}OutputCache
+    WHERE ItemId = @ItemId or @ItemId IS NULL
+GO
+
+/* Add PurgeOutputCache Schedule Job */
+/*************************************/
+
+INSERT INTO {databaseOwner}{objectQualifier}Schedule
+		   ([TypeFullName]
+		   ,[TimeLapse]
+		   ,[TimeLapseMeasurement]
+		   ,[RetryTimeLapse]
+		   ,[RetryTimeLapseMeasurement]
+		   ,[RetainHistoryNum]
+		   ,[AttachToEvent]
+		   ,[CatchUpEnabled]
+		   ,[Enabled]
+		   ,[ObjectDependencies]
+		   ,[Servers]
+		   ,[CreatedByUserID]
+		   ,[CreatedOnDate]
+		   ,[LastModifiedByUserID]
+		   ,[LastModifiedOnDate])
+	 VALUES
+		   ('DotNetNuke.Services.OutputCache.PurgeOutputCache, DotNetNuke'
+		   ,1
+		   ,'m'
+		   ,30
+		   ,'s'
+		   ,10
+		   ,''
+		   ,0
+		   ,0
+		   ,'OutputCache'
+		   ,NULL
+		   ,NULL
+		   ,NULL
+		   ,NULL
+		   ,NULL)
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

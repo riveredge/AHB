@@ -1,0 +1,96 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}{objectQualifier}ModuleCache') AND type in (N'U'))
+	DROP TABLE {databaseOwner}{objectQualifier}ModuleCache
+GO
+IF EXISTS (SELECT * FROM {databaseOwner}sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}ModuleCacheGetItem]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}ModuleCacheGetItem
+GO
+IF EXISTS (SELECT * FROM {databaseOwner}sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}ModuleCacheAddItem]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}ModuleCacheAddItem
+GO
+IF EXISTS (SELECT * FROM {databaseOwner}sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}ModuleCacheGetItemCount]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}ModuleCacheGetItemCount
+GO
+IF EXISTS (SELECT * FROM {databaseOwner}sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}ModuleCachePurgeCache]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}ModuleCachePurgeCache
+GO
+IF EXISTS (SELECT * FROM {databaseOwner}sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}ModuleCachePurgeExpiredItems]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}ModuleCachePurgeExpiredItems
+GO
+IF EXISTS (SELECT * FROM {databaseOwner}sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}ModuleCacheRemoveItem]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}ModuleCacheRemoveItem
+GO
+IF EXISTS (SELECT * FROM {databaseOwner}sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}ModuleCacheGetKeys]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}ModuleCacheGetKeys
+GO
+
+UPDATE {databaseOwner}{objectQualifier}TabModules
+	SET CacheMethod = NULL
+	WHERE CacheMethod='Database'
+GO
+
+IF NOT EXISTS ( SELECT * FROM {databaseOwner}{objectQualifier}Packages WHERE Name like '%ModuleCaching%' )
+	BEGIN
+		IF EXISTS(SELECT * FROM {databaseOwner}{objectQualifier}Schedule WHERE TypeFullName='DotNetNuke.Services.ModuleCache.PurgeModuleCache, DotNetNuke')
+			BEGIN
+				DELETE FROM {databaseOwner}{objectQualifier}Schedule
+				WHERE TypeFullName = 'DotNetNuke.Services.ModuleCache.PurgeModuleCache, DotNetNuke'
+			END
+	END
+GO 
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}{objectQualifier}OutputCache') AND type in (N'U'))
+DROP TABLE {databaseOwner}{objectQualifier}OutputCache
+GO
+IF EXISTS (SELECT * FROM {databaseOwner}sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}OutputCacheGetItem]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}OutputCacheGetItem
+GO
+IF EXISTS (SELECT * FROM {databaseOwner}sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}OutputCacheAddItem]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}OutputCacheAddItem
+GO
+IF EXISTS (SELECT * FROM {databaseOwner}sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}OutputCacheGetItemCount]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}OutputCacheGetItemCount
+GO
+IF EXISTS (SELECT * FROM {databaseOwner}sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}OutputCachePurgeCache]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}OutputCachePurgeCache
+GO
+IF EXISTS (SELECT * FROM {databaseOwner}sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}OutputCachePurgeExpiredItems]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}OutputCachePurgeExpiredItems
+GO
+IF EXISTS (SELECT * FROM {databaseOwner}sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}OutputCacheRemoveItem]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}OutputCacheRemoveItem
+GO
+IF EXISTS (SELECT * FROM {databaseOwner}sysobjects WHERE id = object_id(N'{databaseOwner}[{objectQualifier}OutputCacheGetKeys]') AND OBJECTPROPERTY(id, N'IsPROCEDURE') = 1)
+  DROP PROCEDURE {databaseOwner}{objectQualifier}OutputCacheGetKeys
+GO
+IF EXISTS (SELECT * FROM {databaseOwner}{objectQualifier}Schedule WHERE TypeFullName='DotNetNuke.Services.OutputCache.PurgeOutputCache, DotNetNuke')
+  DELETE FROM  {databaseOwner}{objectQualifier}Schedule WHERE TypeFullName='DotNetNuke.Services.OutputCache.PurgeOutputCache, DotNetNuke'
+GO
+
+DELETE FROM {databaseOwner}{objectQualifier}TabSettings
+	WHERE SettingName='CacheProvider'
+	AND SettingValue='Database'
+GO
+
+IF NOT EXISTS ( SELECT * FROM {databaseOwner}{objectQualifier}Packages WHERE Name like '%OutputCaching%' )
+	BEGIN
+		IF EXISTS(SELECT * FROM {databaseOwner}{objectQualifier}Schedule WHERE TypeFullName='DotNetNuke.Services.OutputCache.PurgeOutputCache, DotNetNuke')
+			BEGIN
+				DELETE FROM {databaseOwner}{objectQualifier}Schedule
+				WHERE TypeFullName = 'DotNetNuke.Services.OutputCache.PurgeOutputCache, DotNetNuke'
+			END
+	END
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

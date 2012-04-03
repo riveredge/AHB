@@ -1,0 +1,19 @@
+﻿INSERT INTO {databaseOwner}{objectQualifier}ModuleSettings (ModuleID, SettingName, SettingValue, CreatedByUserID, CreatedOnDate, LastModifiedByUserID, LastModifiedOnDate)
+SELECT MS.ModuleID,
+	'dl_EnabledExtensions' as SettingName,
+	CASE
+		WHEN LEN(ISNULL(MS.SettingValue, '')) > 0 THEN 'Selected'
+		ELSE 'All'
+	END AS SettingValue,
+	MS.CreatedByUserID,
+	MS.CreatedOnDate,
+	MS.LastModifiedByUserID,
+	MS.LastModifiedOnDate
+FROM {databaseOwner}{objectQualifier}ModuleSettings MS
+WHERE MS.SettingName = 'dl_AllowedExtensions'
+	AND NOT EXISTS(
+		SELECT MS2.SettingName
+		FROM {databaseOwner}{objectQualifier}ModuleSettings MS2
+		WHERE MS2.ModuleID = MS.ModuleID
+			AND MS2.SettingName = 'dl_EnabledExtensions')
+

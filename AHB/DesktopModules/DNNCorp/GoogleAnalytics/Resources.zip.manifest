@@ -1,0 +1,28 @@
+﻿<dotnetnuke type="ResourceFile" version="5.0">
+  <files>
+    <file>
+      <path>App_LocalResources/</path>
+      <name>GoogleAnalyticsSettings.ascx.resx</name>
+    </file>
+    <file>
+      <path />
+      <name>GoogleAnalyticsSettings.ascx</name>
+    </file>
+    <file>
+      <path />
+      <name>module.css</name>
+    </file>
+    <file>
+      <path>Images/</path>
+      <name>analytics.gif</name>
+    </file>
+    <file>
+      <path />
+      <name>SiteAnalytics.config</name>
+    </file>
+    <file>
+      <path />
+      <name>05.05.00.txt</name>
+    </file>
+  </files>
+</dotnetnuke>

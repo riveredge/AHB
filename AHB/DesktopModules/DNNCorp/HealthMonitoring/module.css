@@ -1,0 +1,25 @@
+﻿.healthrow {
+	clear:both;
+	overflow:hidden;
+	cursor:pointer;
+}
+.healthDetail{
+	clear:both;
+	display:none;
+	padding: 5px 10px;
+	margin-bottom: 15px;
+	background-color: #f3f3f3;
+}
+.healthDate {
+	width: 200px;
+	float:left;
+	padding: 3px;
+}
+.healthPortal {
+	width: 200px;
+	float:left;
+	padding: 3px;
+}
+.dhvSummary .dnnFormMessage.dnnFormHelpContent{
+	max-width:100%;
+}

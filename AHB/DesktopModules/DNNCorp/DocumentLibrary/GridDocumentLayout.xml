@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<gridLayouts>
+  <gridLayout name="GridDocument.ascx" displayName="multiple columns"></gridLayout>
+  <gridLayout name="GridDocumentL2.ascx" displayName="compact"></gridLayout>
+  <gridLayout name="GridDocumentL3.ascx" displayName="multimedia"></gridLayout>
+  <gridLayout name="GridDocumentL4.ascx" displayName="thumbnails"></gridLayout>
+</gridLayouts>
